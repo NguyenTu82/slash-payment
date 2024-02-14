@@ -1,0 +1,10 @@
+<svg id="グループ_20651" data-name="グループ 20651" xmlns="http://www.w3.org/2000/svg" width="54" height="52" viewBox="0 0 54 52">
+    <g id="BG" fill="#4e73df" stroke="#dddfe1" stroke-linejoin="round" stroke-width="1">
+        <rect width="54" height="52" stroke="none"/>
+        <rect x="0.5" y="0.5" width="53" height="51" fill="none"/>
+    </g>
+    <g id="baseline-insert_invitation-24px" transform="translate(15 14)">
+        <path id="パス_1305" data-name="パス 1305" d="M17.778,12.55H12.5V17.8h5.278ZM16.722,1V3.1H8.278V1H6.167V3.1H5.111a2.1,2.1,0,0,0-2.1,2.1L3,19.9A2.1,2.1,0,0,0,5.111,22H19.889A2.112,2.112,0,0,0,22,19.9V5.2a2.112,2.112,0,0,0-2.111-2.1H18.833V1Zm3.167,18.9H5.111V8.35H19.889Z" transform="translate(0 0)" fill="#fff"/>
+        <path id="パス_1306" data-name="パス 1306" d="M0,0H25V25H0Z" fill="none"/>
+    </g>
+</svg>

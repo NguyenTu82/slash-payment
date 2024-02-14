@@ -1,0 +1,486 @@
+.five-card{
+    margin-top: 20px;
+}
+
+.content-style{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.card-transaction-time .border-left-primary{
+    width: 200px;
+}
+.card-transaction-time{
+    padding-right: 15px;
+}
+.card-transaction-time .card-body, .card-merchant-stores .card-body, .card-amount-af .card-body{
+    padding-right: 18px !important;
+}
+
+.card-total-receive .border-left-primary{
+    width: 432px;
+}
+.card-total-receive{
+    padding-right: 15px;
+}
+
+.card-total-paid .border-left-primary{
+    width:290px;
+    padding-left: 10px;
+}
+
+.card-merchant-stores{
+    width: 200px;
+}
+
+.card-amount-af .border-left-primary{
+    padding-right: 0px;
+    margin-left: 15px;
+    width: 200px;
+}
+
+.text-transaction-time, .text-merchant-stores, .text-amount-af {
+    text-align: right;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.row .row .text-total-receive-usdt, .row .row .text-total-receive-usdc {
+    font-size: 16px;
+    padding-left: 97px;
+}
+
+.row .row .text-total-receive-dai {
+    font-size: 16px;
+    margin-left: 33px !important;
+}
+.row .row .text-total-receive-money{
+    font-size: 16px;
+}
+.text-total-receive-jpyc{
+    margin-left: 18px !important;
+}
+
+.text-total-paid-bank{
+    margin-left: 18px;
+    padding-left: 40px;
+    font-size:16px !important;
+}
+
+.text-total-paid-money{
+    text-align: right;
+    font-size: 16px;
+}
+
+.text-total-paid-crypto{
+    padding-left:29px;
+    font-size: 16px;
+}
+
+.text-total-paid-cash{
+    padding-left:104px;
+    font-size: 16px;
+}
+
+.mb-4 .border-left-primary{
+  height: 85.5px;
+}
+
+.row .card-body{
+  font-size: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Chart */
+
+.card-chart .card-body{
+    border-color: rgb(112,112,112) !important;
+    border: 1px solid rgb(112,112,112);
+    width: 1468px;
+    height: 287px;
+    margin: 0px 35px 15px 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card-chart .card-chart-name {
+    width: 1400px;
+    height: 200px;
+    margin-left: 10px;
+    margin-right:10px!important
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.chartMenu {
+width: 100vw;
+height: 40px;
+background: #1A1A1A;
+color: rgba(54, 162, 235, 1);
+}
+.chartMenu p {
+padding: 10px;
+font-size: 20px;
+}
+.chartCard {
+width: 100vw;
+height: calc(100vh - 40px);
+background: rgba(54, 162, 235, 0.2);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.chartBox {
+width: 700px;
+padding: 20px;
+border-radius: 20px;
+border: solid 3px rgba(54, 162, 235, 1);
+background: white;
+}
+
+/*table*/
+.card-mer-dash-table .card-body{
+    padding-bottom: 12px;
+}
+
+.card-mer-dash-table .card-body .container-fluid .card-body{
+    padding-bottom: 0px;
+}
+
+.table-responsive {
+    /* max-width:1480px !important; */
+    margin: 0 auto;
+}
+.table-bordered th, td {
+white-space: nowrap;
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+} 
+
+.table-responsive {
+margin-top: 20px;
+}
+.row .sorting_disabled {
+padding: 23,0,23,0 !important;
+background-color: rgb(240,240,240);
+text-align: center;
+height: 70px;
+line-height: 70px;
+}
+
+  table.dataTable tbody td, table.dataTable tbody th {
+    padding: 8px;
+    text-align: center;
+}
+
+table.dataTable tbody .even{
+    background-color: rgb(236,248,247);
+}
+  
+/* dataTable_length (entries) */
+.dataTables_length select {
+    width: 100px;
+}
+.col-sm-4 .dataTables_length{
+    margin-top: 15px;
+}
+
+/* dataTable_paginate */
+.dataTables_paginate{
+    margin-left: 600px !important;
+}
+
+.pagination {
+    margin-top: 15px !important;
+}
+        /*color fix*/
+.paginate_button .page-link {
+    border: none !important;
+    color: rgb(171,175,179);
+}
+
+.pagination .disabled .page-link{
+    border: none !important;
+    background-color: white;
+    color: rgb(171,175,179) !important;
+}
+
+.paginate_button.active .page-link {
+    border: none !important;
+    background-color: white;
+    color: rgb(21,132,214);
+}
+
+.pagination .next .page-link, .pagination .previous .page-link{
+    color: rgb(21,132,214);
+}
+
+    /*csv button*/
+.card-mer-dash-table .btn-primary{
+    margin-right: 60px;
+    margin-top: 16px;
+    width: 150px;
+    height: 48px;
+    font-size: 20px;
+}
+    /*distance from csv button to table*/
+.card-mer-dash-table .card-body{
+    padding-top: 0px;
+}
+
+.card-mer-dash-table .table-bordered{
+    margin-top: 16px !important;
+}
+
+.table-responsive{
+    margin-top: 0px;
+}
+
+    /* table column width*/
+.card-mer-dash-table tr:first-child th:nth-child(1) {
+    width: 155px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(2) {
+    width: 120px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(3) {
+    width: 150px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(4) {
+    width: 150px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(5) {
+    width: 120px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(6) {
+    width: 150px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(7) {
+    width: 150px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(8) {
+    width: 150px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(9) {
+    width: 120px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(10) {
+    width: 120px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card-mer-dash-table tr:first-child th:nth-child(11) {
+    width: 100px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* totalling target (year&month)*/
+.card-year-month-dropdown{
+    margin-bottom: 19px;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 42px;
+    border: 1px solid black;
+  }
+  
+.dropdown-content {
+position: absolute;
+top: 0;
+left: 0;
+width: 77px;
+height: 38px;
+overflow: hidden;
+}
+  
+.dropdown-content select {
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+border: none;
+outline: none;
+background: none;
+font-size: 14px;
+cursor: pointer;
+}
+  
+.dropdown-button {
+position: absolute;
+top: 0;
+right: 0;
+width: 40px;
+height: 100%;
+padding: 10px;
+text-align: center;
+background-color: #F5F5F5;
+cursor: pointer;
+}
+  
+.dropdown-button:hover {
+background-color: #DDDDDD;
+}
+
+    /* year dropdown*/
+.card-year {
+    position: relative;
+    width: 127px;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+.card-year-container {
+    border: 1px solid rgba(106,112,126,0.2);
+    height: 42px;
+    width: 127px;
+    padding: 1px 0px 1px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.selected-year {
+    width: 77px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.year-dropdown-btn {
+    border: none;
+    height: 42px;
+    width: 40px;
+    padding-right: 0px;
+    background-color: rgba(106,112,126,0.1);
+    cursor: pointer;
+}
+
+.year-dropdown {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 120px;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    overflow-y: auto;
+    max-height: 114px;
+    z-index: 1;
+}
+
+    /* month dropdown*/
+.card-month {
+    position: relative;
+    width: 127px;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+.card-month-container {
+    border: 1px solid rgba(106,112,126,0.2);
+    height: 42px;
+    width: 127px;
+    padding: 1px 0px 1px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.selected-month {
+    width: 77px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.month-dropdown-btn {
+    border: none;
+    height: 42px;
+    width: 40px;
+    padding-right: 0px;
+    background-color: rgba(106,112,126,0.1);
+    cursor: pointer;
+}
+
+.month-dropdown {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 120px;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    overflow-y: auto;
+    max-height: 114px;
+    z-index: 1;
+}
+
+.confirm-month-year {
+    margin-right: 60px;
+    width:150px;
+    height:48px;
+}
+
+.row-year-month .text-primary{
+    margin-top: 20px !important;
+}
+
+.note-year-month {
+    margin-left: 16px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.card-mer-dash-table{
+    margin-bottom: 0px;
+}
+
+/* .chat-container {
+    border: 2px solid black;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .card {
+    background-color: white;
+  } */

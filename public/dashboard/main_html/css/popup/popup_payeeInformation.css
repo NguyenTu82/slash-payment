@@ -1,0 +1,331 @@
+
+.modal-open{
+    overflow: auto;
+}
+.modal {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.popup-PayeeInfomation .modal-content {
+    border: none;
+    margin: 40px 0;
+}
+.popup-PayeeInfomation .modal-popup-DataForm.fade .modal-dialog{
+    max-width: 800px;
+    padding-left: 0 !important;
+}
+
+.popup-PayeeInfomation .title-detail-noti {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.popup-PayeeInfomation .button-action {
+    padding-top: 50px;
+}
+.popup-PayeeInfomation .close {
+    display: flex;
+    align-items: center;
+    width: auto !important;
+    color: #4E73DF;
+    opacity: 1;
+}
+.popup-PayeeInfomation .modal-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    align-items: center;
+    margin-top: 0;
+    background-color: #EEF5F9;
+    padding: 11px 15px 9px 29px;
+}
+.popup-PayeeInfomation .modal-title{
+    font-size: 22px;
+    font-family: 'Noto Sans JP';
+    color: #686E7C;
+    font-weight: 400 ;
+}
+/* body */
+.popup-PayeeInfomation .modal-body{
+    padding: 17px 69px 0 69px;
+}
+.popup-PayeeInfomation .infomation-time {
+    margin: 0;
+}
+.popup-PayeeInfomation .info-detail-popup {
+    display: flex;
+}
+.popup-PayeeInfomation .info-detail-popup label{
+    min-width: 160px;
+}
+.popup-PayeeInfomation .info-detail-popup .info-input{
+    flex-basis: 80%;
+}
+.popup-PayeeInfomation .info-input-two {
+    display: flex;
+    justify-content: space-between !important;
+}
+.popup-transfer-two-input {
+    display: flex;
+    align-items: center;
+}
+.popup-transfer-two-input label {
+    flex-basis: unset !important;
+    width: 100%;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+.popup-transfer-two-input .info-input {
+    flex-basis: unset !important;
+}
+.popup-PayeeInfomation .form-group.form-item label {
+    max-width: 160px;
+}
+/* footer */
+.popup-PayeeInfomation .modal-footer{
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    margin-bottom: 40px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.popup-PayeeInfomation .btn-primary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+.popup-PayeeInfomation .btn {
+    width: 150px;
+    height: 48px;
+}
+.popup-PayeeInfomation .btn-secondary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color: #F3F3F3;
+    color: #6A707E;
+    border: none;
+}
+.popup-PayeeInfomation .btn-delete{
+    font-size: 18px;
+    background-color:#FD5274;
+    color: #FFFFFF;
+    border: none;
+    margin: 0 ;
+    padding: 0;
+    margin-right: 28px;
+}
+.show-popup {
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+
+.popup-PayeeInfomation .form-detail .form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.popup-PayeeInfomation .noti-detai-type{
+    margin-top: 24px !important;
+}
+.popup-PayeeInfomation .info-detail-popup-transfer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.transfer-two-input-data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.transfer-two-input {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.transfer-two-input .info-input {
+    flex-basis: unset !important;
+    display: flex;
+    justify-content: end;
+}
+.transfer-two-input label {
+    min-width: unset !important;
+    margin-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.popup-PayeeInfomation .form-control.form-w200 {
+    max-width: 200px;
+}
+.popup-PayeeInfomation .form-control.form-w300 {
+    max-width: 300px;
+    width: 300px;
+}
+.popup-PayeeInfomation .form-control.form-w311 {
+    max-width: 311px;
+}
+.popup-PayeeInfomation .form-control.form-w62 {
+    max-width: 62px;
+    width: 62px;
+}
+.popup-PayeeInfomation .form-control.form-w100 {
+    max-width: 100px;
+    width: 100px;
+}
+.popup-PayeeInfomation .form-detail .form-control {
+    padding: 10px;
+}
+
+.popup-PayeeInfomation .noti-content-detail {
+    align-items: start !important;
+}
+.popup-PayeeInfomation .noti-content-title {
+    margin-top: 15px;
+}
+.popup-PayeeInfomation .list-area-contents{
+    max-width: 850px !important;
+    width: 100%;
+    height: 279px !important;
+    overflow-y: auto;
+    resize: none;
+    border-radius: unset !important;
+    font-size: 16px !important;
+    color: #686e7c;
+}
+textarea.list-area-contents:disabled{
+    background-color: #f0f0f2;
+    font-size: 16px !important;
+    color: #ABAFB3;
+}
+.popup-PayeeInfomation .button-action {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 34px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.btn-back-with500 {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.popup-PayeeInfomation-edit .btn-back-with500 {
+    display: flex;
+    justify-content: space-between;
+}
+.btn-delete-detail{
+    margin-left: 100px;
+}
+.form-close{
+    margin-left: 20px;
+}
+.form .form-group.form-item {
+    gap: 5px;
+}
+.content-item {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #ABAFB3;
+}
+.noti-content-detail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.height-control {
+    min-height: 52px !important;
+}
+@media only screen and (max-width: 1500px) {
+    .input_time-day{
+       max-width: 500px;
+       width: 100% !important;
+    }
+   }
+
+@media only screen and (max-width: 1500px) {
+ .btn-back-with500 {
+    width: auto;
+ }
+}
+@media only screen and (max-width: 1200px) {
+.popup-PayeeInfomation .form-group.form-item label {
+    max-width: 180px;
+}
+ .currency-unit-value {
+    gap: 10px;
+    flex-wrap: wrap;
+ }
+ .btn-delete-detail{
+    margin-left: 20px;
+}
+.info-detail-popup-transfer {
+    flex-direction: column;
+}
+.popup-PayeeInfomation .title-detail-noti {
+    padding-bottom: 40px;
+}
+.popup-PayeeInfomation .title-detail-noti {
+    padding-top: 40px;
+}
+.popup-PayeeInfomation .button-action {
+    padding-top: 40px;
+}
+.popup-PayeeInfomation .info-detail-popup label {
+    min-width: unset;
+    width: 100px;
+    margin-right: 20px;
+}
+.popup-PayeeInfomation .form-detail .label-custom {
+    margin: 0;
+}
+.transfer-two-input {
+    margin-top: 15px;
+}
+.transfer-two-input, .transfer-two-input-data {
+    justify-content: start;
+}
+.popup-PayeeInfomation .info-detail-popup .minw-160 {
+    min-width: 160px !important;
+}
+.popup-PayeeInfomation .form-control.form-w300 {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 992px) {
+    .popup-PayeeInfomation .btn {
+        width: 150px !important;
+    }
+    .popup-PayeeInfomation .modal-title {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    form .form-group.form-item ,.transfer-two-input, .transfer-two-input-data{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .popup-PayeeInfomation .form-detail .form-group {
+        align-items: start;
+    }
+    .form-detail .label-custom {
+        margin-bottom: 10px;
+    }
+    .form-group.form-item.info-detail-popup {
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 400px) {
+
+}
+

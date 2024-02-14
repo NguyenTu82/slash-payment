@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <title>Base</title>
+
+        <!-- Google Font: Source Sans Pro -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Inter"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=fallback"
+            rel="stylesheet"
+        />
+
+        <!-- Custom fonts for this template-->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        />
+        <link
+            href="vendor/fontawesome-free/css/all.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        />
+
+        <!-- Custom styles for this template-->
+        <link href="../../../css/sb-admin-2.min.css" rel="stylesheet" />
+        <link href="../../../css/common/sidebarr.css" rel="stylesheet" />
+        <link href="../../../css/common/header.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../../css/sb-admin-2.css" />
+        <!-- <link rel="stylesheet" href="./../../../css/common/sidebar.css"> -->
+        <link rel="stylesheet" href="./../../../css/common/custom.css" />
+        <link
+            rel="stylesheet"
+            href="./../../../css/merchant/account_manager_edit.css"
+        />
+        <link rel="stylesheet" href="./../../../css/merchant/account_manager_edit.css">
+        <link rel="stylesheet" href="./../../../css/popup/popup_form.css">
+        <link rel="stylesheet" href="./../../../css/popup/popup_confirm.css">
+        <link rel="stylesheet" href="./../../../css/popup/popup_success.css">
+        <link rel="stylesheet" href="./../../../css/popup/popup_select.css">
+        <!-- checkbox css -->
+        <link rel="stylesheet" href="./../../../css/common/checkbox.css">
+
+        <!-- select boostrap -->
+        <link
+            rel="stylesheet"
+            href="../../../../main_html/css/bootstrap-select.min.css"
+        />
+        <link rel="stylesheet" href="../../../../../css/select.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.css"
+        />
+        <!-- icheck bootstrap -->
+        <link
+            rel="stylesheet"
+            href="../../../../../dashboard/themes/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+        />
+    </head>
+
+    <body id="page-top">
+        <!-- Page Wrapper -->
+        <div id="wrapper" class="wrapper">
+            <!-- Sidebar -->
+            <ul
+                class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+                id="accordionSidebar"
+            >
+                <!-- Sidebar - Brand -->
+                <a
+                    class="sidebar-brand link-img-sidebar d-flex align-items-center justify-content-center"
+                    href="#"
+                >
+                    <img
+                        class="img-sidebar"
+                        src="http://dev.crypto-epay.io/dashboard/img/sidebar_logo.svg"
+                    />
+                </a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0" />
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item active">
+                    <div class="nav-hover">
+                        <a class="nav-link" href="#">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/dashboard.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>sidebar.dashboard</span></a
+                        >
+                    </div>
+                </li>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="true"
+                            aria-controls="collapseTwo"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/merchant.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>sidebar.merchant</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="buttons.html"
+                                >sidebar.merchant_list</a
+                            >
+                            <a class="collapse-item" href="cards.html"
+                                >sidebar.merchant_regis</a
+                            >
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapseUtilities"
+                            aria-expanded="true"
+                            aria-controls="collapseUtilities"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/AF.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>sidebar.AF</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapseUtilities"
+                        class="collapse"
+                        aria-labelledby="headingUtilities"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="utilities-color.html"
+                                >sidebar.AF_list</a
+                            >
+                            <a
+                                class="collapse-item"
+                                href="utilities-border.html"
+                                >sidebar.AF_regis</a
+                            >
+                        </div>
+                    </div>
+                </li>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapsePages"
+                            aria-expanded="true"
+                            aria-controls="collapsePages"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/payment.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>sidebar.payment</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapsePages"
+                        class="collapse"
+                        aria-labelledby="headingPages"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item active" href="login.html"
+                                >sidebar.payment_request</a
+                            >
+                            <a class="collapse-item" href="register.html"
+                                >sidebar.payment_history</a
+                            >
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Charts -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a class="nav-link" href="">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/noti.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>sidebar.notification</span></a
+                        >
+                    </div>
+                </li>
+
+                <!-- Nav Item - Tables -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a class="nav-link" href="tables.html">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/setting.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>sidebar.setting</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <!-- Main Content -->
+                <div id="content">
+                    <!-- Topbar -->
+                    <nav
+                        class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"
+                    >
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button
+                            id="sidebarToggleTop"
+                            class="btn btn-link d-md-none rounded-circle mr-3"
+                        >
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+
+
+                            <!-- Nav Item - Language -->
+                            <li class="nav-item dropdown mx-1">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="messagesDropdown"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="19"
+                                        viewBox="0 0 20 19"
+                                    >
+                                        <path
+                                            id="Vector"
+                                            d="M20,1.959V9.141A1.912,1.912,0,0,1,18.065,11.1h-7.1v4.57H6.645L2.581,19V15.67H1.935A1.912,1.912,0,0,1,0,13.711V6.529A1.912,1.912,0,0,1,1.935,4.57H7.742V0H18.065A1.912,1.912,0,0,1,20,1.959ZM8.516,12.993,6.387,7.182H4.839L2.71,12.993H4.258l.387-1.045h2l.323,1.045Zm7.032-5.354a5,5,0,0,0,1.419-3.722L16.9,3.265H14.774V1.959h-1.29V3.265H11.548V4.57h3.871a3.391,3.391,0,0,1-1.226,2.416A3.281,3.281,0,0,1,13.161,5.55H11.806a4.475,4.475,0,0,0,1.161,2.089,4.857,4.857,0,0,1-1.355.2l.065,1.306a6.849,6.849,0,0,0,2.581-.653,5.77,5.77,0,0,0,2.516.653V7.835a4.336,4.336,0,0,1-1.226-.2Z"
+                                            transform="translate(0 0)"
+                                            fill="#64748b"
+                                        />
+                                    </svg>
+                                    <span>&nbsp;日本語</span>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div
+                                    class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="messagesDropdown"
+                                >
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"
+                                    >
+                                        <div>
+                                            <span class="font-weight-bold"
+                                                >日本語</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"
+                                    >
+                                        <div>English</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a
+                                    class="nav-link info-user-name"
+                                    href="#"
+                                    id="user-name"
+                                >
+                                    <span>UserName: </span>
+                                    <span class="name-user"
+                                        >Sample Sample
+                                    </span>
+                                    <!-- Counter - Messages -->
+                                </a>
+                            </li>
+                            <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
+                            <li class="nav-item logout">
+                                <a
+                                    class="nav-link"
+                                    href="http://dev.crypto-epay.io/admin-epay/auth/logout"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <button
+                                        type="button"
+                                        class="btn btn-logout btn-outline-primary"
+                                        style="text-align: center"
+                                    >
+                                        ログアウト
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="acount-manager-detail bg-white">
+                        <div class="container-fluid">
+                            <section class="content-header">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h1 class="main-title-page">設定</h1>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- Content Row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="account bg-white mt-20">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <a class="nav-link" aria-current="page" href="">
+                                                    プロファイル情報
+                                                </a>
+                                                <a class="nav-link active" aria-current="page" href="">
+                                                    アカウント管理
+                                                </a>
+                                                <a class="nav-link" aria-current="page" href="e">
+                                                    新規店舗申請
+                                                </a>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="form__edit_account">
+                                        <form class="form-edit">
+                                            <h3 class="title_edit_account">プロファイル情報</h3>
+
+                                            <div class="form-group row form-item account__id">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    アカウントID
+                                                </label>
+                                                <div class="col col-md-10 form-item-ip">
+                                                    <input readonly type="text" class="form-control" disabled id="input-uid"
+                                                           value="MER0000001">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row form-item">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    氏名
+                                                </label>
+                                                <div class="col col-md-10  form-item-ip form-note">
+                                                    <input type="text" class="form-control border-error" id="input-name"
+                                                           name="name" value="nanashino">
+                                                           <div class="note-pass">
+                                                            <p class="note-pass-error">氏名を入力して下さい。</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row form-item ">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    アカウントタイプ
+                                                </label>
+                                                <div class="col col-md-10 form-item-ip">
+                                                    <div class="select_info">
+                                                        <select class="form-control select_form" name="role_id">
+                                                            <option value="">ロールを選択してください</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row form-item ">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    ステータス
+                                                </label>
+                                                <div class="col col-md-10 form-item-ip">
+                                                    <div class="select_info">
+                                                        <select class="form-control select_form" name="role_id">
+                                                            <option value="">ロールを選択してください</option>
+                                                            <option value="">ロールを選択して1ください</option>
+                                                            <option value="">ロールを選択して2ください</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row form-item">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    備考欄
+                                                </label>
+                                                <div class="col col-md-10 form-item-ip form-note">
+                                                    <textarea class="form-control form-area-remarks "  rows="5" placeholder="スパーアカウントなので、アカウント追加できる。"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row form-item">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    登録メールアドレス
+                                                </label>
+                                                <div class="col col-md-10 form-item-ip form-note">
+                                                    <input type="text" class="form-control border-error" id="input-email"
+                                                           name="email" value="admin@admin.com">
+                                                    <div class="note-pass">
+                                                            <p class="note-pass-error">メールアドレスを入力して下さい。</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row form-item">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    パスワード
+                                                </label>
+                                                <div class="col col-md-10 pw-current-box form-item-ip form-note">
+                                                    <input readonly type="password" class="form-control" disabled value="***********">
+                                                    <div href="" class="note-pass popup-show">
+                                                        <p class="change-pass show-modal-change-pass" data-toggle="modal" data-target="#exampleModal1">パスワードを変更する</p>
+                                                          <!-- Modal -->
+                                                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                              <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                  <h5 class="modal-title" id="exampleModalLabel">パスワード変更</h5>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-12 input-change-pass">
+                                                                            <div>
+                                                                                <p class="title-password">新いパスワード</p>
+                                                                            </div>
+                                                                            <div class="col form-input">
+                                                                                <div>
+                                                                                    <input  type="password" class="form-control form-control-input border-error"  placeholder="****************">
+                                                                                    <p class="noti-input">新しいパスワードと同じパスワードを入力して下さい</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                        <p class="note-pass-error">新いパスワードが間違っています。</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 input-change-pass">
+                                                                            <div>
+                                                                                <p class="title-password">新いパスワード（確認用）</p>
+                                                                            </div>
+                                                                            <div class="col  form-input">
+                                                                                <div>
+                                                                                    <input  type="password" class="form-control form-control-input border-error"  placeholder="****************" >
+                                                                                    <p class="noti-input">新しいパスワードと同じパスワードを入力して下さい</p>
+                                                                                </div>
+                                                                                <div>
+                                                                                        <p class="note-pass-error">新いパスワード（確認用）が間違っています。</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                  <button type="button" class="btn btn-accept-change btn-primary" class="btn show-popup" data-toggle="modal" data-target="#confirmPass">変更</button>
+                                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="popup-confirm popup-confirm-changepass">
+                                                        <div class="modal modal-confirm-changpass fade" id="confirmPass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                              <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                  <h5 class="modal-title" id="exampleModalLabel">パスワード変更確認</h5>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12 content-change-pass">
+                                                                            <img src="../../../../img/question.svg" alt="">
+                                                                            <p class="title-change-pass">パスワードの変更します。よろしいですか?</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                  <button type="button" data-toggle="modal" data-target="#successConfirmPass" class="btn btn-accept-confirm btn-primary">確認</button>
+                                                                  <button type="button" class="btn btn-cancel-confirm btn-secondary" data-dismiss="modal">キャンセル</button>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+                                                    </div>
+                                                    <div class="popup-success popup-success-changepass">
+                                                        <!-- Modal -->
+                                                        <div class="modal modal-success fade" id="successConfirmPass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                          <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                              <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">パスワード変更完了</h5>
+                                                              </div>
+                                                              <div class="modal-body">
+                                                                  <div class="row">
+                                                                      <div class="col-12 content-change-pass">
+                                                                            <img src="../../../../img/checked.svg" alt="">
+                                                                          <p class="title-change-pass">パスワードの変更が完了しました。</p>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="modal-footer">
+                                                                <button type="button" class="btn btn-ok-changePass btn-primary">確認</button>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                  </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row form-item">
+                                                <label for="" class="col col-md-2 col-form-label label-custom">
+                                                    加盟店
+                                                </label>
+                                                <div class="col col-md-10 form-item-ip form-note form-note-textarea">
+                                                    <div class="form-control list-area-members border-error">
+                                                        <p class="members-item">加盟店A</p>
+                                                        <div class="line-item"></div>
+                                                        <p class="members-item">加盟店B</p>
+                                                        <div class="line-item"></div>
+                                                        <p class="members-item">加盟店C</p>
+                                                        <div class="line-item"></div>
+                                                        <p class="members-item">加盟店D</p>
+                                                        <div class="line-item"></div>
+                                                        <p class="members-item">加盟店E</p>
+                                                        <div class="line-item"></div>
+                                                    </div>
+                                                    <div class="note-pass note-pass-select">
+                                                        <div>
+                                                            <p class="note-pass-error">グループを選択して下さい。</p>
+                                                        </div>
+                                                        <button type="button" class="btn form-select" data-toggle="modal" data-target="#exampleModal">
+                                                            加盟店選択
+                                                          </button>
+
+                                                          <!-- Modal -->
+                                                          <div class="modal modal-select fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                              <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                  <h5 class="modal-title" id="exampleModalLabel">加盟店選択</h5>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12 my_checkbox merchant-list">
+                                                                            <div class="row merchant-select checkbox active  icheck-primary">
+                                                                                <input type="checkbox" checked id="加盟店A" />
+                                                                                <label class="name-merchant-item" for="加盟店A">加盟店A</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox" id="加盟店B" />
+                                                                                <label class="name-merchant-item" for="加盟店B">加盟店B</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox" id="加盟店C" />
+                                                                                <label class="name-merchant-item" for="加盟店C">加盟店C</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox" id="加盟店D" />
+                                                                                <label class="name-merchant-item" for="加盟店D">加盟店D</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店E" />
+                                                                                <label class="name-merchant-item" for="加盟店E">加盟店E</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店F" />
+                                                                                <label class="name-merchant-item" for="加盟店F">加盟店F</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店F" />
+                                                                                <label class="name-merchant-item" for="加盟店F">加盟店F</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店G" />
+                                                                                <label class="name-merchant-item" for="加盟店G">加盟店G</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店H" />
+                                                                                <label class="name-merchant-item" for="加盟店H">加盟店H</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店J" />
+                                                                                <label class="name-merchant-item" for="加盟店J">加盟店J</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox"  id="加盟店K" />
+                                                                                <label class="name-merchant-item" for="加盟店K">加盟店K</label>
+                                                                            </div>
+                                                                            <div class="row merchant-select checkbox icheck-primary">
+                                                                                <input type="checkbox" id="加盟店L" />
+                                                                                <label class="name-merchant-item" for="加盟店L">加盟店L</label>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                  <button type="button" class="btn btn-primary">確認</button>
+                                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row form-item">
+                                                <label for="" class="col col-sm-2 col-form-label label-custom"></label>
+                                                <div class="col col-md-7 button-action">
+                                                    <button
+                                                            type="button"
+                                                            class="btn form-save"
+                                                            > 変更
+                                                    </button>
+                                                    <button
+                                                            type="button"
+                                                            class="btn form-close"
+                                                            > キャンセル
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container content-footer">
+                        <div class="copyright text-center">
+                            <strong
+                                >2023 Copyrights &copy; 2023
+                                <a href="#">epay</a>.</strong
+                            >
+                        </div>
+                        <div class="text-produce">
+                            Produced by <b>E-money Hub Ltd</b>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- End of Footer -->
+            </div>
+            <!-- End of Content Wrapper -->
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="../../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="../../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="../../../js/sb-admin-2.min.js"></script>
+
+        <script>
+            var selectDropdown = document.getElementById("authority-dropdown");
+            var selectedItem = document.getElementById("selected-author");
+            var itemSelect = ["権限 1", "権限 2", "権限 3", "権限 4", "権限 5"];
+            for (var item = 0; item < itemSelect.length; item++) {
+                var option = document.createElement("div");
+                option.innerText = itemSelect[item];
+                option.style.padding = "5px";
+                option.style.cursor = "pointer";
+                option.onclick = function () {
+                    selectedItem.innerText = this.innerText;
+                    selectDropdown.style.display = "none";
+                };
+                selectDropdown.appendChild(option);
+                selectDropdown.style.display = "none";
+            }
+
+            var dropdownBtn = document.getElementById("authority-dropdown-btn");
+            dropdownBtn.onclick = function () {
+                selectDropdown.style.display =
+                    selectDropdown.style.display === "none" ? "block" : "none";
+            };
+        </script>
+        <script>
+            var selectDropdown1 = document.getElementById("status-dropdown");
+            var selectedItem1 = document.getElementById("selected-status");
+            var itemSelect = [
+                "ステータス 1",
+                "ステータス 2",
+                "ステータス 3",
+                "ステータス 4",
+                "ステータス 5",
+            ];
+            for (var item = 0; item < itemSelect.length; item++) {
+                var option = document.createElement("div");
+                option.innerText = itemSelect[item];
+                option.style.padding = "5px";
+                option.style.cursor = "pointer";
+                option.onclick = function () {
+                    selectedItem1.innerText = this.innerText;
+                    selectDropdown1.style.display = "none";
+                };
+                selectDropdown1.appendChild(option);
+                selectDropdown1.style.display = "none";
+            }
+
+            var dropdownBtn = document.getElementById("status-dropdown-btn");
+            dropdownBtn.onclick = function () {
+                selectDropdown1.style.display =
+                    selectDropdown1.style.display === "none" ? "block" : "none";
+            };
+        </script>
+        <script type="text/javascript">
+            let btnChangePass = document.getElementsByClassName('btn-accept-change')
+            let modalInputChangePass = document.getElementById('exampleModal1')
+
+            let btnCancelConfirm = document.getElementsByClassName('btn-cancel-confirm')
+            let modalConfirmChangePass = document.getElementsByClassName('modal-confirm-changpass')
+            let btnAcceptConfirm = document.getElementsByClassName('btn-accept-confirm')
+            let btnOkChangePass = document.getElementsByClassName('btn-ok-changePass')
+            btnChangePass[0].onclick = () => {
+                modalInputChangePass.style.display = 'none';
+                modalInputChangePass.style.opacity  = "0"
+            }
+            btnCancelConfirm[0].onclick = () => {
+                modalInputChangePass.style.display = 'block';
+                modalInputChangePass.style.opacity  = "1"
+            }
+            // modalConfirmChangePass[0].onclick = () => {
+            //     modalInputChangePass.style.display = 'block';
+            //     modalInputChangePass.style.opacity  = "1"
+            // }
+            btnAcceptConfirm[0].onclick = () => {
+                console.log()
+                modalConfirmChangePass.style.display = 'none';
+                modalConfirmChangePass.style.opacity  = "0"
+            }
+            btnOkChangePass[0].onclick = () => {
+                location.reload();
+            }
+    </script>
+    <script src="../../../../main_html/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function () {
+            $("select").selectpicker({ noneSelectedText: "" });
+        });
+    </script>
+    </body>
+</html>

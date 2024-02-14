@@ -1,0 +1,76 @@
+.modal-open{
+    overflow: auto;
+    padding-right:0 !important;
+}
+.popup-success .modal-success.fade .modal-dialog{
+    max-width: 589px;
+}
+.popup-success .modal-header{
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    margin-top: 34px;
+}
+.popup-success .modal-title{
+    font-size: 22px;
+    font-family: 'Noto Sans JP';
+    color: #6A707E;
+}
+.popup-success .modal-body{
+    padding: 40px 74px 0 74px;
+}
+
+.popup-success .content-change-pass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-success .title-change-pass {
+    margin-top: 46px;
+    font-size: 16px;
+    font-family: 'Noto Sans JP';
+    color: #686E7C;
+    margin-bottom: 50px;
+}
+.popup-success .modal-footer{
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    margin-bottom: 40px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.popup-success .fa-question-circle-o {
+    width: 120px;
+    height: 120px;
+    background-color: #607ED5;
+    color: #607ED5;
+}
+.popup-success .btn-primary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 25px;
+}
+.popup-success .btn-secondary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color: #F3F3F3;
+    color: #6A707E;
+    border: none;
+    margin-left: 25px;
+}
+.popup-success button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.show-popup {
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}

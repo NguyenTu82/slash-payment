@@ -1,0 +1,44 @@
+.box-right .box-auth p.desc-page {
+    margin-top: 12px;
+    padding-bottom: 0px;
+}
+.container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.box-right .box-auth .login-card-body {
+    margin-top: 0px;
+    padding-top: 30px;
+}
+.icheck-primary a {
+    color: #4E73DF;
+    white-space: pre;
+}
+
+@media only screen and (max-width: 992px){
+    .container-fluid {
+        padding-top: 89px !important;
+    }
+    .box-right .box-auth .login-card-body {
+        margin-top: 30px;
+        padding: 0 74px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .box-right .box-auth p.desc-page {
+        margin-bottom: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 586px) {
+    .box-right .box-auth .container-fluid {
+        padding-top: 89px !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 589px;
+    }
+}

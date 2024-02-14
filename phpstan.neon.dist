@@ -1,0 +1,47 @@
+includes:
+  - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+  level: 5
+
+  paths:
+    - app
+    - database
+    - routes
+    - tests
+
+  ignoreErrors:
+    - '#PHPDoc tag @var above a method has no effect.#'
+    - '#PHPDoc tag @var does not specify variable name#'
+
+  excludePaths:
+    - ./routes/console.php
+    - app\Form\AdminCustomValidator.php
+    - app\Http\Middleware\Role.php
+    - app\Http\Traits\Permission.php
+    - app\Models\Admins.php
+    - app\Models\Role.php
+    - app\Repositories\BaseRepository.php
+    - app\Models\ScreenPermissionRoles.php
+    - app\Repositories\Eloquent\RoleAdminRepository.php
+    - app\Repositories\Eloquent\UserRepository.php
+    - app\Repositories\RepositoryInterface.php
+    - app\Rules\UserEmailUnique.php
+    - app\Http\Controllers\AdminEpay\Admin\AdminController.php
+    - app\Traits\HasPermissions.php
+    - app\Exports\AdminExport.php
+    - app\Http\Controllers\AdminEpay\Auth\ForgotPasswordController.php
+    - app\Http\Controllers\AdminEpay\Auth\LoginController.php
+    - database/seeders/MerchantUsersTableSeeder.php
+    - app\Services\Merchant\MerchantService.php
+    - app/Helpers/Common.php
+    - app/Repositories/MerchantNotificationRepositoryEloquent.php
+    - app/Http/Controllers/Merchant/AuthController.php
+    - app/Services/Merchant/MerchantStoreService.php
+    - app/Console/Commands/SendNoti.php
+    - app/Http/Controllers/AdminEpay/NotiController.php
+    - app/Services/Epay/NotificationService.php
+    - app/Http/Controllers/AdminEpay/DashboardController.php 
+    - app/Console/Commands/WithdrawEveryMonth.php 
+    - app/Console/Commands/WithdrawEveryWeek.php 
+    - app/Http/Controllers/Merchant/WithdrawController.php  

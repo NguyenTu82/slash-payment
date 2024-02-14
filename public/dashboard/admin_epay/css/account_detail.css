@@ -1,0 +1,172 @@
+.account{
+    width: 100%;
+    align-items: center;
+}
+.list_search{
+    align-items: center;
+}
+.setting_item.active {
+    font-weight: 600;
+    color: #4e73df;
+    border-bottom: 2px solid #4E73DF;
+}
+.content-wrapper-detail {
+    background: #FFFFFF
+}
+textarea:read-only {
+    color: #abafb3;
+    background-color: #f0f0f2 !important
+}
+select:read-only {
+    color: #abafb3;
+    background-color: #f0f0f2 !important
+
+}
+/* .form__edit_account{
+    width: 50%;
+} */
+.form-control{
+    border-radius: unset;
+    width: 500px;
+}
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: 'Noto Sans JP';
+}
+.title_edit_account{
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    margin: 20px 0;
+}
+.select_form{
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 0 1em;
+    color: #000;
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+.select_info {
+    position: relative;
+    display: flex;
+    width: 500px;
+}
+.account__id input{
+    width: 23%;
+}
+.button-action{
+    margin-top: 20px;
+    display: flex;
+}
+.password-input{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.note-pass{
+    text-decoration:underline;
+}
+.btn-edit-cancel{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.form-save{
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+}
+.form-select{
+    margin-left: 20px;
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+}
+
+.btn-delete{
+    color: #FFFFFF;
+    background-color: #FF5274;
+    margin-left: 50px;
+}
+.action_search{
+    margin-top: 30px;
+}
+@media only screen and (max-width: 1500px) {
+    .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+
+}
+@media only screen and (max-width: 1200px) {
+    button{
+        width: 100px;
+        height: 40px;
+        padding: 10px 0;
+        border-radius: none;
+    }
+    .form-close{
+        margin-left: 80px;
+    }
+    .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .password-input{
+        width: 300px;
+    }
+    .form-control{
+        width: 300px;
+    }
+    .select_info {
+        width: 300px;
+    }
+    .form-group label {
+        font-size: 14px !important;
+        font-weight: 500;
+        font-family: 'Noto Sans JP';
+    }
+    .note-pass{
+        font-size: 12px;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .form-note {
+        flex-wrap: wrap;
+    }
+    .note-pass{
+        margin-top: 10px;
+    }
+    .button-action button{
+        font-size: 10px !important;
+    }
+    .btn-edit-cancel{
+        width: 300px;
+    }
+    .button-action{
+        flex-wrap: wrap;
+    }
+    .btn-delete {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+}
+
+

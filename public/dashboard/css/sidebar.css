@@ -1,0 +1,121 @@
+.collapse-item {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-align: right;
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.collapsed{
+    margin-right: 10px;
+    width: 320px !important;
+}
+
+.os-content .nav-item .nav-link{
+    width: 320px !important;
+}
+
+.os-padding {
+    background-color: rgb(78,115,223);
+    width: 320px !important;
+}
+
+.collapse-item:hover{
+    background-color: rgba(255,255,255,0.5) !important;
+    padding: 10px;
+}
+
+.nav-item-logout .nav-link{
+    width: 140px;
+}
+
+.nav-item-logout .btn{
+    text-align: center;
+    width: 140px;
+}
+
+.nav-link img{
+    width: 30px;
+    max-width: 30px;
+}
+
+.sidebar-brand{
+    background-color: white;
+    align-items: center !important;
+    height: 70px;
+}
+
+.main-sidebar .os-content{
+    width: 320px !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+
+.main-sidebar .os-viewport{
+    width: 320px !important;
+    background-color: rgb(78,115,223) !important;
+}
+
+.main-sidebar .os-padding{
+    width: 320px !important;
+    background-color: rgb(78,115,223) !important;
+}
+
+
+.main-sidebar {
+    width: 320px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+
+.main-sidebar .os-content-glue{
+    width: 320px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+.main-sidebar .os-resize-observer{
+    width: 320px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+.main-sidebar .os-resize-observer::before{
+    width: 320px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+.main-sidebar .os-resize-observer-host{
+    width: 320px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+.main-sidebar .sidebar{
+    width: 320px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(78,115,223) !important;
+}
+
+/*content-wrapper*/
+.content-wrapper{
+    height: auto !important;
+    padding-bottom: 20px;
+}
+
+.elevation-4{
+    width: 320px;
+}
+
+.elevation-4 .nav-item .nav-link img {
+    height: 20px;
+    padding-right: 10px;
+}
+
+.elevation-4 .sidebar-brand img {
+    height:70px
+}

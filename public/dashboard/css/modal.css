@@ -1,0 +1,165 @@
+
+/*commal modal*/
+.common-modal {
+    background: transparent;
+}
+
+.common-modal .modal-content {
+    border: none;
+}
+
+.common-modal .modal-body {
+    max-width: 589px;
+    background: #FFFFFF;
+    padding: 50px 74px;
+    border: 1px solid #DDDFE1;
+    border-radius: 5px;
+}
+.common-modal .modal-dialog {
+    max-width: 589px;
+}
+.modal-select .modal-dialog {
+    max-width: 800px;
+}
+
+.common-modal .card-body {
+    padding: 0;
+}
+
+.common-modal .modal-body .btn-confirm {
+    text-align: center;
+}
+
+.common-modal .modal-body .btn-confirm .btn-yes {
+    width: 150px;
+    height: 48px;
+    border-radius: 3px;
+    background: #4e73df;
+    font-weight: normal;
+    font-size: 18px !important;
+    text-align: center;
+    color: #fff;
+    border-color: unset !important;
+}
+
+.common-modal .modal-body .btn-confirm .btn-no {
+    margin-left: 50px;
+    width: 150px;
+    height: 48px;
+    background: #f3f3f3;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #6a707e;
+    border: none;
+}
+
+.common-modal .modal-body .btn-confirm .btn-reject {
+    width: 150px;
+    height: 48px;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    color: #FFFFFF;
+    background-color: #F6C23E;
+}
+
+
+/*commal modal confirm */
+.common-modal-confirm .modal-body .title {
+    font-weight: 500;
+    font-size: 22px;
+    color: #6a707e;
+    margin: 0px;
+    text-align: center;
+}
+
+.common-modal-confirm .modal-body .icon {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.common-modal-confirm .modal-body .desc {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+    color: #686e7c;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/*commal modal form */
+.common-modal-form .modal-body .title {
+    font-weight: normal;
+    font-size: 22px;
+    color: #6a707e;
+    font-size: 22px !important;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.common-modal-form .modal-body .btn-confirm {
+    margin-top: 50px;
+}
+
+/*commal modal selectbox */
+.common-modal.common-modal-selectbox .modal-body {
+    width: 800px;
+    height: 800px;
+    padding: 50px 40px 0px 50px;
+    border: 1px solid #DDDFE1;
+}
+
+.common-modal-selectbox .modal-body .title {
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    color: #6a707e;
+    margin-bottom: 50px;
+}
+
+.common-modal-selectbox .list-select {
+    height: 529px;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+    border: 1px solid red;
+    /* margin-left: 15px; */
+    border: 1px solid #dddfe1;
+}
+
+.common-modal-selectbox .list-select .list-item{padding-left: 40px;}
+
+.common-modal-selectbox .list-select .list-item input{
+    width: 22px;
+    height: 22px;
+    background: rgba(106, 112, 126, 0);
+    border: 1px solid #dddfe1;
+}
+
+.common-modal-selectbox .list-select .list-item label{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    color: #6f7582;
+    margin-top: 5px;
+    margin-left: 18px;
+}
+.common-modal-selectbox .list-select .list-item.selected{
+    background: rgb(96 126 213 / 10%);
+}
+
+.common-modal.common-modal-selectbox .btn-yes {
+    margin-right: 145px;
+}
+@media only screen and (max-width: 576px) {
+    .common-modal .modal-body .btn-confirm .btn-no{
+        margin-left: 0;
+    }
+    .common-modal .modalFooter button {
+        margin-top: 15px;
+    }
+}

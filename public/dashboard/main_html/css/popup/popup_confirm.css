@@ -1,0 +1,96 @@
+.modal-open{
+    overflow: auto;
+    padding-right:0 !important;
+}
+.popup-confirm .modal-popup-confirm.fade .modal-dialog{
+    max-width: 589px;
+}
+.popup-confirm .modal-header{
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    margin-top: 34px;
+}
+.popup-confirm .modal-title{
+    font-size: 22px;
+    font-family: 'Noto Sans JP';
+    color: #6A707E;
+}
+.popup-confirm .modal-body{
+    padding: 40px 74px 0 74px;
+}
+
+.popup-confirm .content-change-pass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-confirm .title-change-pass {
+    margin-top: 46px;
+    font-size: 16px;
+    font-family: 'Noto Sans JP';
+    color: #686E7C;
+    margin-bottom: 50px;
+}
+.popup-confirm .modal-footer{
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    margin-bottom: 40px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.popup-confirm .fa-question-circle-o {
+    width: 120px;
+    height: 120px;
+    background-color: #607ED5;
+    color: #607ED5;
+}
+.popup-confirm .btn-primary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 25px;
+}
+.popup-confirm .btn-secondary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color: #F3F3F3;
+    color: #6A707E;
+    border: none;
+    margin-left: 25px;
+}
+.popup-confirm .btn-delete{
+    font-size: 18px;
+    background-color:#FD5274;
+    color: #FFFFFF;
+    border: none;
+    margin: 0 ;
+    padding: 0;
+    margin-right: 28px;
+}
+.popup-confirm button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.show-popup {
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+@media only screen and (max-width: 576px) {
+    .popup-confirm .btn-delete {
+        margin-right: 0;
+    }
+    .popup-confirm .btn-secondary {
+        margin-left: 0;
+    }
+    .popup-confirm .modal-footer {
+        justify-content: space-around;
+    }
+}

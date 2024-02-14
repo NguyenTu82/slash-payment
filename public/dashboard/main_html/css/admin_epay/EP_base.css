@@ -1,0 +1,351 @@
+#content {
+    background-color: #FFFFFF;
+}
+.modal.modal-popup-DataForm{
+    width: calc(100% - 320px) !important;
+    left: auto;
+    right: 0 !important;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 70px;
+}
+.sidebar-toggled .container-fluid .modal.modal-popup-DataForm{
+    width: calc(100% - 7rem) !important;
+}
+.modal-backdrop {
+    position: static;
+    top: unset;
+    left: unset;
+    z-index: unset;
+    width: unset;
+    height: unset;
+    background-color: unset;
+}
+.modal-open {
+    overflow:  hidden !important;
+}
+/* input date */
+.date-time {
+    max-width: 500px;
+    width: 100%;
+}
+.form-two-col-input {
+    padding-right: 100px;
+}
+.form-two-col-input .col-md-10{
+    flex: 0 0 75% !important;
+    max-width: 75%;
+}
+.form-two-col-input .col-md-2{
+    flex: 0 0 25% !important;
+    max-width: 25%;
+}
+
+/* select css dropdown fomr */
+/* select */
+.select_form {
+    max-width: 500px !important;
+    width: 100% !important;
+    height: 52px !important;
+}
+
+.select_form {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #686E7C;
+}
+
+select::-ms-expand {
+    display: none;
+}
+.payment_information {
+    color: #464A53;
+    font-size: 16px;
+}
+.form-edit-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mg-top-first-form {
+    margin-top: 25px !important;
+}
+.form-control-w200 {
+    max-width: 200px !important;
+    width: 200px !important;
+}
+.form-control-w311 {
+    max-width: 311px !important;
+    width: 311px !important;
+}
+.form-control-w62 {
+    max-width: 62px !important;
+}
+.form-control-w94 {
+    max-width: 94px !important;
+}
+.form-control-w128 {
+    max-width: 128px !important;
+}
+.form-control-w293 {
+    max-width: 293px !important;
+    width: 293px !important;
+}
+.form-input-mini {
+    display: flex;
+    align-items: center;
+}
+.form-input-mini label {
+    margin-left: 36px;
+    margin-right: 16px;
+}
+.list-data-transaction-amount {
+    align-items: start !important;
+    display: flex;
+}
+.title-list-data {
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+/* form-two-input-withdraw */
+.form-two-input-withdraw {
+    max-width: 500px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.form-two-input-withdraw-list .form-two-input-withdraw {
+    margin-top: 15px;
+}
+.form-two-input-withdraw-list .form-two-input-withdraw:first-child {
+    margin-top: 0;
+}
+.form-input-mini-item {
+    display: flex;
+    align-items: center;
+}
+.form-input-mini-item label{
+    margin-left: 0px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    padding: 0px;
+    width: 100%;
+    text-align: right;
+}
+/* payment_information" */
+.form-input-payment-info {
+    width: calc(100% - 311px);
+    justify-content: space-between;
+}
+.form-input-mini-item.form-input-payment-info label{
+    margin-left: 16px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0;
+    padding: 0px;
+    width: 100%;
+    text-align: left;
+}
+/*  */
+.title-detail-noti{
+    padding-top: 26px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #464A53;
+}
+.noti-detai-member-store{
+    margin-top: 36px !important;
+}
+
+.noti-content-detail {
+    align-items: start !important;
+}
+.noti-content-title {
+    margin-top: 15px;
+}
+.list-area-contents{
+    max-width: 500px !important;
+    width: 100%;
+    height: 92px !important;
+    overflow-y: auto;
+    resize: none;
+    border-radius: unset !important;
+    font-size: 16px !important;
+    color: #686e7c;
+}
+.form-detail .form-control-Wmini {
+    padding: 15px 10px 15px 10px;
+}
+/* form-input-select */
+.form-input-select {
+    display: flex;
+    align-items: end;
+}
+.select_info {
+    max-width: 500px;
+    width: 100%;
+}
+.form-select {
+    width: 150px;
+    height: 48px;
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 15px;
+    padding: 0;
+}
+.btn-w500 {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    gap: 15px 0;
+}
+.button-action {
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.button-action button{
+    margin-left: 5px;
+}
+.btn-delete-detail{
+    margin-left: 20px;
+}
+.form-close{
+    margin-right: 0 ;
+}
+.form .form-group.form-item {
+    gap: 5px;
+}
+.content-item {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #ABAFB3;
+}
+.noti-content-detail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 1850px) {
+    .form-control-w200 {
+        max-width: 200px !important;
+        width: 100% !important;
+    }
+    .form-two-input-withdraw input:nth-child(2n){
+        margin-left: 15px;
+    }
+    .form-two-col-input {
+        padding-right: 0;
+    }
+}
+
+@media  only screen and (max-width: 1550px) { 
+    .form-input-mini-item label {
+        width: 50%;
+    }
+    .form-input-first {
+        width: 40% !important;
+    }
+}
+@media  only screen and (max-width: 1200px) { 
+    .form-select{
+        font-size: 14px !important;
+    }
+    .form-input-first {
+        width: 100% !important;
+    }
+}
+@media  only screen and (max-width: 992px) {
+    .form-input-mini-item label {
+        margin: 0 5px;
+    }
+    .form-control-w311 {
+        max-width: 311px !important;
+        width: 100% !important;
+    }
+    .form-control-w293 {
+        max-width: 293px !important;
+        width: 100% !important;
+    }
+    .form-input-payment-info {
+        width: 100%;
+    }
+    .btn-w500 { 
+        width: auto;
+    }
+
+}
+@media  only screen and (max-width: 768px){
+    .modal.modal-popup-DataForm {
+        top: 0 !important;
+        width: 100% !important;
+    }
+    .sidebar-toggled .container-fluid .modal.modal-popup-DataForm {
+        width: 100% !important;
+    }
+    .form-input-mini label {
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    form .form-group.form-item {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-detail .label-custom {
+        margin-bottom: 10px !important;
+    }
+    .form-input-select {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .form-select {
+        margin-left: 0 ;
+    }
+    .form-input-mini-item label {
+        margin: 0 5px;
+    }
+
+}
+@media only screen and (max-width: 520px) {
+    .form-input-mini {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-input-mini label {
+        margin-left: 0;
+    }
+    .form-two-input-withdraw {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-input-mini-item {
+        flex-direction: column;
+        align-items: start;
+        margin-top: 15px;
+    }
+    .form-input-mini-item label {
+        text-align: left;
+        margin: 0;
+    }
+    .form-input-mini-item.form-input-payment-info label{
+        margin-left: 0px !important;
+    }
+    .form-two-input-withdraw input:nth-child(2n){
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}

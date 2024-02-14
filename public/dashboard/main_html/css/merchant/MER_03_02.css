@@ -1,0 +1,194 @@
+#content {
+    background-color: #FFFFFF;
+}
+
+.form-control-w200 {
+    max-width: 200px !important;
+    width: 200px !important;
+}
+.form-control-w128 {
+    max-width: 128px !important;
+}
+.form-input-mini {
+    display: flex;
+    align-items: center;
+}
+.form-input-mini label {
+    margin-left: 36px;
+    margin-right: 16px;
+}
+/* form-two-input-withdraw */
+.form-two-input-withdraw {
+    max-width: 500px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 12px;
+}
+.form-input-mini-item {
+    display: flex;
+    align-items: center;
+}
+.form-input-mini-item label{
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 0;
+    padding: 0px;
+    width: 100%;
+    text-align: right;
+}
+
+.title-detail-noti{
+    padding-top: 26px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #464A53;
+}
+.noti-detai-member-store{
+    margin-top: 36px !important;
+}
+
+.noti-content-detail {
+    align-items: start !important;
+}
+.noti-content-title {
+    margin-top: 15px;
+}
+.list-area-contents{
+    max-width: 850px !important;
+    width: 100%;
+    height: 272px !important;
+    overflow-y: auto;
+    resize: none;
+    border-radius: unset !important;
+    font-size: 16px !important;
+    color: #686e7c;
+}
+
+/* form-input-select */
+.form-input-select {
+    display: flex;
+    align-items: end;
+}
+.form-select {
+    width: 150px;
+    height: 48px;
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 15px;
+    padding: 0;
+}
+.btn-w500 {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.button-action {
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.button-action button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+    font-size: 18px;
+}
+.btn-delete-detail{
+    color: #FFFFFF;
+    background-color: #FF5274;
+    margin-left: 20px;
+}
+.form-close{
+    margin-right: 0 ;
+    margin-left: 20px;
+}
+.form .form-group.form-item {
+    gap: 5px;
+}
+.content-item {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #ABAFB3;
+}
+.noti-content-detail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+@media  only screen and (max-width: 1200px) { 
+    .form-select{
+        font-size: 14px !important;
+    }
+}
+@media  only screen and (max-width: 992px) {
+    .form-input-mini-item label {
+        margin: 0 5px;
+    }
+    .form-control-w200 {
+        max-width: 200px !important;
+        width: 100% !important;
+    }
+
+    .btn-w500 { 
+        width: auto;
+    }
+
+}
+@media  only screen and (max-width: 768px){
+    .form-input-mini label {
+        margin-left: 5px;
+    }
+    .button-action button{
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    form .form-group.form-item {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-detail .label-custom {
+        margin-bottom: 10px;
+    }
+    .form-input-select {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .form-select {
+        margin-left: 0 ;
+    }
+    .form-input-mini-item label {
+        margin: 0 5px;
+    }
+
+}
+@media only screen and (max-width: 520px) {
+    .form-input-mini {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-input-mini label {
+        margin-left: 0;
+    }
+    .form-two-input-withdraw {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-input-mini-item {
+        flex-direction: column;
+        align-items: start;
+        margin-top: 15px;
+    }
+    .form-input-mini-item label {
+        text-align: left;
+        margin: 0;
+    }
+}

@@ -1,0 +1,125 @@
+.modal-open{
+    overflow: auto;
+}
+.modal {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.popup-pdf .modal-popup-pdf.fade .modal-dialog{
+    max-width: 1200px;
+    padding-left: 0 !important;
+}
+.popup-pdf .modal-content{
+    margin-bottom: 60px;
+    background-color: #686E7C;
+}
+.popup-pdf .input-header-close  {
+    display: flex;
+    align-items: center;
+}
+.popup-pdf .modal-body{
+    padding: 0;
+}
+.popup-pdf .close{
+    padding-left: 23px;
+    color: #4E73DF;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+}
+.popup-pdf .close .img-cancel {
+    width: 15px;
+    height: 15px;
+}
+
+.popup-pdf .modal-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    padding: 9px 25px 9px 30px;
+    background-color: #EEF5F9;
+}
+.popup-pdf .modal-title{
+    font-size: 22px;
+    font-family: 'Noto Sans JP';
+    color: #6A707E;
+}
+.popup-pdf .modal-body{
+    padding: 15px 20px 0 20px;
+}
+
+.popup-pdf .modal-footer{
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    padding: 0;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.popup-pdf .action-button-footer {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.popup-pdf .fa-question-circle-o {
+    width: 120px;
+    height: 120px;
+    background-color: #607ED5;
+    color: #607ED5;
+}
+.popup-pdf .btn-primary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 25px;
+}
+.popup-pdf .btn-secondary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color: #F3F3F3;
+    color: #6A707E;
+    border: none;
+    margin-left: 25px;
+}
+.popup-pdf .btn-delete{
+    font-size: 18px;
+    background-color:#FD5274;
+    color: #FFFFFF;
+    border: none;
+    margin: 0 ;
+    padding: 0;
+    margin-right: 28px;
+}
+.popup-pdf button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.show-popup {
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+.popup-pdf .img-pdf-show {
+    display: flex;
+    justify-content: center;
+}
+.popup-pdf .img-pdf {
+    max-width: 510px;
+    height: 716px;
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .input-header-close {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

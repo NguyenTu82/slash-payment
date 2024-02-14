@@ -1,0 +1,249 @@
+* {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif !important;
+    }
+.mt-10 {
+    margin-top: 10px !important;
+    }
+    .mt-15 {
+    margin-top: 15px !important;
+    }
+    .mt-20 {
+    margin-top: 20px !important;
+    }
+    .mt-25 {
+    margin-top: 25px !important;
+    }
+    .mt-30 {
+    margin-top: 30px !important;
+    }
+    .mt-50 {
+    margin-top: 50px !important;
+    }
+
+
+    .mb-10 {
+    margin-bottom: 10px !important;
+    }
+    .mb-15 {
+    margin-bottom: 15px !important;
+    }
+    .mb-20 {
+    margin-bottom: 20px !important;
+    }
+    .mb-25 {
+    margin-bottom: 25px !important;
+    }
+    .mb-30 {
+    margin-bottom: 30px !important;
+    }
+    .mb-50 {
+    margin-bottom: 50px !important;
+    }
+
+
+    .ml-10 {
+    margin-left: 10px !important;
+    }
+    .ml-15 {
+    margin-left: 15px !important;
+    }
+    .ml-20 {
+    margin-left: 20px !important;
+    }
+    .ml-25 {
+    margin-left: 25px !important;
+    }
+    .ml-30 {
+    margin-left: 30px !important;
+    }
+    .ml-50 {
+    margin-left: 50px !important;
+    }
+
+    .mr-10 {
+    margin-right: 10px !important;
+    }
+    .mr-15 {
+    margin-right: 15px !important;
+    }
+    .mr-20 {
+    margin-right: 20px !important;
+    }
+    .mr-25 {
+    margin-right: 25px !important;
+    }
+    .mr-30 {
+    margin-right: 30px !important;
+    }
+    .mr-50 {
+    margin-right: 50px !important;
+    }
+    select:disabled, textarea:read-only {
+        background-color: #f0f0f2 !important;
+        }
+.content-header {
+    background-color: #EEF5F9;
+    padding-left: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+.note-pass-error{
+    font-family: 'Noto Sans JP';
+    margin: 0;
+    font-size: 16px;
+    color: #FF5274;
+}
+.border-error {
+    border: 1px solid #FF5274 !important ;
+}
+.content-wrapper {
+    background: #ffffff;
+    height: auto !important;
+    margin-bottom: 20px;
+    /* margin-left: 320px !important; */
+}
+
+.dashboard-wrapper{
+    /* margin-left: 320px; */
+}
+
+.container-title{
+    margin-bottom: 12px;
+}
+
+.container-breadcrumb{
+    margin-top: 3px;
+}
+
+.error{
+    font-size: 80%;
+    color: #e74a3b;
+    /* width: 100%; */
+}
+.bg-primary{
+    width: 243px;
+}
+.color-white{
+    color: #fff;
+}
+
+.bg-light{
+    width: 243px;
+}
+/* .input-group input{
+    border-right: 1px solid #d1d3e2 !important;
+}
+.input-group .is-invalid input{
+    border-right: 1px solid #e74a3b !important;
+} */
+
+
+.main-title-page {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
+    font-size: 22px !important;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    text-align: left;
+    color: #686e7c;
+    margin-left: 30px !important;
+}
+
+.label-custom {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500 !important;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 10px;
+    text-align: left;
+    color: #686e7c;
+}
+
+
+.nav-tabs .nav-item.show .nav-link {
+    color: #495057 !important;
+    background-color: #fff;
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    font-size: 18px;
+    border: none;
+    color: #686E7C;
+}
+
+.nav-tabs .nav-link.active {
+    font-family: "Noto Sans JP";
+    font-weight: 500;
+    text-align: left;
+    color: #4e73df;
+    border-bottom: 2px solid #4E73DF;
+    background-color: #fff;
+}
+
+.nav-link:focus, .nav-link:hover {
+    /* color: #495057 !important; */
+}
+
+input {
+    border-radius: initial !important;
+}
+
+input:read-only {
+    background-color: #f0f0f2 !important;
+    font-family: "Noto Sans JP";
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    line-height: 10px;
+    text-align: left;
+    color: #abafb3;
+}
+
+form .form-group.form-item {
+    margin-bottom: 15px;
+}
+
+.form-group.form-item label{
+    max-width: 180px;
+}
+
+.form-control {
+    background: rgba(106, 112, 126, 0);
+    border: 1px solid #dddfe1;
+    color: #abafb3;
+}
+
+.form-control:focus {
+    /*border-color: #86b7fe;*/
+    /*box-shadow: none;*/
+    box-shadow: 0 0 0 0.05rem rgb(0 123 255 / 60%);
+}
+
+.input-description {
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: #abafb3;
+}
+
+.btn:focus {
+    /*box-shadow: 0 0 0 0.05rem rgb(0 123 255 / 60%);*/
+}
+
+.drop-down .animated--grow-in{
+    left: inherit;
+    right: 0px;
+}
+
+/* .main-footer{
+    margin-left: 320px;
+} */
+
+.main-footer .row .text-center{
+    padding-left: 200px;
+}
+.page-white {
+    padding-left: 35px;
+    margin-left: -20px;
+}
+

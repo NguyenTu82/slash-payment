@@ -1,0 +1,26 @@
+version: 0.2
+
+env:
+  parameter-store:
+    ENV_FILE: $PARA_ENV_FILE
+phases:
+  install:
+    runtime-versions:
+      php: 8.1
+    commands:
+      - apt-get update
+      - apt-get install -y zip unzip
+      - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+      - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+      - php -r "unlink('composer-setup.php');"
+      - rm -rf vendor
+      - composer install --no-progress --no-suggest
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo $ENV_FILE
+      - echo $ENV_FILE | tr " " "\n" > .env
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'

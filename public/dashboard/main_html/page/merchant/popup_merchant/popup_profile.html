@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <title>Base</title>
+
+        <!-- Google Font: Source Sans Pro -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Inter"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=fallback"
+            rel="stylesheet"
+        />
+
+        <!-- Custom fonts for this template-->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        />
+        <link
+            href="vendor/fontawesome-free/css/all.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        />
+        <!-- select boostrap -->
+        <link
+            rel="stylesheet"
+            href="../../../../main_html/css/bootstrap-select.min.css"
+        />
+        <link rel="stylesheet" href="../../../../../css/select.css" />
+
+        <!-- Custom styles for this template-->
+        <link href="../../../css/sb-admin-2.min.css" rel="stylesheet" />
+        <link href="../../../css/common/sidebarr.css" rel="stylesheet" />
+        <link href="../../../css/common/header.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../../css/sb-admin-2.css" />
+        <!-- <link rel="stylesheet" href="./../../../css/common/sidebar.css"> -->
+        <link rel="stylesheet" href="./../../../css/common/custom.css" />
+        <link rel="stylesheet" href="./../../../css/popup/popup_profile.css" />
+    </head>
+
+    <body id="page-top">
+        <!-- Page Wrapper -->
+        <div id="wrapper" class="wrapper">
+            <!-- Sidebar -->
+            <ul
+                class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+                id="accordionSidebar"
+            >
+                <!-- Sidebar - Brand -->
+                <a
+                    class="sidebar-brand link-img-sidebar d-flex align-items-center justify-content-center"
+                    href="#"
+                >
+                    <img
+                        class="img-sidebar"
+                        src="http://dev.crypto-epay.io/dashboard/img/sidebar_logo.svg"
+                    />
+                </a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0" />
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item nav-item-not-drop active">
+                    <div class="nav-hover active">
+                        <a class="nav-link active" href="#">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/dashboard.svg"
+                            />
+                            <span>sidebar.dashboard</span></a
+                        >
+                    </div>
+                </li>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="true"
+                            aria-controls="collapseTwo"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/merchant.svg"
+                            />
+                            <span>sidebar.merchant</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="buttons.html"
+                                >sidebar.merchant_list</a
+                            >
+                            <a class="collapse-item" href="cards.html"
+                                >sidebar.merchant_regis</a
+                            >
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item active">
+                    <div class="nav-hover active">
+                        <a
+                            class="nav-link active collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapseUtilities"
+                            aria-expanded="true"
+                            aria-controls="collapseUtilities"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/AF.svg"
+                            />
+                            <span>sidebar.AF</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapseUtilities"
+                        class="collapse"
+                        aria-labelledby="headingUtilities"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="utilities-color.html"
+                                >sidebar.AF_list</a
+                            >
+                            <a
+                                class="collapse-item"
+                                href="utilities-border.html"
+                                >sidebar.AF_regis</a
+                            >
+                        </div>
+                    </div>
+                </li>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapsePages"
+                            aria-expanded="true"
+                            aria-controls="collapsePages"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/payment.svg"
+                            />
+                            <span>sidebar.payment</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapsePages"
+                        class="collapse"
+                        aria-labelledby="headingPages"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item active" href="login.html"
+                                >sidebar.payment_request</a
+                            >
+                            <a class="collapse-item" href="register.html"
+                                >sidebar.payment_history</a
+                            >
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Nav Item - Charts -->
+                <li class="nav-item nav-item-not-drop">
+                    <div class="nav-hover">
+                        <a class="nav-link notification" href="">
+                            <div class="img-noti">
+                                <img
+                                    src="http://dev.crypto-epay.io/dashboard/img/noti.svg"
+                                    class="notification-sidebar"
+                                />
+                                <div class="icon-dot-noti"></div>
+                            </div>
+                            <span>sidebar.notification</span></a
+                        >
+                    </div>
+                </li>
+
+                <!-- Nav Item - Tables -->
+                <li class="nav-item nav-item-not-drop">
+                    <div class="nav-hover">
+                        <a class="nav-link" href="tables.html">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/setting.svg"
+                            />
+                            <span>sidebar.setting</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <!-- Main Content -->
+                <div id="content">
+                    <!-- Topbar -->
+                    <nav
+                        class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"
+                    >
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button
+                            id="sidebarToggleTop"
+                            class="btn btn-link rounded-circle mr-3"
+                        >
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Search -->
+                        <!-- <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                            <!-- <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li> -->
+
+                            <!-- Nav Item - Language -->
+                            <li class="nav-item dropdown mx-1">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="messagesDropdown"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="19"
+                                        viewBox="0 0 20 19"
+                                    >
+                                        <path
+                                            id="Vector"
+                                            d="M20,1.959V9.141A1.912,1.912,0,0,1,18.065,11.1h-7.1v4.57H6.645L2.581,19V15.67H1.935A1.912,1.912,0,0,1,0,13.711V6.529A1.912,1.912,0,0,1,1.935,4.57H7.742V0H18.065A1.912,1.912,0,0,1,20,1.959ZM8.516,12.993,6.387,7.182H4.839L2.71,12.993H4.258l.387-1.045h2l.323,1.045Zm7.032-5.354a5,5,0,0,0,1.419-3.722L16.9,3.265H14.774V1.959h-1.29V3.265H11.548V4.57h3.871a3.391,3.391,0,0,1-1.226,2.416A3.281,3.281,0,0,1,13.161,5.55H11.806a4.475,4.475,0,0,0,1.161,2.089,4.857,4.857,0,0,1-1.355.2l.065,1.306a6.849,6.849,0,0,0,2.581-.653,5.77,5.77,0,0,0,2.516.653V7.835a4.336,4.336,0,0,1-1.226-.2Z"
+                                            transform="translate(0 0)"
+                                            fill="#64748b"
+                                        />
+                                    </svg>
+                                    <span>&nbsp;日本語</span>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div
+                                    class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="messagesDropdown"
+                                >
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"
+                                    >
+                                        <div>
+                                            <span class="font-weight-bold"
+                                                >日本語</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="#"
+                                    >
+                                        <div>English</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a
+                                    class="nav-link info-user-name"
+                                    href="#"
+                                    id="user-name"
+                                >
+                                    <span>UserName: </span>
+                                    <span class="name-user"
+                                        >Sample Sample
+                                    </span>
+                                    <!-- Counter - Messages -->
+                                </a>
+                            </li>
+                            <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
+                            <li class="nav-item logout">
+                                <a
+                                    class="nav-link"
+                                    href="http://dev.crypto-epay.io/admin-epay/auth/logout"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <button
+                                        type="button"
+                                        class="btn btn-logout btn-outline-primary"
+                                        style="text-align: center"
+                                    >
+                                        ログアウト
+                                    </button>
+                                </a>
+                            </li>
+                            <!-- Nav Item - User Information -->
+                            <!-- <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li> -->
+                        </ul>
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div>
+                        <div class="container-fluid">
+                            <section class="content-header">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h1 class="main-title-page">設定</h1>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- Content Row -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div
+                                        class="account account-list bg-white mt-20"
+                                    >
+                                        <div class="popup-profile">
+                                            <button
+                                                type="button"
+                                                class="btn show-popup"
+                                                data-toggle="modal"
+                                                data-target="#showData"
+                                            >
+                                                加盟店選択
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div
+                                                class="modal modal-popup-profile fade"
+                                                id="showData"
+                                                tabindex="-1"
+                                                aria-labelledby="exampleModalLabel"
+                                                aria-hidden="true"
+                                            >
+                                                <div
+                                                    class="modal-dialog modal-dialog-centered"
+                                                >
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <div class="row m-0">
+                                                                <div
+                                                                    class="col-12 p-0"
+                                                                >
+                                                                    <section
+                                                                        class="content-header"
+                                                                    >
+                                                                        <div
+                                                                            class="row header-input"
+                                                                        >
+                                                                            <div
+                                                                                class="d-flex align-items-center"
+                                                                            >
+                                                                                <h1
+                                                                                    class="main-title-page"
+                                                                                >
+                                                                                    プロフィール画面 > 加盟店詳細情報
+                                                                                </h1>
+                                                                            </div>
+                                                                            <div class="input-header-close"> 
+                                                                                <div class="setting-page-profile page-merchant-store-header">
+                                                                                    <div
+                                                                                        class="form-group form-item form-item-header pl-0 pr-0 mb-0"
+                                                                                    >
+                                                                                        <label
+                                                                                            for=""
+                                                                                            class="text-right col-form-label label-custom"
+                                                                                        >
+                                                                                            総取引金額
+                                                                                        </label>
+                                                                                        <div
+                                                                                            class="form-item-ip form-note"
+                                                                                        >
+                                                                                            <input
+                                                                                                type="text"
+                                                                                                class="form-control form-control-header bg-white"
+                                                                                                value=""
+                                                                                                name="total_transaction_amount_value"
+                                                                                                id="total_transaction_amount"
+                                                                                            />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="form-group form-item form-item-header pl-0 pr-0 mb-0"
+                                                                                    >
+                                                                                        <label
+                                                                                            for=""
+                                                                                            class="text-right col-form-label label-custom"
+                                                                                        >
+                                                                                            支払済残高
+                                                                                        </label>
+                                                                                        <div
+                                                                                            class="form-item-ip form-note"
+                                                                                        >
+                                                                                            <input
+                                                                                                type="text"
+                                                                                                class="form-control form-control-header bg-white"
+                                                                                                value=""
+                                                                                                name="account_balance_value"
+                                                                                                id="account_balance"
+                                                                                            />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="form-group form-item form-item-header pl-0 pr-0 mb-0"
+                                                                                    >
+                                                                                        <label
+                                                                                            for=""
+                                                                                            class="text-right col-form-label label-custom"
+                                                                                        >
+                                                                                            口座残高
+                                                                                        </label>
+                                                                                        <div
+                                                                                            class="form-item-ip form-note"
+                                                                                        >
+                                                                                            <input
+                                                                                                type="text"
+                                                                                                class="form-control form-control-header bg-white"
+                                                                                                value=""
+                                                                                                name="paid_balance_value"
+                                                                                                id="paid_balance"
+                                                                                            />
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close"
+                                                                                >
+                                                                                    <!-- <span
+                                                                                        aria-hidden="true"
+                                                                                        >&times;</span
+                                                                                    > -->
+                                                                                    <img class="img-cancel" src="../../../../../dashboard/img/cancel.svg" />
+                                                                                </button>
+                                                                            </div> 
+                                                                        </div>
+                                                                    </section>
+                                                                    <section id="stepper1" class="content setting-page-profile pt-4" style="padding-left: 0px !important">
+                                                                        <!--step's content-->
+                                                                        <div class="form-container merchant-regist-page ">
+                                                                                <div class="row ml-0">
+                                                                                    <div class="col-lg-6 pl-0 tab-content" style="padding-right: 40px;" id="nav-tabContent">
+                                                                                        <h4 class="title-merchant">加盟店詳細</h4>
+                                                                                        <div class="profile-box">
+                                                                                            <div class="row">
+                                                                                                
+                                                                                                <div class="col-12">
+                                                                                                    <div class="form-group row form-item form-status-id">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            加盟店ID
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-3 form-responsive-two-input form-responsive-mb-15 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control form-control-w200" name="merchant_code" id="name" value="122" disabled >
+                                                                                                        </div>
+                                                                                                        <label for="" class="col-sm-4 col-form-label label-custom text-select-status text-end">
+                                                                                                            ステータス
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-2 form-control-w91 form-item-ip form-note select_search form-select-option-status ">
+                                                                                                            <select class="form-control form-control-w91" id="payment_cycle" disabled name="payment_cycle">
+                                                                                                                <option value="仮登録済"  selected >仮登録済</option>
+                                                                                                            </select>
+                                                                                                            <!-- <input type="text" class="form-control form-control-w91" disabled value="仮登録済"> -->
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            加盟店名*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" name="name" id="name" disabled value="dung" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            サービス名
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="service_name" name="service_name" disabled value=""  required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            業種
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="industry" name="industry" disabled value=""  required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            代表者名
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="representative_name" disabled name="representative_name" value="" required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            住所
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note form-two-infomation">
+                                                                                                            <div class="form-item-ip form-note">
+                                                                                                                <input type="text" class="form-control form-control-w91" name="post_code_id" id="post_code_id" disabled value="" required>
+                                                                                                            </div>
+                                                                                                            <div class="form-item-ip form-note">
+                                                                                                                <input type="text" class="form-control form-control-w399" id="address" name="address" disabled value=""  required>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                    
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            電話番号
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="phone" name="phone" disabled value=""  required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            登録メールアドレス
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="phone" name="phone" disabled value="yourcompany@gmail.com"  required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            パスワード
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="phone" name="phone" disabled value="***********"  required>
+                                                                                                        </div>
+                                                                                                    </div>                                   
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="group" class="col-sm-3 col-form-label label-custom">
+                                                                                                            グループ
+                                                                                                        </label>
+                                                                                                        <div class="col-md-9 form-item-ip form-note ">
+                                                                                                            <div class="form-control list-area-members list-area-members-w500" style="background-color: #f0f0f2 !important;">
+                                                                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom" style="line-height: 16px">
+                                                                                                            コントラクト<br>ウォレット*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip">
+                                                                                                            <input type="text" class="form-control" name="contract_wallet" id="contract_wallet" disabled value="dfghjkl" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom" style="line-height: 16px">
+                                                                                                            受取ウォレット<br>アドレス*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip">
+                                                                                                            <input type="text" class="form-control" name="receiving_walletaddress" id="receiving_walletaddress" disabled value="fghjk" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            受取仮想通貨種類*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip">
+                                                                                                            <!-- <input type="text" class="form-control" disabled value="USDT" > -->
+                                                                                                            <select class="form-control" id="payment_cycle" disabled name="payment_cycle">
+                                                                                                                <option value="USDT"  selected >USDT</option>
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            APIキー*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control" id="api_key" name="api_key" disabled value="dsdfgjhklk"  required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6 pl-0 tab-content tab-content-option" id="nav-tabContent">
+                                                                                        <h4 class="title-merchant"><u>加盟店のその他情報</u></h4>
+                                                                                        <div class="profile-box">
+                                                                                            <div class="row">
+                                                                                                
+                                                                                                <div class="col-12">
+                                                                                                    <div class="form-group row form-item form-switch-input">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            明細送付の有無
+                                                                                                        </label>
+                                                                                                        <div class="form-item-ip form-note">
+                                                                                                            <div class="custom-control custom-switch custom-switch-md">
+                                                                                                                <input type="checkbox" class="custom-control-input" id="sending_detail" name="sending_detail"  ">
+                                                                                                                <label class="custom-control-label" for="sending_detail"></label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <label for="" class="col-form-label label-custom mr-15">
+                                                                                                            発送日設定
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-3 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control form-control-w128" id="ship_date" name="ship_date" disabled value="-0001年11月30日" required>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            発送先住所
+                                                                                                        </label>
+                                                                                                        <div class= "col-sm-9 form-item-ip form-note form-two-infomation">
+                                                                                                            <div class="form-item-ip form-note">
+                                                                                                                <input type="text" class="form-control form-control-w91" id="ship_post_code_id" name="ship_post_code_id" disabled value=""  required>
+                                                                                                            </div>
+                                                                                                            <div class="form-item-ip form-note">
+                                                                                                                <input type="text" class="form-control form-control-w399" id="ship_address" name="ship_address" disabled value="" required>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            配信レポート選択
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <select class="form-control" id="payment_cycle" disabled name="payment_cycle">
+                                                                                                                <option value="Dailyレポート"  selected >Dailyレポート</option>
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom label-h52">
+                                                                                                            配信メールアドレス
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control mb-3" id="delivery_email_address" disabled name="delivery_email_address" value="vuminhhoanganh12@gmail.com"  required>
+                                                                                                            <input type="text" class="form-control mb-3" id="delivery_email_address2" disabled name="delivery_email_address2" value="" >
+                                                                                                            <input type="text" class="form-control" id="delivery_email_address3" disabled name="delivery_email_address3" value="" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            ご案内メール
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <div class="custom-control custom-switch custom-switch-md">
+                                                                                                                <input type="checkbox" class="custom-control-input" id="guidance_email" name="guidance_email">
+                                                                                                                <label class="custom-control-label" for="guidance_email"></label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <h4 class="title-merchant"><u>契約や支払い情報</u></h4>
+                                                                                        <div class="profile-box">
+                                                                                            <div class="row">
+                                                                                                
+                                                                                                <div class="col-12">
+                                                                                                    <div class="form-group row form-item form-group-two-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            契約日*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-3 form-item-ip form-note form-responsive-two-input  form-responsive-mb-15 form-control-date-w191">
+                                                                                                            <div class="input-group date form-control-date-w191" >
+                                                                                                                <input type="text" class="form-control" name="contract_date" disabled id="contract_date" value="2023年06月26日" "/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <!-- <label for="" class="col-sm-1 form-item-ip form-note">
+                                                                                                        </label> -->
+                                                                                                        <label for="" class="col-sm-2 col-form-label label-custom text-end col-form-label-date">
+                                                                                                            解約日
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-3 form-item-ip form-note form-control-date-w191">
+                                                                                                            <div class="input-group date form-control-date-w191" >
+                                                                                                                <input type="text" class="form-control" disabled name="termination_date" id="termination_date" value="-0001年11月30日" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item form-group-two-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            契約利率
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-3 form-responsive-two-input form-responsive-mb-15 form-item-ip form-note">
+                                                                                                            <input type="text" class="form-control form-control-date-w191" id="contract_interest_rate" disabled name="contract_interest_rate" value="" >
+                                                                                                        </div>
+                                                                                                        <!-- <label for="" class="col-sm-1 form-item-ip form-note"> -->
+                                                                                                        </label>
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom text-end  pr-24 ">
+                                                                                                            支払いサイクル
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-2 form-item-ip form-note">
+                                                                                                            <!-- <input type="text" class="form-control form-control-w128" disabled value="週末払い"> -->
+                                                                                                            <select class="form-control form-control-w128" id="payment_cycle" disabled name="payment_cycle">
+                                                                                                                <option value="1"  selected >週末払い</option>
+                                                                                                                <option value="2" >月末払い</option>
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                    
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            支払い方法*
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note merchant-select-input">
+                                                                                                            <!-- <input type="text" class="form-control form-control-w311" disabled value="銀行振込"> -->
+                                                                                                            <select class="form-control form-control-w311" id="payment_cycle" disabled name="payment_cycle">
+                                                                                                                <option value="1"  selected >週末払い</option>
+                                                                                                                <option value="2" >月末払い</option>
+                                                                                                            </select>
+                                                                                                            <button class="btn form-save btn-primary btn-show_payment_modal" id="show_payment_modal">支払い先情報表示</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <h4 class="title-merchant"><u>AF情報</u></h4>
+                                                                                        <div class="profile-box">
+                                                                                            <div class="row">
+                                                                                                
+                                                                                                <div class="col-12">
+                                                                                                    <div class="form-group row form-item">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                        アフィリエイト情報
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <div class="custom-control custom-switch custom-switch-md">
+                                                                                                                <input type="checkbox" class="custom-control-input" name="afSwitch" id="afSwitch">
+                                                                                                                <label class="custom-control-label" for="afSwitch"></label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                    <div class="form-group row form-item form-group-two-item-input">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            アフィリエイトID
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" disabled class="form-control form-control-w200" id="af_name" name="af_name" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                    <div class="form-group row form-item form-group-two-item-input">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            アフィリエイト名
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" disabled class="form-control" id="af_name" name="af_name" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                    <div class="form-group row form-item form-group-two-item-input">
+                                                                                                        <label for="" class="col-sm-3 col-form-label label-custom">
+                                                                                                            アフィリエイトの手数料
+                                                                                                        </label>
+                                                                                                        <div class="col-sm-9 form-item-ip form-note">
+                                                                                                            <input type="text" disabled class="form-control" id="af_name" name="af_name" >
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                        </div>
+                                                                    </section>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container content-footer">
+                        <div class="copyright text-center">
+                            <strong
+                                >2023 Copyrights &copy; 2023
+                                <a href="#">epay</a></strong
+                            >
+                        </div>
+                        <div class="text-produce">
+                            Produced by E-money Hub Ltd
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- End of Footer -->
+            </div>
+            <!-- End of Content Wrapper -->
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <!-- <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a> -->
+
+        <!-- Logout Modal-->
+        <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="../../../vendor/jquery/jquery.min.js"></script>
+        <script src="../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="../../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="../../../js/sb-admin-2.min.js"></script>
+        <script src="http://dev.crypto-epay.io/js/common.js"></script>
+        <!-- select-boostrap-js -->
+        <script src="../../../../main_html/js/bootstrap-select.min.js"></script>
+        <script>
+            $(function () {
+                $("select").selectpicker({ noneSelectedText: "" });
+            });
+        </script>
+        <script>
+            var selectDropdown = document.getElementById("authority-dropdown");
+            var selectedItem = document.getElementById("selected-author");
+            var itemSelect = ["権限 1", "権限 2", "権限 3", "権限 4", "権限 5"];
+            for (var item = 0; item < itemSelect.length; item++) {
+                var option = document.createElement("div");
+                option.innerText = itemSelect[item];
+                option.style.padding = "5px";
+                option.style.cursor = "pointer";
+                option.onclick = function () {
+                    selectedItem.innerText = this.innerText;
+                    selectDropdown.style.display = "none";
+                };
+                selectDropdown.appendChild(option);
+                selectDropdown.style.display = "none";
+            }
+
+            var dropdownBtn = document.getElementById("authority-dropdown-btn");
+            dropdownBtn.onclick = function () {
+                selectDropdown.style.display =
+                    selectDropdown.style.display === "none" ? "block" : "none";
+            };
+        </script>
+        <script>
+            var selectDropdown1 = document.getElementById("status-dropdown");
+            var selectedItem1 = document.getElementById("selected-status");
+            var itemSelect = [
+                "ステータス 1",
+                "ステータス 2",
+                "ステータス 3",
+                "ステータス 4",
+                "ステータス 5",
+            ];
+            for (var item = 0; item < itemSelect.length; item++) {
+                var option = document.createElement("div");
+                option.innerText = itemSelect[item];
+                option.style.padding = "5px";
+                option.style.cursor = "pointer";
+                option.onclick = function () {
+                    selectedItem1.innerText = this.innerText;
+                    selectDropdown1.style.display = "none";
+                };
+                selectDropdown1.appendChild(option);
+                selectDropdown1.style.display = "none";
+            }
+
+            var dropdownBtn = document.getElementById("status-dropdown-btn");
+            dropdownBtn.onclick = function () {
+                selectDropdown1.style.display =
+                    selectDropdown1.style.display === "none" ? "block" : "none";
+            };
+        </script>
+    </body>
+</html>

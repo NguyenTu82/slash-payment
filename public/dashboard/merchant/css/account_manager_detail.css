@@ -1,0 +1,308 @@
+.account{
+    width: 100%;
+    align-items: center;
+    margin-left: -2px;
+}
+/*form .form-group.form-item label {*/
+/*    max-width: none !important;*/
+/*}*/
+.btn-delete-account{
+    color: #FFFFFF;
+    background-color: #FF5274;
+    margin-left: 87px;
+}
+.nav-link {
+    display: block;
+    padding: 10px 30px;
+}
+
+.list_search{
+    align-items: center;
+}
+.setting_item.active {
+    font-weight: 600;
+    color: #4e73df;
+    border-bottom: 2px solid #4E73DF;
+}
+.content-wrapper {
+    background: #FFFFFF
+}
+.form__edit_account .form-control{
+    border-radius: unset;
+    width: 500px;
+    height: 52px;
+}
+.form-area-remarks{
+    height: 92px !important;
+    resize: none;
+}
+.list-area-members{
+    height: 151px !important;
+    resize: none;
+}
+
+.list-area-members-disabled{
+    background-color: #f0f0f2;
+}
+
+/* .list-area-members:read-only{
+    color: #abafb3;
+    background-color: #f0f0f2 !important
+} */
+.form-group{
+    margin-bottom: 15px;
+    align-items: center;
+}
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+}
+.title_edit_account{
+    font-size: 22px;
+    font-weight: 500;
+    color: #464A53;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.select_form{
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 0 1em;
+    color: #ABAFB3;
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+.select_info {
+    position: relative;
+    display: flex;
+    width: 500px;
+}
+.account__id input{
+    width: 200px;
+}
+.button-action{
+    margin-top: 20px;
+    display: flex;
+}
+.password-input{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.password-input p {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    color: #4E73DF;
+    opacity: 1;
+}
+.note-pass{
+    margin-top: 4px;
+    text-decoration:underline;
+}
+.btn-edit-cancel{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.form-save{
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+}
+.form-select{
+    margin-left: 20px;
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+}
+.action_search{
+    margin-top: 30px;
+}
+.modal-open{
+    overflow: auto;
+    padding-right:0 !important;
+}
+.popup-show .modal.fade .modal-dialog{
+    max-width: 589px;
+}
+/* .popup-show .modal-content {
+    margin-top: 40px;
+    max-width: 800px;
+    width: 100%;
+} */
+
+.popup-show .modal-header{
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    margin-top: 36px;
+}
+.popup-show .modal-title{
+    font-size: 22px;
+    color: #6A707E;
+}
+.popup-show .modal-body{
+    padding: 46px 74px 0 74px;
+}
+.popup-show .title-password {
+    margin: 0;
+    font-size: 16px;
+    color: #686E7C;
+}
+.popup-show .noti-input{
+    font-size: 12px;
+    color: #ABAFB3;
+    margin-bottom: 30px;
+
+}
+.popup-show .form-control-input {
+    max-width: 441px;
+    width: 100%;
+    height: 52px;
+}
+.popup-show .form-input{
+    padding: 0;
+}
+.popup-show .input-change-pass {
+    /* margin-bottom: 30px; */
+}
+.popup-show .note-pass-error {
+    /* color: #FF5274;
+    font-size: 16px; */
+    margin-top: -30px;
+    /* margin-bottom: 0; */
+}
+.popup-show .modal-footer{
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    margin-bottom: 40px;
+    padding: 0;
+    margin-top: 34px;
+    margin-bottom: 50px;
+}
+.popup-show .btn-primary{
+    font-size: 18px;
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 25px;
+}
+.popup-show .btn-secondary{
+    font-size: 18px;
+    background-color: #F3F3F3;
+    color: #6A707E;
+    border: none;
+    margin-left: 25px;
+}
+.popup-show button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.show-popup {
+    font-size: 18px;
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+.show-modal-change-pass {
+    cursor: pointer;
+}
+.popup-confirm .modal-popup-confirm.fade .modal-dialog{
+    max-width: 589px;
+    padding-right: 0 !important;
+}
+
+.popup-success .modal-header{
+    margin-top: 42px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .form-item-ip{
+        margin-left: 0;
+    }
+    .button-action{
+        margin-left: 0;
+
+    }
+    .form-group label {
+        line-height: 1.5;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    button{
+        width: 100px;
+        height: 40px;
+        padding: 10px 0;
+        border-radius: none;
+    }
+    .form-close{
+        margin-left: 80px;
+    }
+    .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .password-input{
+        width: 300px;
+    }
+    .form-control{
+        width: 300px;
+    }
+    .select_info {
+        width: 300px;
+    }
+    .form-group label {
+        font-size: 14px !important;
+        font-weight: 500;
+    }
+    .note-pass{
+        font-size: 12px;
+    }
+    .note-pass-error {
+        font-size: 12px;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .form-note {
+        flex-wrap: wrap;
+    }
+    .note-pass{
+        margin-top: 10px;
+    }
+    .button-action button{
+        font-size: 10px !important;
+    }
+    .btn-edit-cancel{
+        width: 300px;
+    }
+    .button-action{
+        flex-wrap: wrap;
+    }
+    .btn-delete {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+}
+
+

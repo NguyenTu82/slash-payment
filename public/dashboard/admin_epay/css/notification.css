@@ -1,0 +1,329 @@
+/*select stores*/
+.selectStoresButton{
+  position: relative;
+  align-items: end;
+  display: flex;
+}
+
+.hideSelectMerchant {
+  display: none;
+}
+
+/*text box with toolbar*/
+.form-group .ql-container {
+  width: 850px;
+  height: 281px;
+  overflow: auto;
+  color: black;
+}
+
+.nowOrLater {
+  width: 65px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-right: 15px;
+  width: 73px;
+  height: 38px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 38px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 32px;
+  width: 32px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgba(78, 115, 223);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(34px);
+}
+
+.datetimeSend {
+  width: 300px !important;
+  height: 52px;
+  border: 1px solid #dddfe1;
+  margin-left: 47px;
+  line-height: 52px !important;
+}
+
+.change-text {
+  margin-right: 47px;
+  font-size: 16;
+}
+
+/* merchant select*/
+.btn-merchantSelect {
+  background-color: #4e73df;
+  color: white;
+  width: 150px;
+  height: 48px;
+}
+
+/*button back*/
+.btn-back{
+  background-color: rgb(243,243,243);
+  color: rgb(106, 112, 126);
+  height: 48px;
+  width: 150px;
+  margin-left: 40px;
+}
+
+/*From setting.css*/
+.modal-content {
+  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  -o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  box-shadow: 0 5px 15px rgba(0,0,0,0);
+}
+
+.notification-page {
+  background-color: #FFFFFF;
+}
+
+.notification-page button, .notification-page textarea, .notification-page select {
+  border-radius: 3px;
+}
+
+.notification-page nav {
+  margin-bottom: 25px;
+}
+
+.notification-page .tab-content-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #464A53;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/*.setting-page .pw-current-box {*/
+/*    max-width: 400px;*/
+/*}*/
+
+.notification-page .change-pw-box {
+  margin-left: 20px;
+  margin-top: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.notification-page .change-pw-box a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4E73DF;
+}
+
+.notification-page .change-store-box {
+  margin-left: 10px;
+  position: relative;
+}
+
+.notification-page .change-store-box button {
+  position: absolute;
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 18px;
+  width: 150px;
+  height: 48px;
+  background: #4e73df;
+  text-align: center;
+}
+
+.notification-page .download-qr-btn {
+  color: #FFFFFF;
+  font-size: 18px;
+  width: 155px;
+  height: 48px;
+  background: #4e73df;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.notification-page .download-qr-btn span{
+  margin-left: 5px;
+}
+
+
+.notification-page .form-item .label-custom {
+  line-height: 52px;
+}
+
+.notification-page .profile-box .form-item-ip {
+  /*width: 470px;*/
+  /*padding-right: 0px;*/
+  padding: 0px;
+  flex-basis: 500px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.notification-page .form-save {
+  color: #FFFFFF;
+  font-size: 18px;
+  width: 150px;
+  height: 48px;
+  background: #4e73df;
+  text-align: center;
+  margin-right: 160px;
+}
+
+.snotification-page .form-close {
+  width: 150px;
+  height: 48px;
+  background: #f3f3f3;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #6a707e;
+}
+
+.notification-page .form-control {
+  height: 52px;
+  background: rgba(106, 112, 126, 0);
+  border: 1px solid #dddfe1;
+  color: #abafb3;
+  margin-bottom: 0px;
+}
+
+.notification-page textarea {
+  min-height: 100px;
+}
+
+.notification-page .profile-box {
+}
+
+.notification-page .profile-box .custom-error-box {
+  width: auto;
+  line-height: 55px;
+}
+
+.notification-page .account-box {
+  /*css here*/
+}
+
+.notification-page .fee-box {
+  /*css here*/
+}
+
+
+.acc-content {
+  background-color: #EAEAEA;
+  padding: 0px !important;
+}
+
+.content-wrapper-setting {
+  /* background-color: #464A53 !important; */
+  margin-left: 0px !important;
+}
+
+.nav-tabs {
+  height: 45px;
+}
+.nav-link {
+  padding: 9px 15px;
+  /* height: 26px; */
+  margin: 0px !important;
+  border: 0px;
+}
+.card-body{
+  padding: 0px !important;
+}
+
+.card {
+  margin: 15px;
+}
+
+.create-account {
+  padding: 17px 19px;
+  /* margin: 0px 30px 15px 30px; */
+  margin-bottom: 0px;
+}
+
+.content-block {
+  /* margin: 0px 30px 15px 30px; */
+}
+
+.search-item {
+  padding: 20px 20px 20px 20px;
+  margin: 0px !important;
+  height: auto;
+  font-size: 18px;
+}
+
+.input-name {
+  width: 252px;
+  height: 40px;
+}
+.input-status {
+  width: 225px;
+  height: 40px;
+}
+.input-permission {
+  width: 225px;
+  height: 40px;
+}
+.create-btn{
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.search-btn {
+  /* width: 100px !important; */
+  height: 40px !important;
+
+  /* position: absolute; */
+  /* bottom: 0; */
+  display: inline-block;
+  /* width: auto; */
+  width: 100px;
+  margin-right: 10px;
+  margin-top: 9px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 1200px) {
+  .setting-page .form-save {
+      margin-right: 20px;
+  }
+}

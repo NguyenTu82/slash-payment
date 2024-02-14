@@ -1,0 +1,2782 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="csrf-token"
+            content="ndgJ1qFNia6H9gi3zkn3dZwhapAAbPBBTSgDGkZQ"
+        />
+        <title>epay | ダッシュボード</title>
+
+        <!-- Google Font: Source Sans Pro -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Inter"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=fallback"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="http://dev.crypto-epay.io/dashboard/themes/plugins/fontawesome-free/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        />
+        <link
+            rel="stylesheet"
+            href="http://dev.crypto-epay.io/dashboard/themes/plugins/toastr/toastr.min.css"
+        />
+        <!-- overlayScrollbars -->
+        <link
+            rel="stylesheet"
+            href="http://dev.crypto-epay.io/dashboard/themes/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+        />
+        <!--sbadmin2-->
+        <link
+            rel="stylesheet"
+            href="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/css/sb-admin-2.min.css"
+        />
+
+        <!--custom css-->
+        <link
+            rel="stylesheet"
+            href="../../../../../dashboard/main_html/css/common/sidebarr.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../../../dashboard/main_html/css/common/header.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../../../dashboard/main_html/css/common/custom.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../../../../"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../../../dashboard/main_html/css/popup/popupFormData.css"
+        />
+        <!-- merchant_dashboard-->
+        <!-- <link rel="stylesheet" href="https://dev.crypto-epay.io/dashboard/main_html/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="https://dev.crypto-epay.io/css/select.css"> -->
+
+        <link rel="stylesheet" href="../../../../main_html/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="../../../../../css/select.css">
+
+
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.css"
+        />
+
+        <!-- add bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"
+        ></script>
+        <!-- <link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/admin_epay/css/dashboard.css"> -->
+        <link
+            rel="stylesheet"
+            href="../../../../../dashboard/main_html/css/merchant/status-screen.css"
+        />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            property="stylesheet"
+            href="//dev.crypto-epay.io/_debugbar/assets/stylesheets?v=1675524420&theme=auto"
+            data-turbolinks-eval="false"
+            data-turbo-eval="false"
+        />
+        <script
+            src="//dev.crypto-epay.io/_debugbar/assets/javascript?v=1675524420"
+            data-turbolinks-eval="false"
+            data-turbo-eval="false"
+        ></script>
+        <script data-turbo-eval="false">
+            jQuery.noConflict(true);
+        </script>
+
+    </head>
+    <body
+        class="hold-transition sidebar-mini layout-fixed"
+        data-panel-auto-height-mode="height"
+        id="page-top"
+    >
+        <!-- <div class="modal-loading">
+            <span class="loader"></span>
+        </div> -->
+        <!-- Page Wrapper -->
+        <div id="wrapper" class="wrapper">
+            <!-- Sidebar -->
+            <ul
+                class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+                id="accordionSidebar"
+            >
+                <!-- Sidebar - Brand -->
+                <a
+                    class="sidebar-brand link-img-sidebar d-flex align-items-center justify-content-center"
+                    href="#"
+                >
+                    <img
+                        class="img-sidebar"
+                        src="http://dev.crypto-epay.io/dashboard/img/sidebar_logo.svg"
+                    />
+                </a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0" />
+
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a class="nav-link" href="">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/dashboard.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>ダッシュボード</span></a
+                        >
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="true"
+                            aria-controls="collapseTwo"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/merchant.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>加盟店管理</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a
+                                class="collapse-item"
+                                href="http://dev.crypto-epay.io/merchant/account"
+                            >
+                                加盟店リスト一覧
+                            </a>
+                            <a class="collapse-item" href=""> 加盟店登録 </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapseUtilities"
+                            aria-expanded="true"
+                            aria-controls="collapseUtilities"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/AF.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>アフィリエイト管理</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapseUtilities"
+                        class="collapse"
+                        aria-labelledby="headingUtilities"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item" href=""> AFリスト一覧 </a>
+                            <a class="collapse-item" href=""> 新規AF登録 </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link collapsed"
+                            href="#"
+                            data-toggle="collapse"
+                            data-target="#collapsePages"
+                            aria-expanded="true"
+                            aria-controls="collapsePages"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/payment.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>出金管理</span>
+                        </a>
+                    </div>
+                    <div
+                        id="collapsePages"
+                        class="collapse"
+                        aria-labelledby="headingPages"
+                        data-parent="#accordionSidebar"
+                    >
+                        <div class="bg-white-nav py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="login.html">
+                                出金リクエスト</a
+                            >
+                            <a class="collapse-item" href="register.html"
+                                >出金履歴</a
+                            >
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a class="nav-link" href="">
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/noti.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>通知管理</span></a
+                        >
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav-hover">
+                        <a
+                            class="nav-link"
+                            href="http://dev.crypto-epay.io/epay/setting/profile"
+                        >
+                            <img
+                                src="http://dev.crypto-epay.io/dashboard/img/setting.svg"
+                                style="height: 20px; padding-right: 10px"
+                            />
+                            <span>設定</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+                <!-- Main Content -->
+                <div id="content">
+                    <!-- Topbar -->
+                    <nav
+                        class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"
+                    >
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button
+                            id="sidebarToggleTop"
+                            class="btn btn-link rounded-circle mr-3"
+                        >
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Nav Item - Language -->
+                            <li class="nav-item dropdown mx-1">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="messagesDropdown"
+                                    role="button"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="19"
+                                        viewBox="0 0 20 19"
+                                    >
+                                        <path
+                                            id="Vector"
+                                            d="M20,1.959V9.141A1.912,1.912,0,0,1,18.065,11.1h-7.1v4.57H6.645L2.581,19V15.67H1.935A1.912,1.912,0,0,1,0,13.711V6.529A1.912,1.912,0,0,1,1.935,4.57H7.742V0H18.065A1.912,1.912,0,0,1,20,1.959ZM8.516,12.993,6.387,7.182H4.839L2.71,12.993H4.258l.387-1.045h2l.323,1.045Zm7.032-5.354a5,5,0,0,0,1.419-3.722L16.9,3.265H14.774V1.959h-1.29V3.265H11.548V4.57h3.871a3.391,3.391,0,0,1-1.226,2.416A3.281,3.281,0,0,1,13.161,5.55H11.806a4.475,4.475,0,0,0,1.161,2.089,4.857,4.857,0,0,1-1.355.2l.065,1.306a6.849,6.849,0,0,0,2.581-.653,5.77,5.77,0,0,0,2.516.653V7.835a4.336,4.336,0,0,1-1.226-.2Z"
+                                            transform="translate(0 0)"
+                                            fill="#64748b"
+                                        />
+                                    </svg>
+                                    <span>&nbsp;日本語</span>
+                                </a>
+                                <!-- Dropdown - Messages -->
+                                <div
+                                    class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="messagesDropdown"
+                                >
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="http://dev.crypto-epay.io/change-language/ja"
+                                    >
+                                        <div>
+                                            <span class="font-weight-bold"
+                                                >日本語</span
+                                            >
+                                        </div>
+                                    </a>
+                                    <a
+                                        class="dropdown-item d-flex align-items-center"
+                                        href="http://dev.crypto-epay.io/change-language/en"
+                                    >
+                                        <div>English</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a
+                                    class="nav-link info-user-name"
+                                    href="#"
+                                    id="user-name"
+                                >
+                                    <span>ユーザー名 : </span>
+                                    <span class="name-user">千能 </span>
+                                    <!-- Counter - Messages -->
+                                </a>
+                            </li>
+                            <!-- <div class="topbar-divider d-none d-sm-block"></div> -->
+                            <li class="nav-item logout">
+                                <a
+                                    class="nav-link"
+                                    href="http://dev.crypto-epay.io/epay/auth/logout"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    <button
+                                        type="button"
+                                        class="btn btn-logout btn-outline-primary"
+                                        style="text-align: center"
+                                    >
+                                        ログアウト
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        <section class="content-header">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h1 class="main-title-page">
+                                        利用状況確認
+                                    </h1>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="content content-style">
+                            <!-- 5 cards -->
+                            <div class="row">
+                                <div class="col-12 mt-15">
+                                    <div class="account account-list bg-white">
+                                        <nav>
+                                            <div
+                                                class="nav nav-tabs"
+                                                id="nav-tab"
+                                                role="tablist"
+                                            >
+                                                <a
+                                                    class="nav-link"
+                                                    aria-current="page"
+                                                    href=""
+                                                >
+                                                    加盟店詳細
+                                                </a>
+                                                <a
+                                                    class="nav-link active"
+                                                    aria-current="page"
+                                                    href="e"
+                                                >
+                                                    利用状況
+                                                </a>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-15">
+                                    <div class="list_search bg-white d-flex">
+                                        <form class="form-search">
+                                            <div class="form-input">
+                                                <div class="search_info d-flex flex-column">
+                                                    <p>加盟店</p>
+                                                    <div class="select_search">
+                                                        <select
+                                                            class="select_list select-list-w300 select_option"
+                                                        >
+                                                            <option>すべて</option>
+                                                            <option>000000 - 加盟店A</option>
+                                                            <option>000001 - 加盟店B</option>
+                                                            <option>000002 - 加盟店C</option>
+                                                            <option>000003 - 加盟店D</option>
+                                                            <option>000004 - 加盟店E</option>
+                                                            <option>000005 - 加盟店F</option>
+                                                            <option>000006 - 加盟店G</option>
+                                                            <option>000007 - 加盟店H</option>
+                                                            <option>000008 - 加盟店I</option>
+                                                            <option>000009 - 加盟店J</option>
+                                                            <option>000010 - 加盟店K</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="date-form-to">
+                                                    <div
+                                                    class="search_info d-flex flex-column"
+                                                    >
+                                                        <p>リクエスト日</p>
+                                                        <input
+                                                            type="date"
+                                                            lang="ja"
+                                                            format="yyyy年 MM月 dd日"
+                                                            class="form-control input_time border-1 small"
+                                                        />
+                                                    </div>
+                                                    <span class="seperate">~</span>
+                                                    <div
+                                                    class="search_info d-flex flex-column"
+                                                    >
+                                                        <input
+                                                            type="date"
+                                                            class="form-control input_time border-1 small"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="date-form-to">
+                                                    <div
+                                                    class="search_info d-flex flex-column"
+                                                    >
+                                                        <p>決済完了日</p>
+                                                        <input
+                                                            type="date"
+                                                            lang="ja"
+                                                            format="yyyy年 MM月 dd日"
+                                                            class="form-control input_time border-1 small"
+                                                        />
+                                                    </div>
+                                                    <span class="seperate">~</span>
+                                                    <div
+                                                    class="search_info d-flex flex-column"
+                                                    >
+                                                        <input
+                                                            type="date"
+                                                            class="form-control input_time border-1 small"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-select-action">
+                                                <div class="search_info d-flex flex-column">
+                                                    <p>トランザクションID</p>
+                                                    <div class="select_search">
+                                                        <select
+                                                            class="select_list select-list-w300 select_option"
+                                                        >
+                                                            <option>すべて</option>
+                                                            <option>Ethereum（ETH）</option>
+                                                            <option>BNB Chain（BNB）</option>
+                                                            <option>Polygon（Matic）</option>
+                                                            <option>Avalanche C-Chain（AVAX）</option>
+                                                            <option>Fantom（FTM）</option>
+                                                            <option>Arbitrum One（ETH）</option>
+                                                            <option>Arbitrum One（ETH）</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="search_info d-flex flex-column"
+                                                >
+                                                    <p>ネットワーク</p>
+                                                    <div class="select_search">
+                                                        <select
+                                                            class="select_list select-list-w300 select_option"
+                                                        >
+                                                            <option>すべて</option>
+                                                            <option>エンド</option>
+                                                            <option>加盟店</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="search_info d-flex flex-column"
+                                                >
+                                                    <p>リクエスト方式</p>
+                                                    <div class="select_search">
+                                                        <select
+                                                            class="select_list select_option"
+                                                        >
+                                                            <option>すべて</option>
+                                                            <option>エンド</option>
+                                                            <option>加盟店</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="search_info d-flex flex-column"
+                                                >
+                                                    <p>単位</p>
+                                                    <div class="select_search">
+                                                        <select
+                                                            class="select_list select-list-w100 select_option"
+                                                        >
+                                                            <option>すべて</option>
+                                                            <option>USD</option>
+                                                            <option>JPY</option>
+                                                            <option>EUR</option>
+                                                            <option>AED</option>
+                                                            <option>SGD</option>
+                                                            <option>HKD</option>
+                                                            <option>CAD</option>
+                                                            <option>IDR</option>
+                                                            <option>PHP</option>
+                                                            <option>INR</option>
+                                                            <option>KRW</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="date-form-to">
+                                                    <div
+                                                    class="search_info d-flex flex-column"
+                                                    >
+                                                        <p>金額</p>
+                                                        <input
+                                                            class="form-control input_text"
+                                                        />
+                                                    </div>
+                                                    <span class="seperate">~</span>
+                                                    <div
+                                                    class="search_info d-flex flex-column"
+                                                    >
+                                                        <input
+                                                            class="form-control input_text "
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-select-action">
+                                                <div
+                                                    class="search_info d-flex flex-column"
+                                                >
+                                                    <p>決済ステータス</p>
+                                                    <div class="select_search">
+                                                        <select
+                                                            class="select_list select_option"
+                                                        >
+                                                            <option>すべて</option>
+                                                            <option>未決済</option>
+                                                            <option>完了</option>
+                                                            <option>失敗</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                class="search_info search_info__input d-flex flex-column"
+                                                >
+                                                    <p>Hash</p>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control input_infor input_infor2 border-1 small"
+                                                        aria-label="Search"
+                                                        aria-describedby="basic-addon2"
+                                                    />
+                                                </div>
+                                                <div class="d-flex flex button__click">
+                                                    <div
+                                                        class="action__button d-flex flex"
+                                                    >
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn_ok"
+                                                        >
+                                                            検索
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            class="btn btn_cancel"
+                                                        >
+                                                            リセット
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="five-card">
+                                        <div class="list-card three-card">
+                                            <div
+                                                class="item card card-transaction-time"
+                                            >
+                                                <div
+                                                    class="card border-left-primary shadow "
+                                                >
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="row no-gutters align-items-center"
+                                                        >
+                                                            <div class="col info-and-priceNumber">
+                                                                    <div
+                                                                        class="text-primary text-uppercase title-transition"
+                                                                    >
+                                                                        総取引回数
+                                                                    </div>
+                                                                    <div
+                                                                        class="text-transaction-time text-primary number-transaction number-value"
+                                                                    >
+                                                                        999,999,999
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="item card card-total-pay"
+                                            >
+                                                <div
+                                                    class="card border-left-primary shadow "
+                                                >
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="row no-gutters align-items-center"
+                                                        >
+                                                            <div
+                                                                class="col show-data-total"
+                                                            >
+                                                                <div class="text-primary text-uppercase title-transition">
+                                                                    <p>支払総額</p>
+                                                                </div>
+                                                                <div class="list-data-total-pay">
+                                                                    <div class="item-transaction-three">
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">USD:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">0</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">JPY:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">0</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">EUR:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">0</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-transaction-three">
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">AED:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">999</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">SGD:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">999,999</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">HKD:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">9</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-transaction-three">
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">CAD:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">999</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">IDR:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">9,999</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">PHP:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">9,99</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item-transaction-three">
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">INR:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">09</p>
+                                                                        </div>
+                                                                        <div class="item-data-trans">
+                                                                            <p class="name-trans text-total-receive-usdt text-primary">KRW:</p>
+                                                                            <p class="price-trans text-total-receive-money text-primary ml-1 number-value">0</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-card two-card">
+                                            <div
+                                                class="item card card-total-receive"
+                                            >
+                                                <div
+                                                    class="card border-left-primary shadow "
+                                                >
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="row no-gutters align-items-center"
+                                                        >
+                                                            <div class="col">
+                                                                <div
+                                                                    class="text-primary text-uppercase title-transition"
+                                                                >
+                                                                    受取総額
+                                                                </div>
+                                                                <div class="two-item--receive">
+                                                                    <div class="row card-total-receive-info" >
+                                                                        <div class="info-receive-flex info-receive-usdt">
+                                                                            <div
+                                                                                class="text-total-receive-usdt text-primary"
+                                                                            >
+                                                                                USDT:
+                                                                            </div>
+                                                                            <div
+                                                                                class="text-total-receive-money text-primary ml-1 number-value"
+                                                                            >
+                                                                                999,999,9
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="info-receive-flex info-receive-dai">
+                                                                            <div
+                                                                                class="text-total-receive-dai text-primary ml-4"
+                                                                            >
+                                                                                DAI:
+                                                                            </div>
+                                                                            <div
+                                                                                class="text-total-receive-money text-primary ml-1 number-value"
+                                                                            >
+                                                                                999
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="two-item--receive">
+                                                                    <div class="row card-total-receive-info" >
+                                                                        <div class="info-receive-flex info-receive-usdc">
+                                                                            <div
+                                                                                class="text-total-receive-usdc text-primary"
+                                                                            >
+                                                                                USDC:
+                                                                            </div>
+                                                                            <div
+                                                                                class="text-total-receive-money text-primary ml-1 number-value"
+                                                                            >
+                                                                                999,999
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class=" info-receive-flex info-receive-usdc">
+                                                                            <div
+                                                                                class="text-total-receive-jpyc text-primary ml-2"
+                                                                            >
+                                                                                JPYC:
+                                                                            </div>
+                                                                            <div
+                                                                                class="text-total-receive-money text-primary ml-1 number-value"
+                                                                            >
+                                                                                999,999,9
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <!--　Chart -->
+                                    <div class=" card card-char justify-content-center">
+
+                                        <div class="d-flex flex-row justify-content-between">
+                                            <h6 class="font-weight-bold text-primary title-chart">各集計推移</h6>
+                                            <div class="switch-contain">
+                                                <h6 class="chart-show-title">グラフ表示</h6>
+                                                <label class="switch ml-3"><input type="checkbox" checked><span class="slider round hide-off"></a></span></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="hideme">
+                                            <!--hide part-->
+                                            <div class="card-body">
+                                                <div class="legendBox">
+                                                    <div class="row">
+                                                        <div class="col-sm-7">
+                                                            <h6 class="left-scale-text">回数／件数</h6>
+                                                        </div>
+                                                        <div class="col-sm-5 d-flex justify-content-end">
+                                                            <div class="row legend-label">
+                                                                <div id="bar-first" onClick="toggleData(0)" class="item row">
+                                                                    <span class="dot dot-bar-first"></span>
+                                                                    <div class="chart-circle-text">取引回数</div>
+                                                                </div>
+                                                                <!-- <div id="bar-second" onClick="toggleData(1)" class="item row">
+                                                                    <span class="dot dot-bar-second"></span>
+                                                                    <div class="chart-circle-text">出金件数</div>
+                                                                </div> -->
+                                                                <div id="line-first" onClick="toggleData(2)" class="item row">
+                                                                    <span class="dot dot-line-first"></span>
+                                                                    <div class="chart-circle-text">支払金額（円）</div>
+                                                                </div>
+                                                                <div id="line-second" onClick="toggleData(3)" class="item row">
+                                                                    <span class="dot dot-line-second"></span>
+                                                                    <div class="chart-circle-text">受取金額（USDT）</div>
+                                                                </div>
+                                                                <!-- <div id="line-third" onClick="toggleData(4)" class="item row">
+                                                                    <span class="dot dot-line-third"></span>
+                                                                    <div class="chart-circle-text">出金手数料</div>
+                                                                </div> -->
+                                                            </div>
+                                                            <div>
+                                                                <h6 class="right-scale-text">万円</h6>
+                                                                <div id="addItem"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div>
+                                                            <h6 class="right-scale-text">万円</h6>
+                                                            <div id="addItem"></div>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                                <canvas class="chart-show" id="名集計推移" width="1600" height="290"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card card-mer-dash-table">
+                                        <div
+                                            class="title-csv d-flex flex-row justify-content-between"
+                                        >
+                                            <h6
+                                                class="font-weight-bold text-primary"
+                                            >
+                                                利用状況
+                                            </h6>
+                                            <button class="btn btn-primary btn-csv">csv</button>
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="table-data over-hidden">
+                                            <div class="table-responsive p-0">
+
+                                                    <table
+                                                        class="table table-fixed table-hover text-nowrap"
+                                                    >
+                                                        <thead>
+                                                            <tr>
+                                                                <th><div class="center-table">トランザクションID</div></th>
+                                                                <th><div class="center-table">加盟店ID</div></th>
+                                                                <th><div class="center-table">加盟店名</div></th>
+                                                                <th><div class="center-table">リクエスト日時</div></th>
+                                                                <th><div class="center-table">支払金額</div></th>
+                                                                <th><div class="center-table">受取金額</div></th>
+                                                                <th><div class="center-table">ネットワーク</div></th>
+                                                                <th><div class="center-table">リクエスト方式</div></th>
+                                                                <th><div class="center-table">決済ステータス</div></th>
+                                                                <th><div class="center-table">決済日時</div></th>
+                                                                <th><div class="center-table">Hash</div></th>
+                                                                <th><div class="center-table">詳細</div></th>
+                                                                <!-- <th>
+                                                                    <div class="center-table">
+                                                                        <div class="info-yen">
+                                                                            <p>出金件数</p><p>(円のみ)</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th> -->
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-number-font">38295863</td>
+                                                                <td>000001</td>
+                                                                <td>加盟店A</td>
+                                                                <td>2023年04月20日　15:41</td>
+                                                                <td>
+                                                                    <div
+                                                                        class="center-table text-number-font text-right-number"
+                                                                    >
+                                                                        JPY 10,000
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div
+                                                                        class="center-table text-number-font text-right-number"
+                                                                    >
+                                                                        USDT 100
+                                                                    </div>
+                                                                </td>
+                                                                <td>ETH</td>
+                                                                <td>加盟店</td>
+                                                                <td class="status_item">
+                                                                    <div class="center-table">
+                                                                        <div
+                                                                            class="status completion "
+                                                                        >
+                                                                            完了
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>2023年04月20日　18:33</td>
+                                                                <td>kioida457487ea123d</td>
+                                                                <td><a class="show-popup-data" data-toggle="modal" data-target="#showDataFormDetail">詳細</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-number-font">23487506</td>
+                                                                <td>000001</td>
+                                                                <td>加盟店A</td>
+                                                                <td>2023年04月20日　18:33</td>
+                                                                <td>
+                                                                    <div
+                                                                        class="center-table text-number-font text-right-number"
+                                                                    >
+                                                                        JPY 10,000
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div
+                                                                        class="center-table text-number-font text-right-number"
+                                                                    >
+                                                                        USDT 100
+                                                                    </div>
+                                                                </td>
+                                                                <td>ETH</td>
+                                                                <td>エンド</td>
+                                                                <td class="status_item">
+                                                                    <div class="center-table">
+                                                                        <div
+                                                                            class="status unsettled "
+                                                                        >
+                                                                            未決済
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td></td>
+                                                                <td>kioida457487ea123d</td>
+                                                                <td><a class="show-popup-data" data-toggle="modal" data-target="#showDataFormEdit">詳細</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- <div class="modal-loading-element">
+                                                        <span class="loader"></span>
+                                                    </div> -->
+                                                <div class="popup-FormData popup-FormData-detail">
+                                                    <!-- Modal -->
+                                                    <div class="modal modal-popup-DataForm fade" id="showDataFormDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">加盟店利用状況 ＞ 利用状況詳細 </h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row ">
+                                                                        <div class="col-12">
+                                                                            <div class="account bg-white ">
+                                                                                <form class="form-detail">
+                                                                                    <div class="form-group row form-item">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            トランザクションID
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control form-w200" disabled
+                                                                                                value="38295863">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            リクエスト日時
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="2023年4月20日　15:41">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            支払金額
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="USD 10,000">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            受取金額
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="USDT 100">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            ネットワーク
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="ETH">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            リクエスト方式
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="加盟店">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            決済ステータス
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="完了">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            決済完了日時
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="2023年4月20日　15:41">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            Hash
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="kioida457487ea123d">
+                                                                                        </div>
+                                                                                    </div>
+
+
+                                                                                    <div class="form-group row form-item">
+                                                                                        <label for="" class="col-sm-2 col-form-label label-custom"></label>
+                                                                                        <div class="col col-md-10 ">
+                                                                                            <div class="button-action">
+
+                                                                                                <div class="btn-back-with500">
+                                                                                                    <!-- <button type="button" disabled class="btn btn-primary bg-transparent">確認</button> -->
+                                                                                                    <button
+                                                                                                            data-toggle="modal"
+                                                                                                            data-target="#confirmModal"
+                                                                                                            type="button"
+                                                                                                            class="btn form-close"
+                                                                                                            > 戻る
+                                                                                                    </button>
+                                                                                                </div>
+
+                                                                                                <button
+                                                                                                        type="button"
+                                                                                                        class="btn btn-delete-detail"
+                                                                                                        > 削除
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-FormData popup-FormData-edit">
+                                                    <!-- Modal -->
+                                                    <div class="modal modal-popup-DataForm fade" id="showDataFormEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">加盟店利用状況 ＞ 利用状況詳細 </h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row ">
+                                                                        <div class="col-12">
+                                                                            <div class="account bg-white ">
+                                                                                <form class="form-detail form-dropdown-input">
+                                                                                    <div class="form-group row form-item">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            トランザクションID
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control form-w200" disabled
+                                                                                                value="38295863">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            リクエスト日時
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input class="date-time input_time-day" type="datetime-local">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            支払金額*
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <div class="currency-unit-value">
+                                                                                                <div class="select_info">
+                                                                                                    <select
+                                                                                                        class="form_control select_form-currency-unit"
+                                                                                                    >
+                                                                                                        <option>
+                                                                                                            USD
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            JPY
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            EUR
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            AED
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            SGD
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            HKD
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            CAD
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            IDR
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            PHP
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            INR
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            KRW
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                                <input  type="text" class="form-control form-control-value-cur"
+                                                                                                        value="USD 10,000">
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            受取金額*
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <div class="currency-unit-value">
+                                                                                                <div class="select_info">
+                                                                                                    <select
+                                                                                                        class="form_control select_form-currency-unit"
+                                                                                                    >
+                                                                                                        <option>
+                                                                                                            USDT
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            USDC
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            DAI
+                                                                                                        </option>
+                                                                                                        <option>
+                                                                                                            JPYC
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                                <input  type="text" class="form-control form-control-value-cur"
+                                                                                                        value="USD 10,000">
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            トランザクションID
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <!-- <input  type="text" class="form-control form-w200" disabled
+                                                                                                   value="新規登録通知"> -->
+                                                                                            <div class="select_info">
+                                                                                                <select
+                                                                                                    class="form_control select_form"
+                                                                                                >
+                                                                                                    <option>
+                                                                                                        Ethereum（ETH）
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        BNB Chain（BNB）
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Polygon（Matic）
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Avalanche C-Chain（AVAX）
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Fantom（FTM）
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Arbitrum One（ETH）
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        Solana (SOL)
+                                                                                                    </option>
+
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            リクエスト方式
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <div class="select_info">
+                                                                                                <select
+                                                                                                    class="form_control select_form"
+                                                                                                >
+                                                                                                    <option>
+                                                                                                        エンド
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        加盟店
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            決済ステータス
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <div class="select_info">
+                                                                                                <select
+                                                                                                    class="form_control select_form"
+                                                                                                >
+                                                                                                    <option>
+                                                                                                        完了
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        失敗
+                                                                                                    </option>
+                                                                                                    <option>
+                                                                                                        未決済
+                                                                                                    </option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            決済完了日時
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input class="date-time input_time-day" type="datetime-local">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group row form-item ">
+                                                                                        <label for="" class="col col-md-2 col-form-label label-custom">
+                                                                                            Hash
+                                                                                        </label>
+                                                                                        <div class="col col-md-10">
+                                                                                            <input  type="text" class="form-control" disabled
+                                                                                                value="kioida457487ea123d">
+                                                                                        </div>
+                                                                                    </div>
+
+
+                                                                                    <div class="form-group row form-item">
+                                                                                        <label for="" class="col-sm-2 col-form-label label-custom"></label>
+                                                                                        <div class="col col-md-10 ">
+                                                                                            <div class="button-action">
+
+                                                                                                <div class="btn-back-with500">
+                                                                                                    <button type="button" class="btn btn-primary ">編集</button>
+                                                                                                    <button
+                                                                                                            data-toggle="modal"
+                                                                                                            data-target="#confirmModal"
+                                                                                                            type="button"
+                                                                                                            class="btn form-close"
+                                                                                                            > 戻る
+                                                                                                    </button>
+                                                                                                </div>
+
+                                                                                                <button
+                                                                                                        type="button"
+                                                                                                        class="btn btn-delete-detail"
+                                                                                                        > 削除
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="pagination_page">
+                                            <div
+                                                class="select-display-pagina"
+                                            >
+                                                <p>表示件数</p>
+                                                <div class="select">
+                                                    <select>
+                                                        <option value="1">
+                                                            1
+                                                        </option>
+                                                        <option value="2">
+                                                            2
+                                                        </option>
+                                                        <option value="3">
+                                                            3
+                                                        </option>
+                                                        <option value="4">
+                                                            4
+                                                        </option>
+                                                        <option value="5">
+                                                            5
+                                                        </option>
+                                                        <option value="6">
+                                                            6
+                                                        </option>
+                                                        <option value="7">
+                                                            7
+                                                        </option>
+                                                        <option value="8">
+                                                            8
+                                                        </option>
+                                                        <option value="9">
+                                                            9
+                                                        </option>
+                                                        <option
+                                                            selected
+                                                            value="10"
+                                                        >
+                                                            10
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <p class="ml-15">xxx件数 </p>
+                                            </div>
+                                            <nav
+                                                aria-label="Page navigation example"
+                                                class="pagination_select"
+                                            >
+                                                <ul
+                                                    class="pagination justify-content-center"
+                                                >
+                                                    <li
+                                                        class="page-item disabled"
+                                                    >
+                                                        <a class="page-link"
+                                                            >前へ</a
+                                                        >
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a
+                                                            class="page-link active"
+                                                            href="#"
+                                                            >1</a
+                                                        >
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a
+                                                            class="page-link"
+                                                            href="#"
+                                                            >2</a
+                                                        >
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a
+                                                            class="page-link"
+                                                            href="#"
+                                                            >...</a
+                                                        >
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a
+                                                            class="page-link"
+                                                            href="#"
+                                                            >5</a
+                                                        >
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a
+                                                            class="page-link"
+                                                            href="#"
+                                                            >次へ</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Year month dropdown -->
+
+                            <!--　Chart -->
+
+                            <!--　Table  -->
+                        </section>
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container content-footer">
+                        <div class="copyright text-center">
+                            <strong>
+                                2023 Copyrights &copy; 2023
+                                <a href="#">epay</a>.</strong
+                            >
+                        </div>
+                        <div class="text-produce">
+                            Produced by <b>E-money Hub Ltd</b>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+            </div>
+            <!-- End of Content Wrapper -->
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- jQuery -->
+        <script src="http://dev.crypto-epay.io/dashboard/themes/plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="http://dev.crypto-epay.io/dashboard/themes/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="http://dev.crypto-epay.io/dashboard/themes/plugins/toastr/toastr.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge("uibutton", $.ui.button);
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="http://dev.crypto-epay.io/dashboard/themes/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="http://dev.crypto-epay.io/dashboard/themes/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="http://dev.crypto-epay.io/dashboard/themes/dist/js/adminlte.js"></script>
+        <!-- sbadmin2 -->
+        <script src="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/js/sb-admin-2.js"></script>
+
+        <!--merchant_dashboard-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.js"></script>
+        <script src="http://dev.crypto-epay.io/dashboard/themes/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="http://dev.crypto-epay.io/dashboard/libs/qrcode/jquery-qrcode.js"></script>
+
+        <script src="http://dev.crypto-epay.io/js/common.js"></script>
+        <!-- select-boostrap-js -->
+        <!-- <script src="https://dev.crypto-epay.io/dashboard/main_html/js/bootstrap-select.min.js"></script> -->
+        <script src="../../../../main_html/js/bootstrap-select.min.js"></script>
+
+        <script>
+            function parseValidateMessage(errors) {
+                console.log(errors);
+                let emes = [];
+                Object.values(errors).forEach(function (e) {
+                    emes.push("<li>" + e.join("</li><li>") + "</li>");
+                });
+                console.log(emes);
+                return emes.join("");
+            }
+
+            $(function () {
+                // toastr option
+                toastr.options.escapeHtml = false;
+                toastr.options.closeButton = true;
+                toastr.options.closeDuration = 0;
+                toastr.options.extendedTimeOut = 500;
+                toastr.options.timeOut = 5000;
+                toastr.options.tapToDismiss = false;
+                toastr.options.positionClass = "toast-top-right";
+            });
+        </script>
+
+        <!-- Chart-->
+        <script>
+            // let colors = ["rgb(78,115,223)", "rgb(166,147,247)", "rgb(28,200,138)", "rgb(246,194,62)", "rgb(255,82,116)"];
+            const ctx = document.getElementById('名集計推移').getContext('2d');
+            var epay_chart = new Chart(ctx, config={
+                // type: 'bar',
+                data: {
+                    labels: ['4月15日', '4月16日', '4月17日', '4月18日', '4月19日', '4月20日', '4月21日', '4月22日', '4月23日', '4月24日', '4月25日', '4月26日', '4月27日', '4月28日', '4月29日', '4月30日', '5月1日', '5月2日', '5月3日', '5月4日', '5月5日', '5月6日', '5月7日', '5月8日'],
+                    datasets: [
+                        {// [0]
+                        yAxisID: 'A',/* use right y axis*/
+                        type: 'bar',
+                        label: '取引回数',
+                        data: [25, 20, 35, 30, 35, 35, 25, 35, 40, 20, 30, 20, 25, 20, 35, 30, 35, 35, 25, 35, 40, 20, 30, 20],
+                        backgroundColor: 'rgb(78,115,223)',
+                        borderColor: 'rgb(78,115,223)',
+                        barThickness: 30,
+                        order: 1,
+                        },
+                        // {//[1]
+                        // yAxisID: 'A',/* use right y axis*/
+                        // type: 'bar',
+                        // label: '出金件数',
+                        // data: [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42],
+                        // backgroundColor: 'rgb(166,147,247)',
+                        // borderColor: 'rgb(166,147,247)',
+                        // order: 1
+                        // },
+                        {//[2]
+                        yAxisID: 'B',
+                        label: '支払金額',
+                        type:'line',
+                        pointRadius: 6,
+                        data: [15, 70, 80, 90, 65, 75, 85, 50, 55, 95, 95, 60, 15, 70, 80, 90, 90, 65, 75, 85, 50, 55, 95, 95, 60],
+                        backgroundColor: 'rgb(28,200,138)',
+                        borderColor: 'rgb(28,200,138)',
+                        pointBorderColor: 'white'
+                        },
+                        {//[3]
+                        yAxisID: 'B',
+                        label: '出金金額',
+                        type:'line',
+                        pointRadius: 6,
+                        data: [20, 60, 70, 80, 75, 65, 75, 40, 45, 85, 85, 50, 20, 60, 70, 80, 75, 65, 75, 40, 45, 85, 85, 50],
+                        backgroundColor: 'rgb(246,194,62)',
+                        borderColor: 'rgb(246,194,62)',
+                        pointBorderColor: 'white'
+                        },
+                        // {//[4]
+                        // yAxisID: 'B',/* use left y axis*/
+                        // label: '出金手数料',
+                        // type: 'line',
+                        // pointRadius: 6,
+                        // data: [10, 45, 55, 30, 35, 45, 55, 35, 40, 20, 40, 30, 10, 45, 55, 30, 35, 45, 55, 35, 40, 20, 40, 30],
+                        // backgroundColor: 'rgb(255,82,116)',
+                        // borderColor: 'rgb(255,82,116)',
+                        // pointBorderColor: 'white'
+                        // },
+                    ]
+                },
+                options: {
+                // maintainAspectRaito: false,
+                responsive: true,
+                plugins:{
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                            callbacks: {
+                                    labelTextColor: (context) => {
+                                        console.log(context.dataIndex)
+                                        console.log(context.dataset.borderColor)
+                                        return context.dataset.borderColor[context.dataIndex]
+                                    },
+                                    label: (context) => {
+                                            const datasetIndex = context.datasetIndex;
+                                            const dataIndex = context.dataIndex;
+                                            const value = context.dataset.data[dataIndex];
+                                            const label = context.dataset.label;
+                                            let unit = '';
+                                            if (datasetIndex === 0) {
+                                                unit = '' ;
+                                            } else if (datasetIndex === 1) {
+                                                unit ='万円'
+                                            } else if (datasetIndex === 2) {
+                                                unit = 'USDT';
+                                            }
+                                            return label + ': ' + value + ' ' + unit;
+                                            }
+                            },
+                    },
+                    zoom: {
+                        zoom: {
+                            enable: true,
+                            mode: 'x',
+                            sensitivity: 3
+                        }
+                    }
+                },
+                scales: {
+                    A:  {
+                        type: 'linear',
+                        // barPercentage: 0.1,
+                        position: 'left',
+                        ticks: { beginAtZero: true, color: '#ABAFB3'},
+                        grid: { display: true},
+                        paddingLeft: '10',
+                        paddingRight: '10',
+                        layout: 'absolute',
+
+                    },
+                    B: {
+                        type: 'linear',
+                        position: 'right',
+                        ticks: { beginAtZero: true, color: '#ABAFB3' },
+                        grid: { display: false},
+                    },
+                    x: {
+                        min: 0,
+                        max: 12,
+                        ticks: { beginAtZero: true, color: '#ABAFB3' },
+                        grid: {
+                            display: false,
+                            drawOnChartArea: false
+                        },
+                            xAxes:[{
+                        }]
+                    }
+                },
+                interaction: {
+                    mode: 'index',
+                    titleAlign: 'center',
+                    backgroundColor: 'white',
+                    titleColor: 'rgb(171,175,179)',
+                    reverse: true
+                },
+                categoryPercentage:0.55,
+                barPercentage:1
+                }
+            }
+            );
+
+            //plugin-legend
+            function toggleData(value){
+                const visibilityData = epay_chart.isDatasetVisible(value);
+                if(visibilityData ==true){
+                    epay_chart.hide(value);
+                }
+                if(visibilityData ==false){
+                    epay_chart.show(value);
+                }
+                var elementId = ['bar-first', 'line-first', 'line-second', 'line-third'][value];
+                var element = document.getElementById(elementId);
+                var chartCircleText = element.querySelector('.chart-circle-text');
+                chartCircleText.classList.toggle('strikethrough');
+            }
+
+            //hidechart
+            $(document).ready(function(){
+                $(".switch input").on("change", function(e) {
+                    const isOn = e.currentTarget.checked;
+
+                    if (isOn) {
+                        $(".hideme").show();
+                    } else {
+                        $(".hideme").hide();
+                    }
+                });
+            });
+
+            // scroll chart
+            function scroller(scroll, chart){
+                console.log(scroll)
+
+                const dataLength = epay_chart.data.labels.length;
+                if(scroll.deltaY>0){
+                    if(epay_chart.config.options.scales.x.max >= dataLength){
+                        epay_chart.config.options.scales.x.min = dataLength-13;
+                        epay_chart.config.options.scales.x.max = dataLength-1;
+                    }
+                    else {
+                        epay_chart.config.options.scales.x.min += 1;
+                        epay_chart.config.options.scales.x.max += 1;
+                    }
+                }
+                else
+                    if(scroll.deltaY < 0){
+                        if(epay_chart.config.options.scales.x.min <= 0){
+                            epay_chart.config.options.scales.x.min = 0;
+                            epay_chart.config.options.scales.x.max = 11;
+                        }
+                        else{
+                            epay_chart.config.options.scales.x.min -= 1;
+                            epay_chart.config.options.scales.x.max -= 1;
+                        }
+                    } else{
+                        //do nothing
+                    }
+                epay_chart.update();
+            }
+
+            epay_chart.canvas.addEventListener('wheel', (e) => {
+                scroller(e, epay_chart);
+            });
+
+        </script>
+
+        <!-- Table -->
+        <script>
+            $(function () {
+                $('select').selectpicker({noneSelectedText: ''});
+            });
+            $(document).ready(function () {
+                var data = [
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月1日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                    [
+                        "2023年4月2日(土)",
+                        "999,999,999",
+                        "￥ 999,999,999",
+                        "999,999,999",
+                        "9,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "￥ 999,999,999",
+                        "9,999,999",
+                        "9,999,999",
+                        "詳細",
+                    ],
+                ];
+
+                var table = $("#dataTable").DataTable({
+                    sDom: "Rfrtlip",
+                    scrollX: true,
+                    scrollY: true,
+                    searching: false,
+                    ordering: false,
+                    language: {
+                        paginate: {
+                            previous: "前へ",
+                            next: "次へ",
+                        },
+                        lengthMenu: "表示件数 _MENU_",
+                    },
+                    dom:
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-4'l><'col-sm-8'p>>",
+                    data: data,
+                    columnDefs: [
+                        {
+                            targets: 10,
+                            render: function (data, type, row, meta) {
+                                if (type === "display") {
+                                    data =
+                                        '<a href="basic.php?game=' +
+                                        encodeURIComponent(data) +
+                                        '">' +
+                                        data +
+                                        "</a>";
+                                }
+                                return data;
+                            },
+                        },
+                    ],
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            var phpdebugbar = new PhpDebugBar.DebugBar();
+            phpdebugbar.addIndicator(
+                "php_version",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "code",
+                    tooltip: "PHP Version",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "messages",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "list-alt",
+                    title: "Messages",
+                    widget: new PhpDebugBar.Widgets.MessagesWidget(),
+                })
+            );
+            phpdebugbar.addIndicator(
+                "time",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "clock-o",
+                    tooltip: "Request Duration",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "timeline",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "tasks",
+                    title: "Timeline",
+                    widget: new PhpDebugBar.Widgets.TimelineWidget(),
+                })
+            );
+            phpdebugbar.addIndicator(
+                "memory",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "cogs",
+                    tooltip: "Memory Usage",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "exceptions",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "bug",
+                    title: "Exceptions",
+                    widget: new PhpDebugBar.Widgets.ExceptionsWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "views",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "leaf",
+                    title: "Views",
+                    widget: new PhpDebugBar.Widgets.TemplatesWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "route",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "share",
+                    title: "Route",
+                    widget: new PhpDebugBar.Widgets.HtmlVariableListWidget(),
+                })
+            );
+            phpdebugbar.addIndicator(
+                "currentroute",
+                new PhpDebugBar.DebugBar.Indicator({
+                    icon: "share",
+                    tooltip: "Route",
+                }),
+                "right"
+            );
+            phpdebugbar.addTab(
+                "queries",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "database",
+                    title: "Queries",
+                    widget: new PhpDebugBar.Widgets.LaravelSQLQueriesWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "models",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "cubes",
+                    title: "Models",
+                    widget: new PhpDebugBar.Widgets.HtmlVariableListWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "emails",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "inbox",
+                    title: "Mails",
+                    widget: new PhpDebugBar.Widgets.MailsWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "gate",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "list-alt",
+                    title: "Gate",
+                    widget: new PhpDebugBar.Widgets.MessagesWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "session",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "archive",
+                    title: "Session",
+                    widget: new PhpDebugBar.Widgets.VariableListWidget(),
+                })
+            );
+            phpdebugbar.addTab(
+                "request",
+                new PhpDebugBar.DebugBar.Tab({
+                    icon: "tags",
+                    title: "Request",
+                    widget: new PhpDebugBar.Widgets.HtmlVariableListWidget(),
+                })
+            );
+            phpdebugbar.setDataMap({
+                php_version: ["php.version"],
+                messages: ["messages.messages", []],
+                "messages:badge": ["messages.count", null],
+                time: ["time.duration_str", "0ms"],
+                timeline: ["time", {}],
+                memory: ["memory.peak_usage_str", "0B"],
+                exceptions: ["exceptions.exceptions", []],
+                "exceptions:badge": ["exceptions.count", null],
+                views: ["views", []],
+                "views:badge": ["views.nb_templates", 0],
+                route: ["route", {}],
+                currentroute: ["route.uri"],
+                queries: ["queries", []],
+                "queries:badge": ["queries.nb_statements", 0],
+                models: ["models.data", {}],
+                "models:badge": ["models.count", 0],
+                emails: ["swiftmailer_mails.mails", []],
+                "emails:badge": ["swiftmailer_mails.count", null],
+                gate: ["gate.messages", []],
+                "gate:badge": ["gate.count", null],
+                session: ["session", {}],
+                request: ["request", {}],
+            });
+            phpdebugbar.restoreState();
+            phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(
+                phpdebugbar,
+                undefined,
+                true
+            );
+            phpdebugbar.ajaxHandler.bindToFetch();
+            phpdebugbar.ajaxHandler.bindToXHR();
+            phpdebugbar.setOpenHandler(
+                new PhpDebugBar.OpenHandler({
+                    url: "http:\/\/dev.crypto-epay.io\/_debugbar\/open",
+                })
+            );
+            phpdebugbar.addDataSet(
+                {
+                    __meta: {
+                        id: "X0dd120f7c0bb600de65135b260e69653",
+                        datetime: "2023-05-18 11:24:13",
+                        utime: 1684376653.529531,
+                        method: "GET",
+                        uri: "\/epay\/admin",
+                        ip: "113.160.247.219",
+                    },
+                    php: { version: "8.1.19", interface: "fpm-fcgi" },
+                    messages: { count: 0, messages: [] },
+                    time: {
+                        start: 1684376653.319863,
+                        end: 1684376653.529547,
+                        duration: 0.20968389511108398,
+                        duration_str: "210ms",
+                        measures: [
+                            {
+                                label: "Booting",
+                                start: 1684376653.319863,
+                                relative_start: 0,
+                                end: 1684376653.411439,
+                                relative_end: 1684376653.411439,
+                                duration: 0.09157586097717285,
+                                duration_str: "91.58ms",
+                                params: [],
+                                collector: null,
+                            },
+                            {
+                                label: "Application",
+                                start: 1684376653.413451,
+                                relative_start: 0.09358787536621094,
+                                end: 1684376653.52955,
+                                relative_end: 3.0994415283203125e-6,
+                                duration: 0.11609911918640137,
+                                duration_str: "116ms",
+                                params: [],
+                                collector: null,
+                            },
+                        ],
+                    },
+                    memory: { peak_usage: 31586728, peak_usage_str: "30MB" },
+                    exceptions: { count: 0, exceptions: [] },
+                    views: {
+                        nb_templates: 7,
+                        templates: [
+                            {
+                                name: "epay.dashboard (resources\/views\/epay\/dashboard.blade.php)",
+                                param_count: 5,
+                                params: [
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                ],
+                                type: "blade",
+                            },
+                            {
+                                name: "epay.layouts.base (resources\/views\/epay\/layouts\/base.blade.php)",
+                                param_count: 9,
+                                params: [
+                                    "__env",
+                                    "app",
+                                    "errors",
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                    "title",
+                                ],
+                                type: "blade",
+                            },
+                            {
+                                name: "common.layouts.headers.head (resources\/views\/common\/layouts\/headers\/head.blade.php)",
+                                param_count: 9,
+                                params: [
+                                    "__env",
+                                    "app",
+                                    "errors",
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                    "title",
+                                ],
+                                type: "blade",
+                            },
+                            {
+                                name: "epay.layouts.navbars.sidebar (resources\/views\/epay\/layouts\/navbars\/sidebar.blade.php)",
+                                param_count: 10,
+                                params: [
+                                    "__env",
+                                    "app",
+                                    "errors",
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                    "title",
+                                    "userInfo",
+                                ],
+                                type: "blade",
+                            },
+                            {
+                                name: "epay.layouts.navbars.top_navbar (resources\/views\/epay\/layouts\/navbars\/top_navbar.blade.php)",
+                                param_count: 10,
+                                params: [
+                                    "__env",
+                                    "app",
+                                    "errors",
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                    "title",
+                                    "userInfo",
+                                ],
+                                type: "blade",
+                            },
+                            {
+                                name: "common.layouts.footers.copyright (resources\/views\/common\/layouts\/footers\/copyright.blade.php)",
+                                param_count: 10,
+                                params: [
+                                    "__env",
+                                    "app",
+                                    "errors",
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                    "title",
+                                    "userInfo",
+                                ],
+                                type: "blade",
+                            },
+                            {
+                                name: "common.layouts.footers.foot (resources\/views\/common\/layouts\/footers\/foot.blade.php)",
+                                param_count: 10,
+                                params: [
+                                    "__env",
+                                    "app",
+                                    "errors",
+                                    "route",
+                                    "action",
+                                    "adminUser",
+                                    "menu",
+                                    "active",
+                                    "title",
+                                    "userInfo",
+                                ],
+                                type: "blade",
+                            },
+                        ],
+                    },
+                    route: {
+                        uri: "GET epay\/admin",
+                        middleware: "admin-epay, auth",
+                        controller:
+                            "App\\Http\\Controllers\\AdminEpay\\Admin\\AdminController@index",
+                        as: "admin_epay.admin.index",
+                        namespace: null,
+                        where: [],
+                        prefix: "epay\/admin",
+                        file: '<a href="phpstorm:\/\/open?file=\/srv\/slash_payment2\/app\/Http\/Controllers\/AdminEpay\/Admin\/AdminController.php&line=27">app\/Http\/Controllers\/AdminEpay\/Admin\/AdminController.php:27-48<\/a>',
+                    },
+                    queries: {
+                        nb_statements: 4,
+                        nb_failed_statements: 0,
+                        accumulated_duration: 0.028999999999999998,
+                        accumulated_duration_str: "29ms",
+                        statements: [
+                            {
+                                sql: "select * from `admins` where `id` = '031447b4-3023-46f2-8b5e-69ec8a7ae660' and `admins`.`deleted_at` is null limit 1",
+                                type: "query",
+                                params: [],
+                                bindings: [
+                                    "031447b4-3023-46f2-8b5e-69ec8a7ae660",
+                                ],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Auth\/EloquentUserProvider.php",
+                                        line: 53,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Auth\/SessionGuard.php",
+                                        line: 159,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Auth\/GuardHelpers.php",
+                                        line: 60,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: "middleware",
+                                        name: "auth",
+                                        line: 18,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+                                        line: 167,
+                                    },
+                                ],
+                                duration: 0.01617,
+                                duration_str: "16.17ms",
+                                stmt_id:
+                                    "\/vendor\/laravel\/framework\/src\/Illuminate\/Auth\/EloquentUserProvider.php:53",
+                                connection: "dev-epay-db",
+                                start_percent: 0,
+                                width_percent: 55.759,
+                            },
+                            {
+                                sql: "select count(*) as aggregate from `admins` inner join `admin_roles` on `admin_roles`.`id` = `admins`.`role_id` where `admins`.`deleted_at` is null",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "\/app\/Services\/AdminService.php",
+                                        line: 40,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "\/app\/Http\/Controllers\/AdminEpay\/Admin\/AdminController.php",
+                                        line: 30,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        line: 45,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        line: 262,
+                                    },
+                                ],
+                                duration: 0.0068,
+                                duration_str: "6.8ms",
+                                stmt_id: "\/app\/Services\/AdminService.php:40",
+                                connection: "dev-epay-db",
+                                start_percent: 55.759,
+                                width_percent: 23.448,
+                            },
+                            {
+                                sql: "select `admins`.*, `admin_roles`.`name_jp` from `admins` inner join `admin_roles` on `admin_roles`.`id` = `admins`.`role_id` where `admins`.`deleted_at` is null order by `email_verified_at` desc limit 10 offset 0",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "\/app\/Services\/AdminService.php",
+                                        line: 40,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "\/app\/Http\/Controllers\/AdminEpay\/Admin\/AdminController.php",
+                                        line: 30,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        line: 45,
+                                    },
+                                    {
+                                        index: 19,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        line: 262,
+                                    },
+                                ],
+                                duration: 0.0028399999999999996,
+                                duration_str: "2.84ms",
+                                stmt_id: "\/app\/Services\/AdminService.php:40",
+                                connection: "dev-epay-db",
+                                start_percent: 79.207,
+                                width_percent: 9.793,
+                            },
+                            {
+                                sql: "select `admins`.*, `admin_roles`.`name_jp` from `admins` inner join `admin_roles` on `admin_roles`.`id` = `admins`.`role_id` where `admins`.`deleted_at` is null order by `email_verified_at` desc",
+                                type: "query",
+                                params: [],
+                                bindings: [],
+                                hints: null,
+                                show_copy: false,
+                                backtrace: [
+                                    {
+                                        index: 14,
+                                        namespace: null,
+                                        name: "\/app\/Services\/AdminService.php",
+                                        line: 41,
+                                    },
+                                    {
+                                        index: 15,
+                                        namespace: null,
+                                        name: "\/app\/Http\/Controllers\/AdminEpay\/Admin\/AdminController.php",
+                                        line: 30,
+                                    },
+                                    {
+                                        index: 16,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Controller.php",
+                                        line: 54,
+                                    },
+                                    {
+                                        index: 17,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/ControllerDispatcher.php",
+                                        line: 45,
+                                    },
+                                    {
+                                        index: 18,
+                                        namespace: null,
+                                        name: "\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Route.php",
+                                        line: 262,
+                                    },
+                                ],
+                                duration: 0.00319,
+                                duration_str: "3.19ms",
+                                stmt_id: "\/app\/Services\/AdminService.php:41",
+                                connection: "dev-epay-db",
+                                start_percent: 89,
+                                width_percent: 11,
+                            },
+                        ],
+                    },
+                    models: { data: { "App\\Models\\Admins": 92 }, count: 92 },
+                    swiftmailer_mails: { count: 0, mails: [] },
+                    gate: { count: 0, messages: [] },
+                    session: {
+                        _token: "ndgJ1qFNia6H9gi3zkn3dZwhapAAbPBBTSgDGkZQ",
+                        _previous:
+                            'array:1 [\n  "url" => "http:\/\/dev.crypto-epay.io\/epay\/admin"\n]',
+                        _flash: 'array:2 [\n  "old" => []\n  "new" => []\n]',
+                        login_epay_59ba36addc2b2f9401580f014c7f58ea4e30989d:
+                            "031447b4-3023-46f2-8b5e-69ec8a7ae660",
+                        admin_roles:
+                            'array:3 [\n  "role_name" => "administrator"\n  "role_name_jp" => "\u7ba1\u7406\u8005"\n  "role_id" => "944a18d1-f2c7-11ed-b024-067e34f000bc"\n]',
+                        PHPDEBUGBAR_STACK_DATA: "[]",
+                    },
+                    request: {
+                        path_info: "\/epay\/admin",
+                        status_code:
+                            '<pre class=sf-dump id=sf-dump-773958562 data-indent-pad="  "><span class=sf-dump-num>200<\/span>\n<\/pre><script>Sfdump("sf-dump-773958562", {"maxDepth":0})<\/script>\n',
+                        status_text: "OK",
+                        format: "html",
+                        content_type: "text\/html; charset=UTF-8",
+                        request_query:
+                            '<pre class=sf-dump id=sf-dump-1387851206 data-indent-pad="  ">[]\n<\/pre><script>Sfdump("sf-dump-1387851206", {"maxDepth":0})<\/script>\n',
+                        request_request:
+                            '<pre class=sf-dump id=sf-dump-1902804807 data-indent-pad="  ">[]\n<\/pre><script>Sfdump("sf-dump-1902804807", {"maxDepth":0})<\/script>\n',
+                        request_headers:
+                            '<pre class=sf-dump id=sf-dump-126410973 data-indent-pad="  "><span class=sf-dump-note>array:10<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>cookie<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="1323 characters">remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6Im5EblN2SER2M2ZZanBhU1lwc1l4K2c9PSIsInZhbHVlIjoiWDdidjJ5NG9kNTJPVk1aVTVMSjd2ek9DVE9WQjF0VEs5YXFwUFAyeGNEQ24zekFwNmhZRDBWUmNKSlRCeDBrVXJUUyswYkdWY3N6WnBhRDVQTHBkQmo5NjBMZzBFU2tZelBGQ1d0Y3RDRXJGenBTVUFGZFFYSkJwNEswU2JHRWlWTEU3Yk11RHU2NDM3OTZ5K1cwajllcGN5UzhOUmxCaHRpWk9EeVREK2YrclhpVFJJKzRZZDJ6eGs5aXhEWm1EUDBTRStheGd2SXhoeGV1TE9NUmNhdFJHbnhDMjdDbWx0V3NOYmdGZVpuS2VXUjJ0MnBZVE8zZ1hRQUk3YWx4WlQ2blhBSDNJd0FvQnpGT3RDaXhmQkE9PSIsIm1hYyI6IjA2YzY1NzhjNDMxNTczN2JmMzc1OTFlNTkzZTY4OTkxYzcxOTgxZDg5Nzk3YzJmODcyYmQ1ZTMwOGI2Y2JhNTUiLCJ0YWciOiIifQ%3D%3D; XSRF-TOKEN=eyJpdiI6ImxYUFZSbG90WFFoNGNrbkE2amFpQlE9PSIsInZhbHVlIjoia1lHYkJEdlkzb1M0UGZrY2s0SU9VT3l0Nlg2Ry9yV0JkN3FsSFlzNVdidnFHQ0dsOGNVZnl0eE5xUlIzK2hLZk9DNFhWTk0xbmxBOVpYbHNBcjNNdXZsVHY3UmZRN2ZCZXlxcHBINjVDM2xWMHd4WkhQSDVrdmo0NWhVYlJoS3kiLCJtYWMiOiIwZDQwNTQ0ZTU4MmFhODg0NTUwNDAwMjg3ZTBlZjA4OTc1N2RjMjc2ZTQ0MzAwZDQ3NjI3NmQ5YTQ5ZWE3MDY4IiwidGFnIjoiIn0%3D; slash_payment_session=eyJpdiI6IklVS3V4czl3MmJ0a1UzVWxreUFCVWc9PSIsInZhbHVlIjoidUhTdXNWTUVQdTNCeHNmSnpUdFVMODRQNlBsdzFpd3hOdDZXaGg2QlhNa2oxY0VlbUxLWDdnUWtOTG9oblo2ZDNEZGJ6VThNNXpmVTNtU1dSUGRTZWVqeDdLQXA2MVpydmlJNGxBZVo4bm55ajBKSUc5TFVZOG1HbjJTTVAwalQiLCJtYWMiOiI3NTAyZDEyMTdhN2MyNzk3ZTFhZmI4NDA5OGU2ZDBlZmI5MTliNmY1M2YyM2Y2NWZkYzIyMjNmMjVmOWU1MzMyIiwidGFnIjoiIn0%3D<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>accept-language<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="65 characters">en-US,en;q=0.9,vi;q=0.8,ja;q=0.7,vi-VN;q=0.6,fr-FR;q=0.5,fr;q=0.4<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>accept-encoding<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="13 characters">gzip, deflate<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>accept<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="135 characters">text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>user-agent<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="111 characters">Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/113.0.0.0 Safari\/537.36<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>upgrade-insecure-requests<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str>1<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>connection<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="10 characters">keep-alive<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>host<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="18 characters">dev.crypto-epay.io<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>content-length<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => ""\n  <\/samp>]\n  "<span class=sf-dump-key>content-type<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => ""\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-126410973", {"maxDepth":0})<\/script>\n',
+                        request_server:
+                            '<pre class=sf-dump id=sf-dump-2092474613 data-indent-pad="  "><span class=sf-dump-note>array:33<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>USER<\/span>" => "<span class=sf-dump-str title="5 characters">nginx<\/span>"\n  "<span class=sf-dump-key>HOME<\/span>" => "<span class=sf-dump-str title="14 characters">\/var\/lib\/nginx<\/span>"\n  "<span class=sf-dump-key>HTTP_COOKIE<\/span>" => "<span class=sf-dump-str title="1323 characters">remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6Im5EblN2SER2M2ZZanBhU1lwc1l4K2c9PSIsInZhbHVlIjoiWDdidjJ5NG9kNTJPVk1aVTVMSjd2ek9DVE9WQjF0VEs5YXFwUFAyeGNEQ24zekFwNmhZRDBWUmNKSlRCeDBrVXJUUyswYkdWY3N6WnBhRDVQTHBkQmo5NjBMZzBFU2tZelBGQ1d0Y3RDRXJGenBTVUFGZFFYSkJwNEswU2JHRWlWTEU3Yk11RHU2NDM3OTZ5K1cwajllcGN5UzhOUmxCaHRpWk9EeVREK2YrclhpVFJJKzRZZDJ6eGs5aXhEWm1EUDBTRStheGd2SXhoeGV1TE9NUmNhdFJHbnhDMjdDbWx0V3NOYmdGZVpuS2VXUjJ0MnBZVE8zZ1hRQUk3YWx4WlQ2blhBSDNJd0FvQnpGT3RDaXhmQkE9PSIsIm1hYyI6IjA2YzY1NzhjNDMxNTczN2JmMzc1OTFlNTkzZTY4OTkxYzcxOTgxZDg5Nzk3YzJmODcyYmQ1ZTMwOGI2Y2JhNTUiLCJ0YWciOiIifQ%3D%3D; XSRF-TOKEN=eyJpdiI6ImxYUFZSbG90WFFoNGNrbkE2amFpQlE9PSIsInZhbHVlIjoia1lHYkJEdlkzb1M0UGZrY2s0SU9VT3l0Nlg2Ry9yV0JkN3FsSFlzNVdidnFHQ0dsOGNVZnl0eE5xUlIzK2hLZk9DNFhWTk0xbmxBOVpYbHNBcjNNdXZsVHY3UmZRN2ZCZXlxcHBINjVDM2xWMHd4WkhQSDVrdmo0NWhVYlJoS3kiLCJtYWMiOiIwZDQwNTQ0ZTU4MmFhODg0NTUwNDAwMjg3ZTBlZjA4OTc1N2RjMjc2ZTQ0MzAwZDQ3NjI3NmQ5YTQ5ZWE3MDY4IiwidGFnIjoiIn0%3D; slash_payment_session=eyJpdiI6IklVS3V4czl3MmJ0a1UzVWxreUFCVWc9PSIsInZhbHVlIjoidUhTdXNWTUVQdTNCeHNmSnpUdFVMODRQNlBsdzFpd3hOdDZXaGg2QlhNa2oxY0VlbUxLWDdnUWtOTG9oblo2ZDNEZGJ6VThNNXpmVTNtU1dSUGRTZWVqeDdLQXA2MVpydmlJNGxBZVo4bm55ajBKSUc5TFVZOG1HbjJTTVAwalQiLCJtYWMiOiI3NTAyZDEyMTdhN2MyNzk3ZTFhZmI4NDA5OGU2ZDBlZmI5MTliNmY1M2YyM2Y2NWZkYzIyMjNmMjVmOWU1MzMyIiwidGFnIjoiIn0%3D<\/span>"\n  "<span class=sf-dump-key>HTTP_ACCEPT_LANGUAGE<\/span>" => "<span class=sf-dump-str title="65 characters">en-US,en;q=0.9,vi;q=0.8,ja;q=0.7,vi-VN;q=0.6,fr-FR;q=0.5,fr;q=0.4<\/span>"\n  "<span class=sf-dump-key>HTTP_ACCEPT_ENCODING<\/span>" => "<span class=sf-dump-str title="13 characters">gzip, deflate<\/span>"\n  "<span class=sf-dump-key>HTTP_ACCEPT<\/span>" => "<span class=sf-dump-str title="135 characters">text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,*\/*;q=0.8,application\/signed-exchange;v=b3;q=0.7<\/span>"\n  "<span class=sf-dump-key>HTTP_USER_AGENT<\/span>" => "<span class=sf-dump-str title="111 characters">Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/113.0.0.0 Safari\/537.36<\/span>"\n  "<span class=sf-dump-key>HTTP_UPGRADE_INSECURE_REQUESTS<\/span>" => "<span class=sf-dump-str>1<\/span>"\n  "<span class=sf-dump-key>HTTP_CONNECTION<\/span>" => "<span class=sf-dump-str title="10 characters">keep-alive<\/span>"\n  "<span class=sf-dump-key>HTTP_HOST<\/span>" => "<span class=sf-dump-str title="18 characters">dev.crypto-epay.io<\/span>"\n  "<span class=sf-dump-key>REDIRECT_STATUS<\/span>" => "<span class=sf-dump-str title="3 characters">200<\/span>"\n  "<span class=sf-dump-key>SERVER_NAME<\/span>" => "<span class=sf-dump-str title="13 characters">13.215.163.58<\/span>"\n  "<span class=sf-dump-key>SERVER_PORT<\/span>" => "<span class=sf-dump-str title="2 characters">80<\/span>"\n  "<span class=sf-dump-key>SERVER_ADDR<\/span>" => "<span class=sf-dump-str title="13 characters">172.31.31.119<\/span>"\n  "<span class=sf-dump-key>REMOTE_PORT<\/span>" => "<span class=sf-dump-str title="5 characters">58237<\/span>"\n  "<span class=sf-dump-key>REMOTE_ADDR<\/span>" => "<span class=sf-dump-str title="15 characters">113.160.247.219<\/span>"\n  "<span class=sf-dump-key>SERVER_SOFTWARE<\/span>" => "<span class=sf-dump-str title="12 characters">nginx\/1.22.1<\/span>"\n  "<span class=sf-dump-key>GATEWAY_INTERFACE<\/span>" => "<span class=sf-dump-str title="7 characters">CGI\/1.1<\/span>"\n  "<span class=sf-dump-key>REQUEST_SCHEME<\/span>" => "<span class=sf-dump-str title="4 characters">http<\/span>"\n  "<span class=sf-dump-key>SERVER_PROTOCOL<\/span>" => "<span class=sf-dump-str title="8 characters">HTTP\/1.1<\/span>"\n  "<span class=sf-dump-key>DOCUMENT_ROOT<\/span>" => "<span class=sf-dump-str title="26 characters">\/srv\/slash_payment2\/public<\/span>"\n  "<span class=sf-dump-key>DOCUMENT_URI<\/span>" => "<span class=sf-dump-str title="10 characters">\/index.php<\/span>"\n  "<span class=sf-dump-key>REQUEST_URI<\/span>" => "<span class=sf-dump-str title="11 characters">\/epay\/admin<\/span>"\n  "<span class=sf-dump-key>SCRIPT_NAME<\/span>" => "<span class=sf-dump-str title="10 characters">\/index.php<\/span>"\n  "<span class=sf-dump-key>CONTENT_LENGTH<\/span>" => ""\n  "<span class=sf-dump-key>CONTENT_TYPE<\/span>" => ""\n  "<span class=sf-dump-key>REQUEST_METHOD<\/span>" => "<span class=sf-dump-str title="3 characters">GET<\/span>"\n  "<span class=sf-dump-key>QUERY_STRING<\/span>" => ""\n  "<span class=sf-dump-key>SCRIPT_FILENAME<\/span>" => "<span class=sf-dump-str title="36 characters">\/srv\/slash_payment2\/public\/index.php<\/span>"\n  "<span class=sf-dump-key>FCGI_ROLE<\/span>" => "<span class=sf-dump-str title="9 characters">RESPONDER<\/span>"\n  "<span class=sf-dump-key>PHP_SELF<\/span>" => "<span class=sf-dump-str title="10 characters">\/index.php<\/span>"\n  "<span class=sf-dump-key>REQUEST_TIME_FLOAT<\/span>" => <span class=sf-dump-num>1684376653.3199<\/span>\n  "<span class=sf-dump-key>REQUEST_TIME<\/span>" => <span class=sf-dump-num>1684376653<\/span>\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-2092474613", {"maxDepth":0})<\/script>\n',
+                        request_cookies:
+                            '<pre class=sf-dump id=sf-dump-604320825 data-indent-pad="  "><span class=sf-dump-note>array:3<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d<\/span>" => <span class=sf-dump-const>null<\/span>\n  "<span class=sf-dump-key>XSRF-TOKEN<\/span>" => "<span class=sf-dump-str title="40 characters">ndgJ1qFNia6H9gi3zkn3dZwhapAAbPBBTSgDGkZQ<\/span>"\n  "<span class=sf-dump-key>slash_payment_session<\/span>" => "<span class=sf-dump-str title="40 characters">JxzpmvPl1JEZPvY2DHGAmIbf7OHwm5qkppJzzZln<\/span>"\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-604320825", {"maxDepth":0})<\/script>\n',
+                        response_headers:
+                            '<pre class=sf-dump id=sf-dump-89924878 data-indent-pad="  "><span class=sf-dump-note>array:5<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>content-type<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="24 characters">text\/html; charset=UTF-8<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>cache-control<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="17 characters">no-cache, private<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>date<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="29 characters">Thu, 18 May 2023 02:24:13 GMT<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>set-cookie<\/span>" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="428 characters">XSRF-TOKEN=eyJpdiI6ImV0Z0FrVWRudlNnQ1JxSU52eURTdHc9PSIsInZhbHVlIjoia1Z4TE5ZeWxHRUF5YS9LMExFbms3Y0RKTzZvQzJ6S1IwMFBNcFI5My9PRVdsWHNqaDhEZWVHK0tYU1Z6Sk02WExpekc3dTB0aG1ETldjbEFyODB3Qkg3NngyU0NURU1Od0toVCtXdm1Gem9nRDA4VCs2UlduVytvNnU5QXM1dVIiLCJtYWMiOiIwYTFmZDZkNTA2MDNlMGYzNmJmYzMyM2MwNjI2MDAzYzZiYWUzNDk0MWQ1ZGVjMTM5MDE5YmEwYWE5YmFiZTA5IiwidGFnIjoiIn0%3D; expires=Thu, 18-May-2023 04:24:13 GMT; Max-Age=7200; path=\/; samesite=lax<\/span>"\n    <span class=sf-dump-index>1<\/span> => "<span class=sf-dump-str title="449 characters">slash_payment_session=eyJpdiI6IlJnRGRKRVVESW52aGY2YmNsa3JkdEE9PSIsInZhbHVlIjoieEVvb2tzUVZWQmQvTTdpQkZTY2ZtbWxHOC9Rb2VjMHpYSHBWak5Sa3VuMGZFc0RPZDFvY3ZvQS9vWEVlQlJ0dld0Q0NxUUxDa2NFWFNHYzJUcjNWVlNqUXBsTkk5M2plQXVGQnh2a3AvYytKUUtvbHRPOG5qdkxsc0RhV2pCTTciLCJtYWMiOiJlMGQ5ZTRhZDJlNWJhOWJiN2Q2MWFhOWQ2MjA5OWE5ZWY1MTllZDc2MGIwOGVmNTcxNWY3MWI4N2Q2NTZmMDhlIiwidGFnIjoiIn0%3D; expires=Thu, 18-May-2023 04:24:13 GMT; Max-Age=7200; path=\/; httponly; samesite=lax<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>Set-Cookie<\/span>" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => "<span class=sf-dump-str title="400 characters">XSRF-TOKEN=eyJpdiI6ImV0Z0FrVWRudlNnQ1JxSU52eURTdHc9PSIsInZhbHVlIjoia1Z4TE5ZeWxHRUF5YS9LMExFbms3Y0RKTzZvQzJ6S1IwMFBNcFI5My9PRVdsWHNqaDhEZWVHK0tYU1Z6Sk02WExpekc3dTB0aG1ETldjbEFyODB3Qkg3NngyU0NURU1Od0toVCtXdm1Gem9nRDA4VCs2UlduVytvNnU5QXM1dVIiLCJtYWMiOiIwYTFmZDZkNTA2MDNlMGYzNmJmYzMyM2MwNjI2MDAzYzZiYWUzNDk0MWQ1ZGVjMTM5MDE5YmEwYWE5YmFiZTA5IiwidGFnIjoiIn0%3D; expires=Thu, 18-May-2023 04:24:13 GMT; path=\/<\/span>"\n    <span class=sf-dump-index>1<\/span> => "<span class=sf-dump-str title="421 characters">slash_payment_session=eyJpdiI6IlJnRGRKRVVESW52aGY2YmNsa3JkdEE9PSIsInZhbHVlIjoieEVvb2tzUVZWQmQvTTdpQkZTY2ZtbWxHOC9Rb2VjMHpYSHBWak5Sa3VuMGZFc0RPZDFvY3ZvQS9vWEVlQlJ0dld0Q0NxUUxDa2NFWFNHYzJUcjNWVlNqUXBsTkk5M2plQXVGQnh2a3AvYytKUUtvbHRPOG5qdkxsc0RhV2pCTTciLCJtYWMiOiJlMGQ5ZTRhZDJlNWJhOWJiN2Q2MWFhOWQ2MjA5OWE5ZWY1MTllZDc2MGIwOGVmNTcxNWY3MWI4N2Q2NTZmMDhlIiwidGFnIjoiIn0%3D; expires=Thu, 18-May-2023 04:24:13 GMT; path=\/; httponly<\/span>"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-89924878", {"maxDepth":0})<\/script>\n',
+                        session_attributes:
+                            '<pre class=sf-dump id=sf-dump-450865139 data-indent-pad="  "><span class=sf-dump-note>array:6<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  "<span class=sf-dump-key>_token<\/span>" => "<span class=sf-dump-str title="40 characters">ndgJ1qFNia6H9gi3zkn3dZwhapAAbPBBTSgDGkZQ<\/span>"\n  "<span class=sf-dump-key>_previous<\/span>" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    "<span class=sf-dump-key>url<\/span>" => "<span class=sf-dump-str title="36 characters">http:\/\/dev.crypto-epay.io\/epay\/admin<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>_flash<\/span>" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    "<span class=sf-dump-key>old<\/span>" => []\n    "<span class=sf-dump-key>new<\/span>" => []\n  <\/samp>]\n  "<span class=sf-dump-key>login_epay_59ba36addc2b2f9401580f014c7f58ea4e30989d<\/span>" => "<span class=sf-dump-str title="36 characters">031447b4-3023-46f2-8b5e-69ec8a7ae660<\/span>"\n  "<span class=sf-dump-key>admin_roles<\/span>" => <span class=sf-dump-note>array:3<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    "<span class=sf-dump-key>role_name<\/span>" => "<span class=sf-dump-str title="13 characters">administrator<\/span>"\n    "<span class=sf-dump-key>role_name_jp<\/span>" => "<span class=sf-dump-str title="3 characters">&#31649;&#29702;&#32773;<\/span>"\n    "<span class=sf-dump-key>role_id<\/span>" => "<span class=sf-dump-str title="36 characters">944a18d1-f2c7-11ed-b024-067e34f000bc<\/span>"\n  <\/samp>]\n  "<span class=sf-dump-key>PHPDEBUGBAR_STACK_DATA<\/span>" => []\n<\/samp>]\n<\/pre><script>Sfdump("sf-dump-450865139", {"maxDepth":0})<\/script>\n',
+                    },
+                },
+                "X0dd120f7c0bb600de65135b260e69653"
+            );
+        </script>
+    </body>
+</html>

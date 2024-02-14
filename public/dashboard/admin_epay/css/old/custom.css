@@ -1,0 +1,23 @@
+.error{
+    font-size: 80%;
+    color: #e74a3b;
+    width: 100%;
+}
+.bg-primary{
+    width: 243px;
+}
+.color-white{
+    color: #fff;
+}
+.row{
+    margin: 0px;
+}
+.bg-light{
+    width: 243px;
+}
+/* .input-group input{
+    border-right: 1px solid #d1d3e2 !important; 
+}
+.input-group .is-invalid input{
+    border-right: 1px solid #e74a3b !important; 
+} */

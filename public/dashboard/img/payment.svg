@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="20.238" viewBox="0 0 25 20.238">
+  <g id="Group_20380" data-name="Group 20380" transform="translate(-1725 670)">
+    <g id="baseline-money-24px" transform="translate(1723 -674)">
+      <path id="Path_1913" data-name="Path 1913" d="M5,8H7.378v7.009H5Zm8.323,0H9.756c-.654,0-1.189.394-1.189.876v5.257c0,.482.535.876,1.189.876h3.567c.654,0,1.189-.394,1.189-.876V8.876C14.512,8.394,13.977,8,13.323,8Zm-1.189,5.257H10.945v-3.5h1.189ZM20.458,8H16.891c-.654,0-1.189.394-1.189.876v5.257c0,.482.535.876,1.189.876h3.567c.654,0,1.189-.394,1.189-.876V8.876C21.647,8.394,21.112,8,20.458,8Zm-1.189,5.257H18.08v-3.5h1.189Z" transform="translate(1.177 2.614)" fill="#fff"/>
+      <path id="Path_1914" data-name="Path 1914" d="M4,6H25V21.238H4Z" transform="translate(0 0.5)" fill="none"/>
+      <path id="Path_1915" data-name="Path 1915" d="M2,4V24.238H27V4ZM4.5,21.708V6.53h20V21.708Z" transform="translate(0)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

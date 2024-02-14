@@ -1,0 +1,262 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+# 各種パラメータ
+Parameters:
+  CodeCommitRepository:
+    Type: String
+    Description: CodeCommit repository
+    Default: dev-epay-codecommit
+
+  ProjectName:
+    Type: String
+    Description: Name of the project
+    Default: epay
+
+  Environment:
+    Description: An environment name that is prefixed to resource names
+    Type: String
+    AllowedValues:
+      - dev
+      - stg
+      - prod
+    Default: stg
+
+# 各種リソース
+Resources:
+  # CodeBuildに適用するIAMRole
+  # 必要に応じて内容を変更してください
+  CodeBuildServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codebuild.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                  - dynamodb:*
+                  - ses:*
+                  - ssm:*
+              - Resource: !Sub arn:aws:s3:::${ArtifactBucket}/*
+                Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:GetObjectVersion
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-CodeBuildServiceRole'
+
+  # CodePipelineに適用するIAMRole
+  # 必要に応じて内容を変更してください
+  CodePipelineServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codepipeline.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Resource:
+                  - !Sub arn:aws:s3:::${ArtifactBucket}/*
+                Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:GetObject
+                  - s3:GetObjectVersion
+                  - s3:GetBucketVersioning
+              - Resource: "*"
+                Effect: Allow
+                Action:
+                  - codebuild:StartBuild
+                  - codebuild:StopBuild
+                  - codebuild:BatchGet*
+                  - codebuild:Get*
+                  - codebuild:List*
+                  - codecommit:GetBranch
+                  - codecommit:GetCommit
+                  - codecommit:GetRepository
+                  - codecommit:ListBranches
+                  - codecommit:GetUploadArchiveStatus
+                  - codecommit:UploadArchive
+                  - codecommit:CancelUploadArchive
+                  - codedeploy:CreateDeployment
+                  - codedeploy:GetApplicationRevision
+                  - codedeploy:GetDeployment
+                  - codedeploy:GetDeploymentConfig
+                  - codedeploy:RegisterApplicationRevision
+                  - s3:GetBucketLocation
+                  - s3:ListAllMyBuckets
+                  - iam:PassRole
+              - Resource: "arn:aws:ssm:*:*:parameter/CodeBuild/*"
+                Effect: Allow
+                Action:
+                  - ssm:PutParameter
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-CodePipelineServiceRole'
+
+  # CodeDeployに適用するIAMRole
+  # 必要に応じて内容を変更してください
+  # すでにAWS側が用意してくれているPolicyを指定
+  CodeDeployServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: codedeploy.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-CodeDeployServiceRole'
+
+  # S3Bucket
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+
+  # Parameter Store
+  ParameterStoreEnv:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub '${Environment}-${ProjectName}-ENV_FILE'
+      Type: String
+      Value: 'Pls update env'
+
+  # CodeCommit
+  #CodeCommitRepository:
+  #  Type: AWS::CodeCommit::Repository
+  #  Properties:
+  #    RepositoryName: !Sub '${Environment}-${ProjectName}-CodeCommitRepository'
+  #    Tags:
+  #      - Key: Name
+  #        Value: !Sub '${Environment}-${ProjectName}-CodeCommitRepository'
+
+  # CodeBuild
+  CodeBuildProject:
+    Type: AWS::CodeBuild::Project
+    Properties:
+      Artifacts:
+        Type: CODEPIPELINE
+      Source:
+        Type: CODEPIPELINE
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:6.0
+        Type: LINUX_CONTAINER
+        EnvironmentVariables:
+          - Name: PARA_ENV_FILE
+            Type: PLAINTEXT
+            Value: !Sub '${Environment}-${ProjectName}-ENV_FILE'
+      Name: !Ref AWS::StackName
+      ServiceRole: !Ref CodeBuildServiceRole
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-CodeBuildProject'
+
+  # CodeDeploy
+  CodeDeployApplication:
+    Type: AWS::CodeDeploy::Application
+    Properties:
+      ApplicationName: !Sub '${Environment}-${ProjectName}-CodeDeployApplication'
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-CodeDeployApplication'
+
+  CodeDeployGroup:
+    Type: AWS::CodeDeploy::DeploymentGroup
+    Properties:
+      ApplicationName: !Ref CodeDeployApplication
+      DeploymentGroupName: !Sub '${Environment}-${ProjectName}-CodeDeployGroup'
+      DeploymentConfigName: CodeDeployDefault.OneAtATime
+      Ec2TagFilters:
+        - Type: KEY_AND_VALUE
+          Key: "CICD"
+          Value: !Sub '${Environment}-${ProjectName}-EC2Instance'
+      ServiceRoleArn: !GetAtt [CodeDeployServiceRole, Arn]
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-CodeDeployGroup'
+
+  # CodePipeLine
+  # 内容は CodeCommit → CodeBuild → CodeDeploy の順で処理
+  Pipeline:
+    Type: AWS::CodePipeline::Pipeline
+    Properties:
+      RoleArn: !GetAtt CodePipelineServiceRole.Arn
+      ArtifactStore:
+        Type: S3
+        Location: !Ref ArtifactBucket
+      Stages:
+        - Name: Source
+          Actions:
+            - Name: SourceAction
+              ActionTypeId:
+                Category: Source
+                Owner: AWS
+                Version: 1
+                Provider: CodeCommit
+              Configuration:
+                RepositoryName: !Ref CodeCommitRepository
+                BranchName: !Ref Environment
+              RunOrder: 1
+              OutputArtifacts:
+                - Name: App
+        - Name: Build
+          Actions:
+            - Name: Build
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: 1
+                Provider: CodeBuild
+              Configuration:
+                ProjectName: !Ref CodeBuildProject
+              RunOrder: 1
+              InputArtifacts:
+                - Name: App
+              OutputArtifacts:
+                - Name: MyApp
+        - Name: Deploy
+          Actions:
+            - Name: Deploy
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Version: 1
+                Provider: CodeDeploy
+              Configuration:
+                ApplicationName: !Ref CodeDeployApplication
+                DeploymentGroupName: !Ref CodeDeployGroup
+              RunOrder: 1
+              InputArtifacts:
+                - Name: MyApp
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-Pipeline'

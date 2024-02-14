@@ -1,0 +1,573 @@
+<html lang="jp">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="wjCPn0bFBpS2zCCEo14whmbBf4nb8AGrnjPEuskg">
+<title>アカウント管理</title>
+
+<!-- Google Font: Source Sans Pro -->
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=fallback' rel='stylesheet'>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/themes/plugins/fontawesome-free/css/all.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/themes/dist/css/adminlte.min.css">
+
+<link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/themes/plugins/toastr/toastr.min.css">
+<!-- overlayScrollbars -->
+<link rel="stylesheet"
+      href="http://dev.crypto-epay.io/dashboard/themes/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+<!--sbadmin2-->
+<link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/css/sb-admin-2.min.css">
+<link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/css/sb-admin-2.css">
+<link rel="stylesheet" href="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/scss/sb-admin-2.scss">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- add bootstrap -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+<!--custom css -->
+<link rel="stylesheet" href="./../../../../css/common/sidebar.css">
+<link rel="stylesheet" href="./../../../../css/common/custom.css">
+<link rel="stylesheet" href="./../../../../css/popup/popup_aggregatedData.css">
+<!-- <link rel="stylesheet" href="./../../../../css/account_manager_edit.css"> -->
+
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
+<div class="wrapper">
+    <div style="margin-left  :224px">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-0 static-top shadow">
+
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- Topbar Search -->
+    <form
+        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Topbar Navbar -->
+    <ul class="navbar-nav ml-auto">
+
+        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+        <li class="nav-item dropdown no-arrow d-sm-none">
+            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+            </a>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small"
+                            placeholder="Search for..." aria-label="Search"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+
+        <!-- Nav Item - Alerts -->
+        <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;日本語</span>
+                <!-- Counter - Alerts -->
+            </a>
+            <!-- Dropdown - Alerts -->
+            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div>
+                        <span class="font-weight-bold">日本語</span>
+                    </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div>
+                        English
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <!-- Nav Item - Messages -->
+        <li class="nav-item mx-1">
+            <a class="nav-link" href="#" id="messagesDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>UserName : </span>
+                <span>Sample Sample </span>
+                <!-- Counter - Messages -->
+            </a>
+        </li>
+        <li class="nav-item mx-1">
+            <a class="nav-link" href="http://dev.crypto-epay.io/admin-epay/auth/logout" role="button" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-outline-primary" style="text-align:center">Logout</button>
+            </a>
+        </li>
+    </ul>
+
+</nav>
+    </div>
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar elevation-4"  style="width: 224px;">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center">
+            <img src="http://dev.crypto-epay.io/dashboard/img/sidebar_logo.svg" style="height:70px"/>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <img src="http://dev.crypto-epay.io/dashboard/img/dashboard.svg" style="height:20px; padding-right:10px"/>
+                <span>sidebar.dashboard</span></a>
+        </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <img src="http://dev.crypto-epay.io/dashboard/img/merchant.svg" style="height:20px; padding-right:10px"/>
+                <span>sidebar.merchant</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="buttons.html">sidebar.merchant_list</a>
+                    <a class="collapse-item" href="cards.html">sidebar.merchant_regis</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities">
+                <img src="http://dev.crypto-epay.io/dashboard/img/AF.svg" style="height:20px; padding-right:10px"/>
+                <span>sidebar.AF</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                data-parent="#accordionSidebar">
+                <div class="py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="utilities-color.html">sidebar.AF_list</a>
+                    <a class="collapse-item" href="utilities-border.html">sidebar.AF_regis</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                aria-expanded="true" aria-controls="collapsePages">
+                <img src="http://dev.crypto-epay.io/dashboard/img/payment.svg" style="height:20px; padding-right:10px"/>
+                <span>sidebar.payment</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="login.html">sidebar.payment_request</a>
+                    <a class="collapse-item" href="register.html">sidebar.payment_history</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <img src="http://dev.crypto-epay.io/dashboard/img/noti.svg" style="height:20px; padding-right:10px"/>
+                <span>sidebar.notification</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a class="nav-link" href="http://dev.crypto-epay.io/admin-epay/setting/profile">
+                <img src="http://dev.crypto-epay.io/dashboard/img/setting.svg" style="height:20px; padding-right:10px"/>
+                <span>sidebar.setting</span></a>
+        </li>
+    </ul>
+</aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper content_edit" style="margin-left:224px;">
+        <section class="content-header">
+            <div class="container-fluid pl-0">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="main-title-page">設定</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+        <div class="container-fluid">
+        <!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="popup-aggregatedData">
+                        <h3 class="title_edit_account">ポップアップ</h3>
+                        <button type="button" class="btn show-popup" data-toggle="modal" data-target="#showData">
+                            加盟店選択
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal modal-popup-aggregatedData fade" id="showData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">パスワード変更確認</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row infomation-time">
+                                        <div class="col-12 content-time">
+                                            <img src="../../../../../img/back.svg" alt="">
+                                            <p class="info-day">2023年4月1日</p>
+                                            <p class="info-time">11:00</p>
+                                            <img src="../../../../../img/next.svg " alt="">
+                                        </div>
+                                    </div>
+                                    <div class="row infomation-data-transaction">
+                                        <div class="col-6 summary-data content-info-data">
+                                            <div class="col title-data">
+                                                <h6 class="title">取引集計データ</h6>
+                                            </div>
+                                            <div class="col item-data-transcation content-data-withdraw bdBottomSolid">
+                                                <div class="name-icon-data">
+                                                    <p class="name-data">総取引回数</p>
+                                                    <div class="img-toogle">
+                                                        <img class="img-question-mini" src="../../../../img/question-icon-mini.svg">
+                                                        <div class="noti-popup">
+                                                              <div class="noti-card-body">
+                                                                <p class="text-noti-popup noti-popup-1">総取引回数の説明</p>
+                                                                <p class="text-noti-popup">取引側行われた回数</p>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="total-number">105</p>
+                                            </div>
+                                            <div class="col item-transcation">
+                                                <div class="name-icon-data item-data-transcation bdBottomDashed">
+                                                    <p class="name-data">支払金額</p>
+                                                    <img class="img-question-mini" src="../../../../../img/question-icon-mini.svg" alt="">
+                                                </div>
+                                                <ul class="list-data-trans">
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USD</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USD</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">JPY</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans ">
+                                                            <p class="name-trans">IDR</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">EUR</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">PHP</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">AED</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">INR</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">SGD</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">KRW</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans ">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">HKD</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col item-transcation">
+                                                <div class="name-icon-data item-data-transcation bdBottomSolid">
+                                                    <p class="name-data">受付金額</p>
+                                                    <img class="img-question-mini" src="../../../../../img/question-icon-mini.svg" alt="">
+                                                </div>
+                                                <ul class="list-data-trans">
+                                                    <li class="two-item-trans ">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USD</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USD</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans ">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">JPY</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans ">
+                                                            <p class="name-trans">IDR</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col data-unpaid-amount bdBottomSolid">
+                                                <div class="name-icon-data">
+                                                    <p class="name-data">未払い額(円)</p>
+                                                    <div class="noti-popup">
+                                                        <div class="collapse width" id="collapseWidthExample">
+                                                          <div class="noti-card-body">
+                                                            <p class="text-noti-popup noti-popup-1">未払い額の説明</p>
+                                                            <p class="text-noti-popup">未払い残高</p>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="total-number">1,500,000</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 summary-data content-info-data">
+                                            <div class="col title-data">
+                                                <h6 class="title">出金集計データ</h6>
+                                            </div>
+                                            <div class="col item-data-transcation content-data-withdraw bdBottomSolid">
+                                                <div class="name-icon-data">
+                                                    <p class="name-data">総出金件数</p>
+                                                    <img class="img-question-mini" src="../../../../../img/question-icon-mini.svg" alt="">
+                                                </div>
+                                                <p class="total-number">105</p>
+                                            </div>
+                                            <div class="col item-transcation">
+                                                <div class="name-icon-data item-data-transcation bdBottomDashed">
+                                                    <p class="name-data">総出金額</p>
+                                                    <img class="img-question-mini" src="../../../../../img/question-icon-mini.svg" alt="">
+                                                </div>
+                                                <ul class="list-data-trans">
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">日本円</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">DAI</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USDT</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans ">
+                                                            <p class="name-trans">JPYC</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USDC</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">現金円</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col item-transcation">
+                                                <div class="name-icon-data item-data-transcation bdBottomSolid">
+                                                    <p class="name-data">出金手数料</p>
+                                                    <img class="img-question-mini" src="../../../../../img/question-icon-mini.svg" alt="">
+                                                </div>
+                                                <ul class="list-data-trans">
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">日本円</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">DAI</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USDT</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans ">
+                                                            <p class="name-trans">JPYC</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="two-item-trans bdBottomDashed">
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">USDC</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                        <div class="item-trans">
+                                                            <p class="name-trans">現金円</p>
+                                                            <p class="value-trans">100,000</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col data-unpaid-amount bdBottomSolid">
+                                                <div class="name-icon-data">
+                                                    <p class="name-data">新規加盟店数</p>
+                                                    <img class="img-question-mini" src="../../../../../img/question-icon-mini.svg" alt="">
+                                                </div>
+                                                <p class="total-number">100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                </div>
+            <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- copyright -->
+    <footer class="main-footer">
+    <strong>2023 Copyrights &copy; 2023 <a href="#">epay</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        Produced by <b>E-money Hub Ltd</b>
+    </div>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="http://dev.crypto-epay.io/dashboard/themes/plugins/toastr/toastr.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/dist/js/adminlte.js"></script>
+<!-- sbadmin2 -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/js/sb-admin-2.js"></script>
+<script src="http://dev.crypto-epay.io/dashboard/themes/dist_sbadmin2/js/sb-admin-2.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="http://dev.crypto-epay.io/dashboard/themes/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    function parseValidateMessage(errors) {
+        console.log(errors)
+        let emes = []
+        Object.values(errors).forEach(function (e) {
+            emes.push('<li>' + e.join('</li><li>') + '</li>')
+        })
+        console.log(emes);
+        return emes.join('');
+    }
+
+    $(function () {
+        // toastr option
+        toastr.options.escapeHtml = false;
+        toastr.options.closeButton = true;
+        toastr.options.closeDuration = 0;
+        toastr.options.extendedTimeOut = 500;
+        toastr.options.timeOut = 5000;
+        toastr.options.tapToDismiss = false;
+        toastr.options.positionClass = 'toast-top-right';
+                            });
+</script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

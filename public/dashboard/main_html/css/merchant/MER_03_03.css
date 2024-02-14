@@ -1,0 +1,323 @@
+#content {
+    background-color: #FFFFFF;
+}
+.modal-open {
+    overflow:  hidden !important;
+}
+/* input date */
+.date-time {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* select css dropdown fomr */
+/* select */
+.select_form {
+    max-width: 500px !important;
+    width: 100% !important;
+    height: 52px !important;
+}
+
+.select_form {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #686E7C;
+}
+
+select::-ms-expand {
+    display: none;
+}
+.form-edit-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-control-w200 {
+    max-width: 200px !important;
+    width: 200px !important;
+}
+.form-control-w128 {
+    max-width: 128px !important;
+    width: 128px !important;
+}
+.form-control-w189 {
+    max-width: 189px !important;
+    width: 189px !important;
+}
+.form-control-w337 {
+    max-width: 337px;
+    width: 337px !important;
+}
+.merchant-slt-btn {
+    width: 150px;
+    height: 48px;
+}
+.form-input-mini {
+    display: flex;
+    align-items: center;
+}
+.form-input-mini label {
+    margin-left: 36px;
+    margin-right: 16px;
+}
+/* form-two-input-withdraw */
+.form-two-input-withdraw {
+    max-width: 500px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+.form-input-mini-item {
+    display: flex;
+    align-items: center;
+}
+.form-input-mini-item label{
+    /* margin-left: 16px; */
+    margin-right: 16px;
+    margin-bottom: 0;
+    padding: 0px;
+    width: 100%;
+    text-align: right;
+}
+.form-detail .form-group.form-item-request {
+    align-items: end;
+}
+.form-detail .form-group.form-item-request .label-custom {
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+.form-input-withdraw-request {
+    align-items: end;
+}
+.form-item-request .form-two-input-withdraw {
+    align-items: end;
+}
+.form-item-request .form-input-mini-item {
+    align-items: end;
+}
+.form-item-request .form-input-mini-item label {
+    height: 52px;
+    align-items: center;
+    display: flex;
+}
+.form-item-request .note-pass {
+    height: 52px;
+}
+.form-item-request .note-pass-error{
+    display: flex;
+    height: 52px;
+    align-items: center;
+}
+.text-noti-request {
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    color: #ABAFB3;
+    margin-bottom: 3px;
+}
+form.form-detail .form-group label {
+    margin-bottom: 0;
+}
+
+.title-detail-noti{
+    padding-top: 26px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #464A53;
+}
+.noti-detai-member-store{
+    margin-top: 36px !important;
+}
+
+.noti-content-detail {
+    align-items: start !important;
+}
+.noti-content-title {
+    margin-top: 15px;
+}
+.list-area-contents{
+    max-width: 850px !important;
+    width: 100%;
+    height: 272px !important;
+    overflow-y: auto;
+    resize: none;
+    border-radius: unset !important;
+    font-size: 16px !important;
+    color: #686e7c;
+}
+
+/* form-input-select */
+.form-input-select {
+    display: flex;
+    align-items: end;
+}
+.select_info {
+    max-width: 500px;
+    width: 100%;
+}
+.form-select {
+    width: 150px;
+    min-height: 48px;
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 15px;
+    padding: 0;
+}
+.btn-w500 {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.button-action {
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.btn-delete-detail{
+    margin-left: 20px;
+}
+.form-close{
+    margin-right: 0 ;
+    margin-left: 20px;
+}
+.form .form-group.form-item {
+    gap: 5px;
+}
+.content-item {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #ABAFB3;
+}
+.noti-content-detail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.input-action-select {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.button-action-select button{
+    width: 150px;
+    height: 48px;
+    border: none;
+}
+.btn-rejection {
+    color: #FFFFFF;
+    background-color: #F6C23E;
+    margin-left: 15px;
+}
+
+@media  only screen and (max-width: 1200px) {
+    .form-select{
+        font-size: 14px !important;
+    }
+    .form-detail .form-group.form-item-request {
+        align-items: center;
+    }
+    .form-item-request .note-pass {
+        height: auto;
+    }
+    .form-item-request .note-pass-error {
+        height: auto;
+    }
+}
+@media  only screen and (max-width: 992px) {
+    .form-input-mini-item label {
+        margin: 0 5px;
+    }
+    .btn-w500 {
+        width: auto;
+    }
+    .form-detail .form-group {
+        align-items: start;
+    }
+
+}
+@media  only screen and (max-width: 768px){
+    .form-input-mini label {
+        margin-left: 5px;
+    }
+    .button-action button , .button-action-select button{
+        width: 100px;
+    }
+    .form-control-w200 {
+        max-width: 200px !important;
+        width: 100% !important;
+    }
+    .form-control-w189 {
+        max-width: 128px !important;
+        width: 128px !important;
+    }
+}
+@media only screen and (max-width: 576px) {
+    form .form-group.form-item {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-detail .label-custom {
+        margin-bottom: 10px;
+    }
+    .form-input-select {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .form-select {
+        margin-left: 0 ;
+    }
+    .form-input-mini-item label {
+        margin: 0 5px;
+    }
+    .button-action button{
+        width: 100px !important;
+    }
+    .form-detail .form-group.form-item-request .label-custom {
+        height: auto;
+    }
+    .form-item-request .form-two-input-withdraw ,.form-item-request .form-input-mini-item ,.form-detail .form-group.form-item-request {
+        align-items: inherit;
+    }
+
+}
+@media only screen and (max-width: 520px) {
+    .form-input-mini {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-input-mini label {
+        margin-left: 0;
+    }
+    .form-two-input-withdraw {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-input-mini-item {
+        flex-direction: column;
+        align-items: start;
+        margin-top: 15px;
+    }
+    .form-input-mini-item label {
+        text-align: left;
+        margin: 0;
+    }
+    .form-item-request .form-two-input-withdraw ,.form-item-request .form-input-mini-item ,.form-detail .form-group.form-item-request {
+        align-items: start;
+    }
+}

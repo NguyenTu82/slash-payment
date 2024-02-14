@@ -1,0 +1,627 @@
+Parameters:
+  KeyName:
+    Description: Key Pair for EC2
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    Default: dev-epay-keypair
+
+  ProjectName:
+    Type: String
+    Description: Name of the project
+    Default: epay
+
+  Environment:
+      Description: An environment name that is prefixed to resource names
+      Type: String
+      AllowedValues:
+        - dev
+        - stg
+        - prod
+      Default: stg
+
+  DBPassword:
+    NoEcho: true
+    Type: String
+    Default: stg-epay
+    Description: The database admin account password
+    MinLength: '8'
+    MaxLength: '32'
+    ConstraintDescription: must be between 8 and 32 characters.
+
+  VpcCIDR:
+    Description: Please enter the IP range (CIDR notation) for this VPC
+    Type: String
+    Default: 10.0.0.0/16
+
+  PublicSubnet1CIDR:
+    Description: Please enter the IP range (CIDR notation) for the public subnet in the first Availability Zone
+    Type: String
+    Default: 10.0.1.0/24
+
+  PublicSubnet2CIDR:
+    Description: Please enter the IP range (CIDR notation) for the public subnet in the second Availability Zone
+    Type: String
+    Default: 10.0.2.0/24
+
+  PrivateSubnet1CIDR:
+    Description: Please enter the IP range (CIDR notation) for the private subnet in the first Availability Zone
+    Type: String
+    Default: 10.0.3.0/24
+
+  PrivateSubnet2CIDR:
+    Description: Please enter the IP range (CIDR notation) for the private subnet in the second Availability Zone
+    Type: String
+    Default: 10.0.4.0/24
+
+  CreateNatGatewayOrNot:
+    Description: You want to create NAT Gateway or not?
+    Type: String
+    AllowedValues:
+      - true
+      - false
+    Default: true
+
+Resources:
+  # Create VPC
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !Ref VpcCIDR
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-VPC'
+
+  # Create Internet Gateway
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-InternetGateway'
+
+  # AttachGateway
+  AttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref InternetGateway
+
+  # Create Public Subnet 1 for ELB Tier
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Ref PublicSubnet1CIDR
+      AvailabilityZone: ap-southeast-1a
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PublicSubnet1'
+
+  # Create Public Subnet 2 for ELB Tier
+  PublicSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Ref PublicSubnet2CIDR
+      AvailabilityZone: ap-southeast-1b
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PublicSubnet2'
+
+  # Create Private Subnet 1 for EC2 Tier
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Ref PrivateSubnet1CIDR
+      AvailabilityZone: ap-southeast-1a
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PrivateSubnet1'
+
+  # Create Private Subnet 2 for EC2 Tier
+  PrivateSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: !Ref PrivateSubnet2CIDR
+      AvailabilityZone: ap-southeast-1b
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PrivateSubnet2'
+
+  # Cache Subnet Group
+  CacheSubnetGroup:
+    Type: 'AWS::ElastiCache::SubnetGroup'
+    Properties:
+      CacheSubnetGroupName: !Sub '${Environment}-${ProjectName}-CacheSubnetGroup'
+      Description: 'Subnet group for ElastiCache Redis'
+      SubnetIds:
+        - !Ref PrivateSubnet1
+        - !Ref PrivateSubnet2
+
+  # Cache Subnet Group
+  RDSSubnetGroup:
+    Type: 'AWS::RDS::DBSubnetGroup'
+    Properties:
+      DBSubnetGroupName: !Sub '${Environment}-${ProjectName}-RDSSubnetGroup'
+      DBSubnetGroupDescription: 'Subnet group for RDS'
+      SubnetIds:
+        - !Ref PrivateSubnet1
+        - !Ref PrivateSubnet2
+
+  # Create NatGateway
+  NatGatewayEIP1:
+    Type: AWS::EC2::EIP
+    DependsOn: AttachGateway
+    Properties:
+      Domain: vpc
+    Condition: IsCreateNATGateway
+
+  NatGatewayEIP2:
+    Type: AWS::EC2::EIP
+    DependsOn: AttachGateway
+    Properties:
+      Domain: vpc
+    Condition: IsCreateNATGateway
+
+  NatGateway1:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt NatGatewayEIP1.AllocationId
+      SubnetId: !Ref PublicSubnet1
+    Condition: IsCreateNATGateway
+
+  NatGateway2:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt NatGatewayEIP2.AllocationId
+      SubnetId: !Ref PublicSubnet2
+    Condition: IsCreateNATGateway
+
+  # Create Public RouteTable
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PublicRouteTable'
+
+  PublicRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGateway
+
+  PublicSubnetRouteTableAssociation1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnet1
+      RouteTableId: !Ref PublicRouteTable
+
+  PublicSubnetRouteTableAssociation2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PublicSubnet2
+      RouteTableId: !Ref PublicRouteTable
+
+  # Create Private RouteTable
+  PrivateRouteTable1:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PrivateRouteTable1'
+
+  DefaultPrivateRoute1:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PrivateRouteTable1
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref NatGateway1
+    Condition: IsCreateNATGateway
+
+  PrivateSubnetRouteTableAssociation1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PrivateSubnet1
+      RouteTableId: !Ref PrivateRouteTable1
+
+  PrivateRouteTable2:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-PrivateRouteTable2'
+
+  DefaultPrivateRoute2:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId: !Ref PrivateRouteTable2
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId: !Ref NatGateway2
+    Condition: IsCreateNATGateway
+
+  PrivateSubnetRouteTableAssociation2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Ref PrivateSubnet2
+      RouteTableId: !Ref PrivateRouteTable2
+
+  # EC2 and ALB, RDS Security Groups
+  ELBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ELB Security Group
+      GroupName: !Sub '${Environment}-${ProjectName}-ELBSecurityGroup'
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-ELBSecurityGroup'
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: EC2 Security Group
+      GroupName: !Sub '${Environment}-${ProjectName}-EC2SecurityGroup'
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-EC2SecurityGroup'
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - ELBSecurityGroup
+              - GroupId
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 10.0.0.0/16
+
+  RDSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: !Ref VPC
+      GroupDescription: 'Security group for RDS instance'
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-RDSSecurityGroup'
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '3306'
+          ToPort: '3306'
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - EC2SecurityGroup
+              - GroupId
+        - IpProtocol: tcp
+          FromPort: '3306'
+          ToPort: '3306'
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - ELBSecurityGroup
+              - GroupId
+        - IpProtocol: tcp
+          FromPort: '6379'
+          ToPort: '6379'
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - EC2SecurityGroup
+              - GroupId
+
+  # Instance profile for EC2
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties: 
+      InstanceProfileName: !Sub '${Environment}-${ProjectName}-InstanceProfile'
+      Path: /
+      Roles: 
+       - !Ref Ec2InstanceRole
+
+  Ec2InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${Environment}-${ProjectName}-Ec2InstanceRole'
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          -
+            Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+
+  InstancePolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub '${Environment}-${ProjectName}-InstancePolicy'
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Resource: "*"
+            Effect: Allow
+            Action:
+              - ses:*
+              - ssm:*
+              - s3:*
+              - elasticache:*
+              - cloudwatch:PutMetricData
+              - ec2:DescribeVolumes
+              - ec2:DescribeTags
+              - logs:PutLogEvents
+              - logs:DescribeLogStreams
+              - logs:DescribeLogGroups
+              - logs:CreateLogStream
+              - logs:CreateLogGroup
+      Roles:
+        -
+          !Ref Ec2InstanceRole
+
+  # EC2 Instances
+  EC2Instance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0b3a4110c36b9a5f0
+      InstanceType: t2.small
+      PrivateIpAddress: 10.0.3.4
+      SecurityGroupIds:
+        - !Ref EC2SecurityGroup
+      SubnetId: !Ref PrivateSubnet1
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-EC2Instance1'
+        - Key: CICD
+          Value: !Sub '${Environment}-${ProjectName}-EC2Instance'
+      IamInstanceProfile: !Ref InstanceProfile
+
+  EC2Instance2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0b3a4110c36b9a5f0
+      InstanceType: t2.small
+      PrivateIpAddress: 10.0.4.4
+      SecurityGroupIds:
+        - !Ref EC2SecurityGroup
+      SubnetId: !Ref PrivateSubnet2
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-EC2Instance2'
+        - Key: CICD
+          Value: !Sub '${Environment}-${ProjectName}-EC2Instance'
+      IamInstanceProfile: !Ref InstanceProfile
+
+  EC2Instance3:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0b3a4110c36b9a5f0
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - !Ref ELBSecurityGroup
+      SubnetId: !Ref PublicSubnet1
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-EC2Instance3'
+
+  # Target Group, Listener and Application Load Balancer
+  EC2TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      HealthCheckIntervalSeconds: 30
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: 15
+      HealthyThresholdCount: 5
+      Matcher:
+        HttpCode: '200'
+      Name: !Sub '${Environment}-${ProjectName}-EC2TargetGroup'
+      Port: 80
+      Protocol: HTTP
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: '20'
+      Targets:
+        - Id: !Ref EC2Instance1
+          Port: 80
+        - Id: !Ref EC2Instance2
+          Port: 80
+      UnhealthyThresholdCount: 3
+      VpcId: !Ref VPC
+
+  ALBListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref EC2TargetGroup
+      LoadBalancerArn: !Ref ApplicationLoadBalancer
+      Port: 80
+      Protocol: HTTP
+
+  ApplicationLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub '${Environment}-${ProjectName}-ApplicationLoadBalancer'
+      Scheme: internet-facing
+      Type: application
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-ApplicationLoadBalancer'
+      Subnets:
+        - !Ref PublicSubnet1
+        - !Ref PublicSubnet2
+      SecurityGroups:
+        - !GetAtt ELBSecurityGroup.GroupId
+
+  # RDS cluster
+  DBCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      Engine: aurora-mysql
+      EngineVersion: 8.0.mysql_aurora.3.03.0
+      DBClusterParameterGroupName: !Ref RDSClusterParameterGroup
+      DBClusterIdentifier: !Sub '${Environment}-${ProjectName}-DBCluster'
+      MasterUsername: admin
+      MasterUserPassword: !Ref DBPassword
+      DatabaseName: !Sub '${Environment}_${ProjectName}_db'
+      StorageEncrypted: true
+      BackupRetentionPeriod: 7
+      DBSubnetGroupName: !Ref RDSSubnetGroup
+      EnableCloudwatchLogsExports:
+        - general
+        - error
+        - slowquery
+        - audit
+      AvailabilityZones:
+        - ap-southeast-1a
+        - ap-southeast-1b
+      VpcSecurityGroupIds:
+        - !Ref RDSSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-DBCluster' 
+
+  # RDS instance in private subnet
+  RDSInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBClusterIdentifier: !Ref DBCluster
+      DBInstanceClass: db.t4g.medium
+      Engine: aurora-mysql
+      EngineVersion: 8.0.mysql_aurora.3.03.0
+      DBInstanceIdentifier: !Sub '${Environment}-${ProjectName}-DBInstance'
+      PubliclyAccessible: false
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-RDSInstance'
+
+  RDSClusterParameterGroup:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Family: "aurora-mysql8.0"
+      Description: "Aurora(MySQL 8.0) DBCluster ParameterGroup"
+      Parameters:
+        time_zone: "Asia/Tokyo"
+        general_log: 1
+        server_audit_logging: 1
+        server_audit_events: "Connect,Query,Query_DCL,Query_DDL,Query_DML,Table"
+        slow_query_log: 1
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-RDSClusterParameterGroup'      
+
+  # Redis instance in private subnet
+  RedisCluster:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupId: !Sub '${Environment}-${ProjectName}-RedisCluster'
+      ReplicationGroupDescription: 'ElastiCache Redis Replication Group'
+      CacheNodeType: cache.t2.micro
+      CacheSubnetGroupName: !Ref CacheSubnetGroup
+      NumCacheClusters: '1'
+      Engine: redis
+      CacheParameterGroupName: default.redis7
+      AutomaticFailoverEnabled: 'false'
+      SecurityGroupIds:
+        - !Ref RDSSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub '${Environment}-${ProjectName}-RedisCluster'
+
+# Create Condition for CreateNatGatewayOrNot
+Conditions:
+  IsCreateNATGateway: !Equals
+    - !Ref CreateNatGatewayOrNot
+    - true
+
+# output
+Outputs:
+  StackVPC:
+    Description: The ID of the VPC
+    Value: !Ref VPC
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-VPC"
+
+  StackPubSubnet1:
+    Description: The ID of the VPC Subnet
+    Value: !Ref PublicSubnet1
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PublicSubnet1"
+
+  StackPubSubnet2:
+    Description: The ID of the VPC Subnet
+    Value: !Ref PublicSubnet2
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PublicSubnet2"
+
+  StackPrivateSubnet1:
+    Description: The ID of the VPC Subnet
+    Value: !Ref PrivateSubnet1
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PrivateSubnet1"
+
+  StackPrivateSubnet2:
+    Description: The ID of the VPC Subnet
+    Value: !Ref PrivateSubnet2
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PrivateSubnet2"
+
+  StackPublicRouteTable:
+    Description: The ID of the VPC Route Table
+    Value: !Ref PublicRouteTable
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PublicRouteTable"
+
+  StackPrivateRouteTable1:
+    Description: The ID of the VPC Route Table
+    Value: !Ref PrivateRouteTable1
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PrivateRouteTable1"
+
+  StackPrivateRouteTable2:
+    Description: The ID of the VPC Route Table
+    Value: !Ref PrivateRouteTable2
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-PrivateRouteTable2"
+
+  StackNatGateway1:
+    Description: The ID of the NatGateway1
+    Value: !Ref NatGateway1
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-NatGateway1"
+
+  StackNatGateway2:
+    Description: The ID of the NatGateway2
+    Value: !Ref NatGateway2
+    Export:
+      Name: !Sub "${Environment}-${ProjectName}-NatGateway2"

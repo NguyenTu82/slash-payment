@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PDF</title>
+        <style>
+            .bg-pdf {
+                background-color: #686e7c !important;
+                margin-bottom: 15px;
+            }
+            .content-pdf {
+                background-color: #ccc;
+                padding: 15px 0;
+            }
+            .table-responsive {
+                display: block;
+                width: 100%;
+            }
+            .ml-1 {
+                margin-left: 4px;
+            }
+            .text-nowrap {
+                white-space: nowrap !important;
+            }
+            .table {
+                width: 100%;
+                margin-bottom: 10px;
+                color: #858796;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            tbody {
+                display: table-row-group;
+                vertical-align: middle;
+                border-color: inherit;
+            }
+            .pdf-page {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                background-color: white;
+                max-width: 510px;
+                height: 720px;
+            }
+            .pdf-page .title-pdf {
+                text-align: center;
+                color: #686e7c;
+                font-size: 22px;
+                font-weight: bold;
+                padding-top: 50px;
+                margin: 0;
+            }
+            .pdf-page .form-pdf {
+                max-width: 400px;
+                width: 100%;
+                margin: 0 auto 20px auto;
+                padding: 0 20px;
+            }
+            .pdf-page .info-pdf {
+                display: flex;
+            }
+            .pdf-page .detail-info {
+                width: 50%;
+                display: flex;
+                justify-content: end;
+                margin-bottom: 0;
+                margin-top: 0px;
+                font-size: 10px;
+                color: #686e7c;
+            }
+            .pdf-page .center-table {
+                text-align: center;
+            }
+            .pdf-page .table td,
+            .pdf-page .table th {
+                border: 1px solid #000;
+                padding: 0;
+            }
+            .pdf-page tbody {
+                border: 1px solid #000;
+            }
+            .pdf-page .boder-bottom-none {
+                border-bottom: transparent !important;
+                border-top: transparent !important;
+            }
+            .pdf-page .value-table {
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 0;
+                padding: 1px 5px;
+                color: #686e7c;
+            }
+            .pdf-page .table tr td:first-child {
+                width: 80px;
+            }
+            .pdf-page .two-value {
+                display: flex;
+            }
+            .pdf-page .w-40-percent {
+                width: 40%;
+            }
+            .pdf-page .w-60-percent {
+                width: 60%;
+            }
+            .pdf-page .w-name-100 {
+                width: 100px;
+            }
+            .pdf-page .w-name-60 {
+                width: 60px;
+            }
+            .pdf-page .boder-right {
+                border-right: 1px solid #000;
+            }
+            .pdf-page .text-right-number {
+                width: 100%;
+                display: flex;
+                justify-content: end !important;
+            }
+            .pdf-page .h-50 {
+                min-height: 50px;
+                height: 50px;
+            }
+            .pdf-page .h-30 {
+                min-height: 30px;
+                height: 30px;
+            }
+            .pdf-page .h-start {
+                vertical-align: top;
+            }
+            .pdf-page .text-notifications {
+                font-size: 11px;
+                font-weight: 600;
+                padding: 1px 5px;
+                color: #686e7c;
+                margin: 0 0 0 50px;
+            }
+            .pdf-page .info-unit {
+                width: fit-content;
+                margin-bottom: 10px;
+            }
+            .pdf-page .info-unit span {
+                font-size: 11px;
+                font-weight: 600;
+                padding: 1px 5px;
+                color: #686e7c;
+            }
+            .boder-bottom {
+                border-bottom: 1px solid #000;
+            }
+            .mr-50 {
+                margin-right: 50px;
+            }
+            .mr-20 {
+                margin-right: 20px;
+            }
+            .pdf-page .table-mini {
+                display: flex;
+                justify-content: end;
+            }
+            .pdf-page .table-50-percent {
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content-pdf">
+            <div class="pdf-page">
+                <h3 class="title-pdf">支払報告書</h3>
+                <div class="form-pdf">
+                    <div class="info-pdf">
+                        <p class="detail-info">利用明細番号</p>
+                        <p class="detail-info">10331033_230501_33</p>
+                    </div>
+                    <div class="info-pdf">
+                        <p class="detail-info">加盟店</p>
+                        <p class="detail-info">000133 - 株式会社ABC</p>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover text-nowrap">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="center-table value-table">
+                                            発行日
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="two-value">
+                                            <div
+                                                class="boder-right w-40-percent"
+                                            >
+                                                <div class="value-table">
+                                                    20123/06/29
+                                                </div>
+                                            </div>
+                                            <div class="w-60-percent">
+                                                <div class="value-table"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="center-table value-table">
+                                            支払い先
+                                        </div>
+                                    </td>
+                                    <td><div class="value-table">現金</div></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="center-table value-table">
+                                            支払い者
+                                        </div>
+                                    </td>
+                                    <td><div class="value-table"></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            取引金額情報
+                                        </div>
+                                    </th>
+                                    <th class="w-name-100">
+                                        <div class="center-table value-table">
+                                            単位
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            取引回数
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            取引金額
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td>
+                                        <div class="value-table">USD</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USD</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USD</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USD</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USD</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USD</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            受取金額情報
+                                        </div>
+                                    </th>
+                                    <th class="w-name-100">
+                                        <div class="center-table value-table">
+                                            単位
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            取引回数
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            取引金額
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USDT</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USDC</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">DAI</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">JPYC</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td>
+                                        <div class="center-table value-table">
+                                            合計
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            受取金額情報
+                                        </div>
+                                    </th>
+                                    <th class="w-name-60">
+                                        <div class="center-table value-table">
+                                            単位
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            出金可能額
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            出金済額
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            出金手数料
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="center-table value-table">
+                                            出金予定額
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">JPY</div></td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">0</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USDT</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">USDC</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">DAI</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="boder-bottom-none"></td>
+                                    <td><div class="value-table">JPYC</div></td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-hover text-nowrap">
+                            <tbody>
+                                <tr class="h-50">
+                                    <td class="h-start">
+                                        <div
+                                            class="center-table value-table h-start"
+                                        >
+                                            備考
+                                        </div>
+                                    </td>
+                                    <td class="h-start">
+                                        <div class="value-table">
+                                            1231232131231232132131231231
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-notifications">
+                        上記の支払を承認したことを証明します。
+                    </p>
+                    <div class="info-unit boder-bottom">
+                        <span class="mr-50">清算日</span>
+                        <span class="mr-20">年</span>
+                        <span class="mr-20">月</span>
+                        <span>日</span>
+                    </div>
+                    <div class="table-mini">
+                        <table
+                            class="table table-50-percent table-hover text-nowrap"
+                        >
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="center-table value-table">
+                                            備考
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">12312</div>
+                                    </td>
+                                    <td>
+                                        <div class="value-table">12312321</div>
+                                    </td>
+                                </tr>
+                                <tr class="h-30">
+                                    <td class="h-start">
+                                        <div
+                                            class="center-table value-table h-start"
+                                        >
+                                            備考
+                                        </div>
+                                    </td>
+                                    <td class="h-start">
+                                        <div class="value-table">123123</div>
+                                    </td>
+                                    <td class="h-start">
+                                        <div class="value-table">12312321</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

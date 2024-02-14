@@ -1,0 +1,347 @@
+.account{
+    width: 100%;
+    align-items: center;
+    margin-left: -2px;
+}
+.nav-link {
+    display: block;
+    padding: 10px 30px;
+}
+.list_search{
+    align-items: center;
+}
+.setting_item.active {
+    font-weight: 600;
+    color: #4e73df;
+    border-bottom: 2px solid #4E73DF;
+}
+.content-wrapper {
+    background: #FFFFFF
+}
+.form__edit_account .form-control{
+    border-radius: unset;
+    width: 500px;
+    height: 52px;
+    color: #686E7C !important;
+}
+.form-area-remarks{
+    height: 92px !important;
+    resize: none;
+}
+.list-area-members{
+    height: 151px !important;
+    resize: none;
+}
+.form-group{
+    margin-bottom: 15px;
+    align-items: center;
+}
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+}
+.title_edit_account{
+    font-size: 22px;
+    font-weight: 500;
+    color: #464A53;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.select_form{
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    padding: 0 1em;
+    color: #000;
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+.select_info {
+    position: relative;
+    display: flex;
+    width: 500px;
+}
+.account__id input{
+    width: 200px;
+}
+.button-action{
+    margin-top: 20px;
+    display: flex;
+}
+.btn-delete-account{
+    color: #FFFFFF;
+    background-color: #FF5274;
+    margin-left: 87px;
+}
+.form-note{
+    display: flex;
+    align-items: center;
+}
+.pw-current-box.form-note{
+    align-items: end;
+}
+.form-note.form-note-textarea {
+    align-items: end;
+}
+.note-pass{
+    margin-left: 15px;
+}
+/* .note-pass-error{
+    margin: 0;
+    font-size: 16px;
+    color: #FF5274;
+} */
+.change-pass{
+    margin: 0;
+    font-size: 16px;
+    margin-left: 29px;
+    text-decoration: underline;
+}
+button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.form-save{
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+}
+.form-select{
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+    margin-top: 14px;
+}
+.note-pass-select{
+    margin-top: 50px;
+}
+.form-close{
+    color: #6A707E;
+    background-color: #F3F3F3;
+    margin-left: 180px;
+}
+.action_search{
+    margin-top: 30px;
+}
+#change-password-form .modal.fade .modal-dialog{
+    max-width: 589px;
+}
+
+.note-pass .modal.fade .modal-dialog{
+    max-width: 800px;
+}
+
+.modal-dialog .btn-secondary{
+    padding: 10px 0;
+}
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.show-modal-change-pass {
+    cursor: pointer;
+    font-size: 14px;
+    color:#4E73DF;
+}
+
+.modal-confirm-changpass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+.popup-success-changepass {
+    z-index: 1060;
+}
+.popup-confirm-changepass .modal.fade .modal-dialog{
+    max-width: 589px;
+}
+.modal-success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+.popup-success-changepass .modal-success.fade .modal-dialog{
+    max-width: 589px;
+}
+.show-popup {
+    font-size: 18px;
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+.card-list {
+    width: 500px;
+    height: 52px;
+}
+.select_list {
+    max-width: 500px;
+    width: 500px;
+    height: 52px;
+}
+.select_list .card-list-container{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDFE1;
+    padding: 0 1em;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.selected-author{
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    color: #6F7582;
+}
+.authority-dropdown{
+    position: relative;
+    border: 1px solid #F3F3F3;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+.authority-dropdown div:hover{
+    background-color: rgba(96, 126, 213, .1);
+}
+.authority-dropdown-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.authority-dropdown-btn svg{
+    width: 12px;
+    height: 12px;
+    background-color: none;
+    margin-right: 5px;
+}
+@media only screen and (max-width: 1500px) {
+    .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .form-item-ip{
+        margin-left: 0px;
+    }
+    .button-action{
+        margin-left: 0;
+    }
+    .card-list {
+        width: 400px;
+    }
+    .select_list {
+        width: 400px;
+    }
+    .form-control{
+        width: 400px;
+    }
+    .note-pass-select{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .form-note{
+        flex-wrap: wrap;
+    }
+    .form-group label {
+        line-height: 1.5;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    button{
+        width: 100px;
+        height: 40px;
+        padding: 10px 0;
+        border-radius: none;
+    }
+    .form-close{
+        margin-left: 80px;
+    }
+    .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .card-list {
+        width: 300px;
+    }
+    .select_list {
+        width: 300px;
+    }
+    .form-control{
+        width: 300px;
+    }
+    .form-group label {
+        font-size: 14px !important;
+        font-weight: 500;
+    }
+    .note-pass{
+        font-size: 12px;
+    }
+    .note-pass-error {
+        font-size: 12px;
+    }
+    .create-new-account .note-pass-error {
+        font-size: 12px !important;
+    }
+    .form-select {
+        font-size: 12px !important;
+    }
+    .button-action button{
+        font-size: 12px !important;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .form-note {
+        flex-wrap: wrap;
+    }
+    .note-pass{
+        margin-top: 10px;
+    }
+    .button-action button{
+        font-size: 8px !important;
+    }
+    .note-pass .modal.fade .modal-dialog{
+        max-width: 500px;
+    }
+    .note-pass-select {
+        flex-wrap: wrap;
+    }
+}
+/* @media only screen and  (min-width: 576px) {
+    .note-pass .modal.fade .modal-dialog{
+        max-width: 800px;
+    }
+} */
+

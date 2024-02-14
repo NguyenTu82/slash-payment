@@ -1,0 +1,27 @@
+.background-login{
+    background-image: url('../img/background-login.svg');
+}
+.background-button{
+    background-image: url('../img/background-button.svg');
+}
+.content-auth{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #FFFFFF;
+}
+.content-auth-forgot-pass{
+    position: absolute;
+    top: 60px;
+    right: 33%;
+    bottom: 0px;
+    background-color: #FFFFFF;
+}
+.navbar{
+    height: 60px;
+    box-shadow: 0px 0px 0px 1px #a1a1a1 inset;
+}
+.auth-logo{
+    width: 337px;
+}

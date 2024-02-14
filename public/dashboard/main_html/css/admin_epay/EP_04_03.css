@@ -1,0 +1,116 @@
+#content {
+    background-color: #FFFFFF;
+}
+.nav.nav-tabs {
+    padding-top: 17px;
+}
+.bg-white-nav {
+
+}
+/* select */
+.select_form {
+    max-width: 500px !important;
+    width: 100% !important;
+    height: 52px !important;
+}
+.select_form{
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #686E7C;
+}
+select::-ms-expand {
+    display: none;
+}
+
+.noti-detai-type{
+    margin-top: 24px !important;
+}
+.form-control.form-w200 {
+    max-width: 200px
+}
+.form-edit-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.editor-custom {
+    max-width: 850px;
+    width: 100%;
+}
+.form-editor-input {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+}
+.dropdown.bootstrap-select.ql-header.show , .dropdown.bootstrap-select.ql-header{
+    display: none;
+}
+.ql-container.ql-snow {
+    height: 281px !important;
+    overflow-y: auto;
+}
+.note-error-editor {
+    display: flex;
+    align-items: center;
+    height: 281px;
+}
+.noti-content-detail {
+    align-items: start !important;
+}
+.noti-content-title {
+    margin-top: 15px;
+}
+.list-area-contents{
+    max-width: 850px !important;
+    width: 100%;
+    height: 279px !important;
+    overflow-y: auto;
+    resize: none;
+    border-radius: unset !important;
+    font-size: 16px !important;
+    color: #686e7c;
+}
+.button-action {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.form-close{
+    margin-right: 50px;
+}
+.form .form-group.form-item {
+    gap: 5px;
+}
+.content-item {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #ABAFB3;
+}
+.noti-content-detail {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 1700px) {
+    .note-error-editor {
+        height: auto;
+    }
+}
+@media only screen and (max-width: 576px) {
+    form .form-group.form-item {
+        flex-direction: column;
+        align-items: start;
+    }
+    .form-detail .label-custom {
+        margin-bottom: 10px;
+    }
+    .btn.btn-edit-detail {
+        margin-right: 20px;
+    }
+
+}

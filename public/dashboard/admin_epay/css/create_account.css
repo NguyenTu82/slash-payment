@@ -1,0 +1,304 @@
+.create-new-account .account{
+    width: 100%;
+    align-items: center;
+    margin-left: -2px;
+}
+.create-new-account  .nav-link {
+    display: block;
+    padding: 10px 15px;
+}
+.create-new-account  .list_search{
+    align-items: center;
+}
+.create-new-account  .setting_item.active {
+    font-weight: 600;
+    color: #4e73df;
+    border-bottom: 2px solid #4E73DF;
+}
+.content-wrapper {
+    background: #FFFFFF
+}
+
+.create-new-account .form-control{
+    border-radius: unset;
+    width: 500px;
+    height: 52px;
+    color: #686E7C !important;
+}
+.create-new-account .form-area-remarks{
+    height: 92px !important;
+    resize: none;
+}
+.create-new-account .list-area-members{
+    height: 151px !important;
+    resize: none;
+}
+.create-new-account .form-group{
+    margin-bottom: 15px;
+    align-items: center;
+}
+.create-new-account .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+}
+.create-new-account .title_edit_account{
+    font-size: 22px;
+    font-weight: 500;
+    color: #464A53;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.create-new-account .select_form{
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    color: #000;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+/* .create-new-account .form-control.border-error {
+    border: 1px solid #FF5274 ;
+} */
+.create-new-account  select::-ms-expand {
+    display: none;
+}
+.create-new-account  .select_info {
+    position: relative;
+    display: flex;
+    width: 500px;
+}
+.create-new-account  .account__id input{
+    width: 200px;
+}
+.create-new-account  .button-action{
+    margin-top: 20px;
+    display: flex;
+}
+.create-new-account  .form-note{
+    display: flex;
+    align-items: center;
+}
+.create-new-account  .note-pass{
+    margin-left: 15px;
+}
+.note-pass-err {
+    height: 52px;
+}
+.create-new-account  .noti-input {
+    margin: 0;
+    margin-top: 4px;
+}
+/* .create-new-account  .note-pass-error{
+    margin: 0;
+    font-size: 16px;
+    color: #FF5274;
+} */
+.create-new-account  .change-pass{
+    margin: 0;
+    font-size: 16px;
+    margin-left: 29px;
+    text-decoration: underline;
+}
+.create-new-account  button{
+    width: 150px;
+    height: 48px;
+    border-radius: none;
+}
+.create-new-account  .form-save{
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+}
+.create-new-account  .form-select{
+    color: #FFFFFF;
+    background-color: #4E73DF;
+    margin-right: 20px;
+    margin-top: 14px;
+}
+.create-new-account .note-pass-select{
+    margin-top: 50px;
+}
+.create-new-account .form-note-textarea{
+    align-items: end;
+}
+.create-new-account  .form-close{
+    margin-left: 180px;
+}
+.create-new-account .action_search{
+    margin-top: 30px;
+}
+.create-new-account .note-pass .modal.fade .modal-dialog{
+    max-width: 800px;
+}
+.create-new-account .name-merchant-item {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    color: #6F7582;
+    font-weight: 500 !important;
+}
+.create-new-account .card-list {
+    width: 500px;
+    height: 52px;
+}
+.create-new-account .select_list {
+    max-width: 500px;
+    width: 500px;
+    height: 52px;
+}
+.create-new-account .select_list .card-list-container{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    background-color: #FFFFFF;
+    border: 1px solid #DDDFE1;
+    padding: 0 1em;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.create-new-account .selected-author{
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    color: #6F7582;
+}
+.create-new-account .authority-dropdown{
+    position: relative;
+    border: 1px solid #F3F3F3;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+.create-new-account .authority-dropdown div:hover{
+    background-color: rgba(96, 126, 213, .1);
+}
+.create-new-account .authority-dropdown-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.create-new-account .authority-dropdown-btn svg{
+    width: 12px;
+    height: 12px;
+    background-color: none;
+    margin-right: 5px;
+}
+@media only screen and (max-width: 1500px) {
+    .create-new-account .button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .create-new-account .form-item-ip{
+        margin-left: 0px;
+    }
+    .create-new-account .button-action{
+        margin-left: 0;
+    }
+    .create-new-account .select_list {
+        width: 400px;
+    }
+    .create-new-account .card-list {
+        width: 400px;
+    }
+    .create-new-account .form-control{
+        width: 400px;
+    }
+    .create-new-account .select_info {
+        width: 400px;
+    }
+    .create-new-account .note-pass-select{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .create-new-account .form-note{
+        flex-wrap: wrap;
+    }
+    .form-group label {
+        line-height: 1.5;
+    }
+    .create-new-account  .noti-input {
+        font-size: 14px !important;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .create-new-account button{
+        width: 100px;
+        height: 40px;
+        padding: 10px 0;
+        border-radius: none;
+    }
+    .create-new-account .form-close{
+        margin-left: 80px;
+    }
+    .create-new-account.button__click button {
+        height: 30px;
+        margin: 10px;
+    }
+    .create-new-account .select_list {
+        width: 300px;
+    }
+    .create-new-account .card-list {
+        width: 300px;
+    }
+    .create-new-account .form-control{
+        width: 300px;
+    }
+    .create-new-account .select_info {
+        width: 300px;
+    }
+    .create-new-account .form-group label {
+        font-size: 13px !important;
+        font-weight: 500;
+    }
+    .create-new-account .note-pass{
+        font-size: 12px;
+    }
+    .create-new-account  .noti-input {
+        font-size: 12px !important;
+    }
+    .create-new-account .note-pass-error {
+        font-size: 12px !important;
+    }
+    .create-new-account .change-pass {
+        font-size: 12px !important;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .create-new-account .form-note {
+        flex-wrap: wrap;
+    }
+    .create-new-account .note-pass{
+        margin-top: 10px;
+    }
+    .create-new-account .button-action button{
+        font-size: 8px !important;
+    }
+    .create-new-account .note-pass .modal.fade .modal-dialog{
+        max-width: 500px;
+    }
+}
+/* @media only screen and  (min-width: 576px) {
+    .note-pass .modal.fade .modal-dialog{
+        max-width: 800px;
+    }
+} */
+

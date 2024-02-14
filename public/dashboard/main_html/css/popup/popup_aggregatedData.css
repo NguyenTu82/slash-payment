@@ -1,0 +1,275 @@
+.modal-open{
+    overflow: auto;
+}
+.modal {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.popup-aggregatedData .modal-popup-aggregatedData.fade .modal-dialog{
+    max-width: 1540px;
+    padding-left: 0 !important;
+    margin: 20px auto;
+}
+.popup-aggregatedData .modal-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    align-items: center;
+    margin-top: 0;
+    background-color: #EEF5F9;
+    padding: 11px 15px 9px 29px;
+}
+.popup-aggregatedData .modal-title{
+    font-size: 22px;
+    font-family: 'Noto Sans JP';
+    color: #686E7C;
+    font-weight: 400 ;
+}
+/* body */
+.popup-aggregatedData .modal-body{
+    padding: 17px 30px 30px 30px;
+}
+.popup-aggregatedData .infomation-time {
+    margin: 0;
+}
+.popup-aggregatedData .content-time {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+.popup-aggregatedData .info-day {
+    margin-bottom: 0;
+}
+.time-day-popup {
+    display: flex;
+    align-items: center;
+    margin-left: 36px;
+    margin-right: 36px;
+    justify-content: center;
+}
+.popup-aggregatedData .info-time {
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+.info-time, .info-day {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ABAFB3;
+}
+.popup-aggregatedData .infomation-data-transaction {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 29px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.popup-aggregatedData .content-info-data {
+    max-width: 670px;
+    width: 100%;
+    padding: 0;
+}
+.popup-aggregatedData .title-data {
+    padding: 0;
+}
+.popup-aggregatedData .title-data .title{
+    font-size: 22px;
+    font-weight: 400;
+    color: #464A53;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(104,110,124,0.4);
+}
+.popup-aggregatedData .name-icon-data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.popup-aggregatedData .item-data-transcation{
+    padding: 15px 0;
+}
+.popup-aggregatedData .data-unpaid-amount{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+.popup-aggregatedData .item-transcation{
+    padding: 0;
+}
+.popup-aggregatedData .bdBottomSolid {
+    border-bottom: 1px solid rgba(104,110,124,0.4);
+}
+.popup-aggregatedData .bdBottomDashed {
+    border-bottom: 1px dashed rgba(104,110,124,0.4);
+}
+.popup-aggregatedData .name-icon-data .name-data {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #686E7C;
+    margin-right: 10px;
+}
+.popup-aggregatedData .img-question-mini {
+    width: 17px;
+}
+
+.content-data-withdraw {
+    display: flex;
+    justify-content: center;
+}
+.popup-aggregatedData .list-data-trans {
+    padding: 0;
+    margin-bottom: 0;
+}
+.popup-aggregatedData .two-item-trans {
+    display: flex;
+}
+.popup-aggregatedData .two-item-trans:last-child {
+    border-bottom: 1px solid rgba(104,110,124,0.4);
+}
+.popup-aggregatedData .item-trans {
+    display: flex;
+    width: 146px;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 115px;
+    padding: 15px 0;
+}
+.popup-aggregatedData .name-trans {
+    font-size: 16px;
+    color: #686E7C;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.popup-aggregatedData .total-number , .popup-aggregatedData .value-trans{
+    font-family: 'Inter' !important;
+    font-size: 16px;
+    color: #686E7C;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+/* footer */
+.popup-aggregatedData .modal-footer{
+    display: flex;
+    justify-content: center;
+    border-top: none;
+    margin-bottom: 40px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.popup-aggregatedData .btn-primary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+    margin-right: 25px;
+}
+.popup-aggregatedData .btn-secondary{
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color: #F3F3F3;
+    color: #6A707E;
+    border: none;
+    margin-left: 25px;
+}
+.popup-aggregatedData .btn-delete{
+    font-size: 18px;
+    background-color:#FD5274;
+    color: #FFFFFF;
+    border: none;
+    margin: 0 ;
+    padding: 0;
+    margin-right: 28px;
+}
+.show-popup {
+    font-size: 18px;
+    font-family: 'Noto Sans JP';
+    background-color:#4E73DF;
+    color: #FFFFFF;
+    border: none;
+}
+.img-toogle {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+}
+.img-toogle img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-toogle:hover .noti-popup{
+    display: block;
+}
+.noti-popup {
+    display: none;
+    position: absolute;
+    left: 32px;
+}
+.noti-card-body {
+    width: 400px;
+    padding: 15px 0 15px 15px;
+    border: 1px solid #4E73DFB3;
+    border-radius: 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.text-noti-popup {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #686E7C;
+}
+.noti-popup-1 {
+    margin-bottom: 15px;
+}
+@media only screen and (max-width: 1500px) {
+    .popup-aggregatedData .content-info-data{
+        max-width:500px
+    }
+    .popup-aggregatedData .name-icon-data .name-data , .popup-aggregatedData .name-trans , .popup-aggregatedData .total-number , .popup-aggregatedData .value-trans {
+        font-size: 14px;
+    }
+    .popup-aggregatedData .title-data .title {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .popup-aggregatedData .content-info-data{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .title-data {
+        margin-top: 20px;
+    }
+    .popup-aggregatedData .modal-popup-aggregatedData.fade .modal-dialog{
+        margin-bottom: 100px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .noti-card-body{
+        width: 200px !important;
+    }
+    .text-noti-popup{
+        font-size: 12px !important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .noti-card-body{
+        width: 130px !important;
+    }
+    .text-noti-popup{
+        font-size: 12px !important;
+    }
+    .popup-aggregatedData .item-trans {
+        margin-right: 10px !important;
+    }
+    .popup-aggregatedData .name-icon-data .name-data , .popup-aggregatedData .name-trans , .popup-aggregatedData .total-number , .popup-aggregatedData .value-trans {
+        font-size: 12px !important;
+    }
+}
+

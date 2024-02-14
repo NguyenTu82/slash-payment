@@ -1,0 +1,104 @@
+#payment-modal .confirmm{
+    width: 800px;
+    padding: 50px 69px;
+}
+#payment-modal .confirmm h1{
+    margin-bottom: 14rem;
+}
+#payment-modal .confirmm h1 r12{
+    margin-bottom: 12rem;
+}
+
+#payment-modal .confirmm label{
+    max-width: 160px;
+    width: 100%;
+}
+#payment-modal .confirmm .w5{
+    max-width: 500px;
+    width: 100%;
+}
+#payment-modal .confirmm .w3{
+    max-width: 300px;
+    width: 100%;
+}
+#payment-modal .confirmm .modalFooter{
+    margin-top : 14rem;
+}
+#payment-modal .confirmm .w6 {
+    max-width: 70px;
+    width: 100%;
+}
+#payment-modal .confirmm .w8{
+    max-width: 80px;
+    width: 100%;
+}
+#payment-modal .confirmm .w11{
+    max-width: 110px;
+    width: 100%;
+}
+
+#payment-modal .confirmm .w95{
+    max-width: 100px;
+    width: 100%;
+}
+.note-pass-select{
+    margin-top: 103px;
+}
+@media only screen and (max-width: 573px) {
+    .note-pass-select{
+        margin-top: 20px;
+    }
+    #payment-modal .confirmm{
+        width: 100%;
+        padding: 50px 69px;
+    }
+    #payment-modal .confirmm h1{
+        margin-bottom: 4rem;
+    }
+    #payment-modal .confirmm h1 r12{
+        margin-bottom: 3rem;
+    }
+    #payment-modal .confirmm label{
+        max-width: 100px;
+        width: 100%;
+    }
+    #payment-modal .confirmm .w5{
+        max-width: 500px;
+        width: 100%;
+    }
+    #payment-modal .confirmm .w3{
+        max-width: 300px;
+        width: 100%;
+    }
+    #payment-modal .confirmm .modalFooter{
+        margin-top : 4rem;
+    }
+    #payment-modal .confirmm .w6,#payment-modal .confirmm .w8,#payment-modal .confirmm .w95 {
+        max-width: 300px;
+    }
+    #payment-modal .d-flex{
+        flex-wrap: wrap;
+    }
+    .content-header{
+        padding-top: 10px;
+    }
+    button.col-md-3,button.col-sm-3{
+        margin-left: 12px !important;
+    }
+    .col-sm-3.text-right{
+        text-align: left !important;
+    }
+    .col-sm-4.pl-0.pr-0.d-flex{
+        margin-top: 14px;
+        justify-content: start !important;
+    }
+    .remove{
+        padding-left: 0px;
+    }
+    .remove .row.ml-1{
+        margin-left: 0px !important;
+    }
+    .remove .col-sm-3{
+        padding-left: 0px;
+    }
+}
